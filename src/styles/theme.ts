@@ -10,7 +10,7 @@ export const theme = {
     success: "#4E913A",
 
     white: "white",
-    black: "#47475E",
+    black: "#1D1D26",
 
     gray1: "#DEDEDE",
     gray2: "#B3B3B3",
