@@ -5,6 +5,7 @@ export const Bio = () => {
     return (
         <Container>
             <PerfilContainer
+            alt='PERFILIMAGE'
         src={perfil}
         />
             <Content>
