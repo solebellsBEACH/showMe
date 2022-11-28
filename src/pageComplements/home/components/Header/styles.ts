@@ -6,22 +6,14 @@ display:flex ;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-height:70vh ;
+height:100vh ;
 background:${({ theme }) => theme.black};
-@media(min-width:1040px){
-    height:100vh ;
-}
 `
 export const BackgroundGif = styled(Image)`
 width:100%;
 object-fit: cover;
-height:70vh ;
+height:100vh ;
 filter: grayscale(90%);
-
-@media(min-width:1040px){
-    height:100vh ;
-}
-
 `
 
 interface ContentTypewriterProps {
