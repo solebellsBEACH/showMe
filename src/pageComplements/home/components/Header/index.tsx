@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { BackgroundGif, Container, ContentTypewriter } from './styles'
-import gif from '../../../../assets/artifact.gif'
+import gif from '../../../../assets/homeHeaderGif.gif'
 import Typewriter from "typewriter-effect";
 
 export const Header = (props: any) => {
@@ -8,12 +8,12 @@ export const Header = (props: any) => {
     const [showGif, setShowGif] = useState(false)
     const information = ["Hi Geek", "Welcomes You"]
 
-
     return (
         <Container>
             {showGif &&
                 <BackgroundGif
                     src={gif}
+                    onLoa
                 />
             }
             <ContentTypewriter
@@ -23,7 +23,7 @@ export const Header = (props: any) => {
                     onInit={(typewriter) => {
                         typewriter
                             .typeString(information[0])
-                            .pauseFor(1000)
+                            .pauseFor(150)
                             .deleteAll()
                             .typeString(information[1])
                             .callFunction(() => {
