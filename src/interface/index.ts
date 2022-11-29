@@ -5,4 +5,15 @@ export interface IApplicationDuckDuckInitialState {
     data: null
     success: boolean
     language: 'pt' | 'en'
+    languageInformation:ILanguageJSON
+}
+export interface IReduxState {
+    application: IApplicationDuckDuckInitialState
+}
+
+export interface ILanguageJSON {
+    homePage: {
+        header: string[]
+        bio:string[]
+    }
 }
