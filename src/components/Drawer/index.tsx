@@ -1,17 +1,26 @@
-import { Avatar, Divider, Drawer, List, ListItem, ListItemAvatar, ListItemText, ListSubheader, SvgIconTypeMap } from '@mui/material'
-import React, { ReactElement } from 'react'
-import { Container } from './styles'
+import {
+    Avatar,
+    Divider,
+    Drawer,
+    List,
+    ListItem,
+    ListItemAvatar,
+    ListItemText,
+    ListSubheader
+} from '@mui/material'
+import React,
+{ ReactElement } from 'react'
 import CabinIcon from '@mui/icons-material/Cabin';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ImageIcon from '@mui/icons-material/Image';
 import CodeIcon from '@mui/icons-material/Code';
 import EmailIcon from '@mui/icons-material/Email';
 
 export interface ITemplateDrawerProps {
     openDrawer: boolean;
+    onClose: () => void;
 }
 
-export const TemplateDrawer = ({ openDrawer }: ITemplateDrawerProps) => {
+export const TemplateDrawer = ({ openDrawer, onClose }: ITemplateDrawerProps) => {
 
     const pages: {
         name: string, path: string, icon: ReactElement<any, any>
@@ -26,6 +35,7 @@ export const TemplateDrawer = ({ openDrawer }: ITemplateDrawerProps) => {
         <Drawer
             open={openDrawer}
             anchor="left"
+            onClose={onClose}
         >
             <List
                 sx={{
