@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import LayersIcon from '@mui/icons-material/Layers';
-
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const Container = styled.button`
 background: none repeat scroll 0 0 ${({theme})=>theme.templateColor5};
@@ -23,7 +22,7 @@ border-radius:100vw;
       
 `
 
-export const StyledLayersIcon = styled(LayersIcon)`
+export const StyledMenuIcon = styled(MenuIcon)`
       height: 3rem;
       width: 3rem;
       @media (max-width: 768px){
