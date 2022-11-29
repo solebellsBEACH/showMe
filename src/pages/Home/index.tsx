@@ -5,22 +5,27 @@ import { DrawerButton, TemplateDrawer } from '../../components';
 
 const HomeComponent = () => {
     const [openDrawer, setOpenDrawer] = useState(false)
-    const handleOpenDrawer = ()=>{
+    const [showGif, setShowGif] = useState(false)
+    const handleOpenDrawer = () => {
         setOpenDrawer(true)
     }
-    const handleCloseDrawer = ()=>{
+    const handleCloseDrawer = () => {
         setOpenDrawer(false)
     }
     return (
         <>
             <TemplateDrawer openDrawer={openDrawer}
-            onClose={handleCloseDrawer}
+                onClose={handleCloseDrawer}
             />
             <Container>
-                <Header />
-                <Bio />
+                <Header
+                    showGif={showGif}
+                    setShowGif={setShowGif}
+                />
+                {showGif && <Bio />}
             </Container>
-            <DrawerButton onClick={handleOpenDrawer}/>
+            {showGif && <DrawerButton onClick={handleOpenDrawer} />}
+
         </>
     )
 }
