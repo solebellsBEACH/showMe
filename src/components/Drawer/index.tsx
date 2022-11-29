@@ -6,15 +6,20 @@ import {
     ListItem,
     ListItemAvatar,
     ListItemText,
-    ListSubheader
+    ListSubheader,
+    Switch
 } from '@mui/material'
 import React,
-{ ReactElement } from 'react'
+{ ReactElement, useState } from 'react'
 import CabinIcon from '@mui/icons-material/Cabin';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CodeIcon from '@mui/icons-material/Code';
 import EmailIcon from '@mui/icons-material/Email';
-
+import { BrasilIcon, SwitchContainer, USAIcon } from './styles';
+import USAPNG from '../../assets/usaLogo.png'
+import BrasilPNG from '../../assets/brasilLogo.png'
+import { useDispatch } from 'react-redux'
+import { Creators as ApplicationActions } from '../../store/ducks/application'
 export interface ITemplateDrawerProps {
     openDrawer: boolean;
     onClose: () => void;
@@ -30,6 +35,14 @@ export const TemplateDrawer = ({ openDrawer, onClose }: ITemplateDrawerProps) =>
             { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
             { name: 'Fale Comigo ', path: '/sendMeAMessage', icon: <EmailIcon /> },
         ]
+
+    const dispatch = useDispatch()
+    const [isEnglish, setIsEnglish] = useState(false)
+
+    const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
+        dispatch(ApplicationActions.setLanguage({ language: e.target.checked ? 'en' : 'pt' }))
+        setIsEnglish(e.target.checked)
+    }
 
     return (
         <Drawer
@@ -64,7 +77,28 @@ export const TemplateDrawer = ({ openDrawer, onClose }: ITemplateDrawerProps) =>
                     </ListItem>
                     <Divider variant="inset" component="li" />
                 </>)}
-
+                <ListSubheader
+                    sx={{
+                        fontWeight: 'bold'
+                    }}
+                    component="div" id="nested-list-subheader">
+                    Escolha o idioma
+                </ListSubheader>
+                <SwitchContainer>
+                    <BrasilIcon
+                        alt='BrasilICON'
+                        src={BrasilPNG}
+                        className={isEnglish ? '' : 'selected'}
+                    />
+                    <Switch
+                        onChange={e => handleChecked(e)}
+                        checked={isEnglish} />
+                    <USAIcon
+                        className={!isEnglish ? '' : 'selected'}
+                        alt='USAICON'
+                        src={USAPNG}
+                    />
+                </SwitchContainer>
 
             </List>
         </Drawer>

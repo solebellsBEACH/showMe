@@ -22,7 +22,7 @@ export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
             <ContentTypewriter
                 showGif={showGif}
             >
-                <Typewriter
+                {!showGif?<Typewriter
                     onInit={(typewriter) => {
                         typewriter
                             .typeString(languageInformation.homePage.header[0])
@@ -34,7 +34,7 @@ export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
                             })
                             .start();
                     }}
-                />
+                />:<>{languageInformation.homePage.header[1]}</>}
             </ContentTypewriter>
         </Container>
     )
