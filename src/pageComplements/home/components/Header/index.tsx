@@ -3,16 +3,21 @@ import { BackgroundGif, Container, ContentTypewriter } from './styles'
 import gif from '../../../../assets/homeHeaderGif.gif'
 import Typewriter from "typewriter-effect";
 
-export const Header = () => {
+export interface IHeaderProps {
+    showGif: boolean;
+    setShowGif: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-    const [showGif, setShowGif] = useState(false)
+export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
+
+
     const information = ["Hi Geek", "Welcomes You"]
 
     return (
         <Container>
             {showGif &&
                 <BackgroundGif
-                alt='gif-header'
+                    alt='gif-header'
                     src={gif}
                 />
             }
@@ -28,7 +33,7 @@ export const Header = () => {
                             .typeString(information[1])
                             .callFunction(() => {
                                 setShowGif(true)
-                              })
+                            })
                             .start();
                     }}
                 />
