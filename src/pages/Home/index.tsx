@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from '../../pageComplements/home/styles';
 import { Bio, Header } from '../../pageComplements/home/components';
+import { TemplateDrawer } from '../../components';
 
 const HomeComponent = () => {
+    const [openDrawer, setOpenDrawer] = useState(true)
     return (
-        <Container>
-            <Header />
-            <Bio/>
-        </Container>
+        <>
+            <TemplateDrawer openDrawer={openDrawer} />
+            <Container>
+                <Header />
+                <Bio />
+            </Container>
+        </>
     )
 }
 
