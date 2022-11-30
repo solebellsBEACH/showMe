@@ -11,17 +11,17 @@ flex-direction:row;
 margin:2vh 0;
 `
 export const ImageBox = styled.div`;
-width:60vw;
-/* min-height: 10vw; */
-background:blue;
-margin-right:1vw;
+    width:60vw;
+    /* min-height: 10vw; */
+    background:blue;
+    margin-right:1vw;
 @media (max-width:1250px){
     width:92vw;
     height: 20vw;
     }
     @media (max-width:768px){
 
-    height: 30vw;
+    height: 22vw;
     }
 
     border-radius:0.5vw;
@@ -32,20 +32,20 @@ height:auto ;
 width:100vw;
 margin-right: 1vw;
 h1{
-    font-size:30px;
+    font-size:25px;
     margin:2vh 0;
     color:${({ theme }) => theme.templateColor5};
     @media (max-width:768px){
-font-size:22px
+font-size:18px
     }
 }
 h2{
-    font-size:20px;
+    font-size:17px;
     margin:2vh 0;
     color:${({ theme }) => theme.templateColor5};
     font-weight:400;
     @media (max-width:768px){
-font-size:16px
+font-size:15px
     }
 }
 

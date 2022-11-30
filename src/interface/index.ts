@@ -15,5 +15,8 @@ export interface ILanguageJSON {
     homePage: {
         header: string[]
         bio:string[]
+    },
+    stacks:{
+        stacksDescription:{title:string, description:string, myXP:string}[]
     }
 }
