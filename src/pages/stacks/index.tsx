@@ -24,6 +24,9 @@ const stacks = () => {
                 <Content>
                     <PageTitle>Stacks</PageTitle>
                 <TextBox/>
+                <TextBox
+                align='right'
+                />
                 </Content>
             </Container>
         </>
