@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BackgroundGif, Container, ContentTypewriter } from './styles'
 import gif from '../../../../assets/homeHeaderGif.gif'
 import Typewriter from "typewriter-effect";
-
+import { IReduxState } from '../../../../interface';
+import { useSelector } from 'react-redux'
 export interface IHeaderProps {
     showGif: boolean;
     setShowGif: React.Dispatch<React.SetStateAction<boolean>>
+    
 }
 
 export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
-
-
-    const information = ["Hi Geek", "Welcomes You"]
-
+    const {languageInformation} = useSelector((state: IReduxState) => state.application);
     return (
         <Container>
             {showGif &&
@@ -24,19 +23,19 @@ export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
             <ContentTypewriter
                 showGif={showGif}
             >
-                <Typewriter
+                {!showGif?<Typewriter
                     onInit={(typewriter) => {
                         typewriter
-                            .typeString(information[0])
+                            .typeString(languageInformation.homePage.header[0])
                             .pauseFor(150)
                             .deleteAll()
-                            .typeString(information[1])
+                            .typeString(languageInformation.homePage.header[1])
                             .callFunction(() => {
                                 setShowGif(true)
                             })
                             .start();
                     }}
-                />
+                />:<>{languageInformation.homePage.header[1]}</>}
             </ContentTypewriter>
         </Container>
     )

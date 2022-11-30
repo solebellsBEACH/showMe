@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { Container } from '../../pageComplements/home/styles';
 import { Bio, Header } from '../../pageComplements/home/components';
 import { DrawerButton, TemplateDrawer } from '../../components';
+import { useSelector } from 'react-redux'
+import { IReduxState } from '../../interface';
 
 const HomeComponent = () => {
+
+    const applicationData = useSelector((state: IReduxState) => state.application);
     const [openDrawer, setOpenDrawer] = useState(false)
     const [showGif, setShowGif] = useState(false)
     const handleOpenDrawer = () => {
@@ -14,7 +18,9 @@ const HomeComponent = () => {
     }
     return (
         <>
-            <TemplateDrawer openDrawer={openDrawer}
+            <TemplateDrawer
+                actualPage='Home'
+                openDrawer={openDrawer}
                 onClose={handleCloseDrawer}
             />
             <Container>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, StyledLayersIcon } from './styles'
+import { Container, StyledMenuIcon } from './styles'
 
 export interface IDrawerButtonProps{
     onClick:()=>void;
@@ -10,7 +10,7 @@ export const DrawerButton = ({onClick}: IDrawerButtonProps) => {
         <Container
         onClick={onClick}
         >
-            <StyledLayersIcon/>
+            <StyledMenuIcon/>
         </Container>
     )
 }
