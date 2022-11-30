@@ -5,12 +5,19 @@ export const Container = styled.div`
 width:100% ;
 min-height: 3.5rem;
 background:${({ theme }) => theme.templateColor5};
-padding:1rem 2rem;
+padding:2vh 4vw;
 
 color:${({ theme }) => theme.white};
 display:flex;
 justify-content: space-between;
 align-items: center;
+
+h1{
+  font-size:3rem;
+  @media (max-width: 768px){
+    font-size:2rem;
+      }
+}
 `
 
 

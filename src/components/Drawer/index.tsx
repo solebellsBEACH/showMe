@@ -84,7 +84,8 @@ export const TemplateDrawer = ({ openDrawer, onClose, actualPage, anchor = 'left
                                 {e.icon}
                             </Avatar>
                         </ListItemAvatar>
-                        <ListItemText primary={e.name} secondary="" />
+                        <ListItemText
+                            primary={e.name} secondary="" />
                     </ListItem>
                     <Divider variant="inset" component="li" />
                 </>)}

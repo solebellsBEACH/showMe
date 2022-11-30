@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Header, TemplateDrawer } from '../../components';
-import { Container } from '../../pageComplements/stacks/styles';
+import { Header, TemplateDrawer, TextBox } from '../../components';
+import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
 
 const stacks = () => {
     const [openDrawer, setOpenDrawer] = useState(false)
@@ -21,6 +21,10 @@ const stacks = () => {
             />
             <Container>
                 <Header handleOpenDrawer={handleOpenDrawer} />
+                <Content>
+                    <PageTitle>Stacks</PageTitle>
+                <TextBox/>
+                </Content>
             </Container>
         </>
     )

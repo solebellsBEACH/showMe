@@ -1,4 +1,5 @@
 import React from 'react'
+import { TextBox } from '../TextBox';
 import { Container, StyledMenuIcon } from './styles'
 
 interface IHeaderProps{
@@ -17,6 +18,7 @@ export const Header = ({handleOpenDrawer}: IHeaderProps) => {
            <StyledMenuIcon
            onClick={handleOpenDrawer}
            />
+
         </Container>
     )
 }
