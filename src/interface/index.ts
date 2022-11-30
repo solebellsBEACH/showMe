@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image"
 
 export interface IApplicationDuckDuckInitialState {
     loading: boolean
@@ -17,6 +18,8 @@ export interface ILanguageJSON {
         bio:string[]
     },
     stacks:{
-        stacksDescription:{title:string, description:string, myXP:string}[]
+        stacksDescription:{title:string, description:string, myXP:string,
+        image:StaticImageData
+        }[]
     }
 }

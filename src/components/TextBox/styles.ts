@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -10,8 +11,10 @@ flex-direction:row;
 }
 margin:2vh 0;
 `
-export const ImageBox = styled.div`;
-    width:60vw;
+export const ImageContainer = styled(Image)`;
+object-fit: cover;
+    width:20vw;
+    height:auto ;
     /* min-height: 10vw; */
     background:blue;
     margin-right:1vw;
