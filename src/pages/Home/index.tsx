@@ -18,7 +18,9 @@ const HomeComponent = () => {
     }
     return (
         <>
-            <TemplateDrawer openDrawer={openDrawer}
+            <TemplateDrawer
+                actualPage='Home'
+                openDrawer={openDrawer}
                 onClose={handleCloseDrawer}
             />
             <Container>

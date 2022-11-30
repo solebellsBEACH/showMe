@@ -20,12 +20,16 @@ import USAPNG from '../../assets/usaLogo.png'
 import BrasilPNG from '../../assets/brasilLogo.png'
 import { useDispatch } from 'react-redux'
 import { Creators as ApplicationActions } from '../../store/ducks/application'
+import { blue } from '@mui/material/colors';
+import { useRouter } from 'next/router';
 export interface ITemplateDrawerProps {
     openDrawer: boolean;
     onClose: () => void;
+    actualPage: 'Home' | 'Hobbies' | 'Stacks' | 'Fale Comigo'
+    anchor?: 'left' | 'right'
 }
 
-export const TemplateDrawer = ({ openDrawer, onClose }: ITemplateDrawerProps) => {
+export const TemplateDrawer = ({ openDrawer, onClose, actualPage, anchor = 'left' }: ITemplateDrawerProps) => {
 
     const pages: {
         name: string, path: string, icon: ReactElement<any, any>
@@ -33,9 +37,9 @@ export const TemplateDrawer = ({ openDrawer, onClose }: ITemplateDrawerProps) =>
             { name: 'Home', path: '/', icon: <CabinIcon /> },
             { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
             { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
-            { name: 'Fale Comigo ', path: '/sendMeAMessage', icon: <EmailIcon /> },
+            { name: 'Fale Comigo', path: '/sendMeAMessage', icon: <EmailIcon /> },
         ]
-
+    const router = useRouter()
     const dispatch = useDispatch()
     const [isEnglish, setIsEnglish] = useState(false)
 
@@ -47,7 +51,7 @@ export const TemplateDrawer = ({ openDrawer, onClose }: ITemplateDrawerProps) =>
     return (
         <Drawer
             open={openDrawer}
-            anchor="left"
+            anchor={anchor}
             onClose={onClose}
         >
             <List
@@ -66,10 +70,17 @@ export const TemplateDrawer = ({ openDrawer, onClose }: ITemplateDrawerProps) =>
                     </ListSubheader>
                 }
             >
-                {pages.map(e => <>
-                    <ListItem>
+                {pages.map((e, i) => <>
+                    <ListItem
+                        onClick={() => {
+                            router.push(e.path)
+                        }}
+                        key={`listItem => ${i}`}
+                    >
                         <ListItemAvatar>
-                            <Avatar>
+                            <Avatar
+                                sx={e.name === actualPage ? { bgcolor: blue[500] } : {}}
+                            >
                                 {e.icon}
                             </Avatar>
                         </ListItemAvatar>
