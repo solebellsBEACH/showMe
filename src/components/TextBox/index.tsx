@@ -1,24 +1,31 @@
-import { Divider } from '@mui/material'
+import { Divider, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { Container, ImageBox, Content } from './styles'
 
 export interface ITextBoxProps {
-    align?: 'left' | 'right'
+    align?: 'left' | 'right',
+    title: string,
+    description: string,
+    myXP: string
 }
 
-export const TextBox = ({ align = 'left' }: ITextBoxProps) => {
+export const TextBox = ({ align = 'left', description, title, myXP }: ITextBoxProps) => {
+    const matches = useMediaQuery('(max-width:1250px)');
+
     return (
         <>
-        <Container>
-            {align === 'left' && <ImageBox />}
-            <Content>
-                <h1>Title</h1>
-                <h2>Development of web applications with React, Ant Design, Sass, Less, Css, integration of REST APIs, develop screens focused in UX specification. Git versioning control on Jira, GitHub, TFS, SCRUM methodology. Development of web applications with React, Ant Desing, Sass, Less, Css, integration of REST APIs, develop screens focused in UX specification. Git versioning control on Jira, GitHub, TFS, SCRUM methodology.</h2>
-            </Content>
-            {align === 'right' && <ImageBox />}
-        </Container>
-        <Divider
-        />
+            <Container>
+                {align === 'right' && matches && <ImageBox />}
+                {align === 'left' && <ImageBox />}
+                <Content>
+                    <h1>{title}</h1>
+                    <h2>{description}</h2>
+                    <h2>{myXP}</h2>
+                </Content>
+                {align === 'right' && !matches && <ImageBox />}
+            </Container>
+            <Divider
+            />
         </>
     )
 }

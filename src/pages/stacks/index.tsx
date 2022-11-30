@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux';
 import { Header, TemplateDrawer, TextBox } from '../../components';
+import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
 
 const stacks = () => {
+
+    const { languageInformation } = useSelector((state: IReduxState) => state.application)
     const [openDrawer, setOpenDrawer] = useState(false)
     const handleOpenDrawer = () => {
         setOpenDrawer(true)
@@ -23,10 +27,9 @@ const stacks = () => {
                 <Header handleOpenDrawer={handleOpenDrawer} />
                 <Content>
                     <PageTitle>Stacks</PageTitle>
-                <TextBox/>
-                <TextBox
-                align='right'
-                />
+                    {languageInformation.stacks.stacksDescription.map((e, i) => <TextBox
+                        {...e}
+                        align={i % 2 === 0 ? 'left' : 'right'} />)}
                 </Content>
             </Container>
         </>
