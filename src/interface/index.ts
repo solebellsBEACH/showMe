@@ -23,6 +23,12 @@ export interface ILanguageJSON {
     },
     hobbies:{
         hobbiesDescription:IListItems[]
+    },
+    sendMeAMessage:{
+        title:string
+        subject:string
+        description:string
+        send:string
     }
 }
 export interface  ILinks {
@@ -34,4 +40,21 @@ export interface  ILinks {
 export interface IListItems{
     title:string, description:string, myXP:string,
     image:StaticImageData
+}
+
+export interface ITheme{
+    templateColor1: string;
+    templateColor2: string;
+    templateColor3: string;
+    templateColor4: string;
+    templateColor5: string;
+    danger: string;
+    alert: string;
+    success: string;
+    white: string;
+    black: string;
+    gray1: string;
+    gray2: string;
+    gray3: string;
+    gray4: string;
 }

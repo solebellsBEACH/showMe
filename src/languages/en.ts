@@ -105,5 +105,11 @@ export const englishJson: ILanguageJSON = {
             },
             
         ]
+    },
+    sendMeAMessage:{
+        title:'Send me a Message',
+        subject:'Subject',
+        description:'Description',
+        send:'Send'
     }
 }

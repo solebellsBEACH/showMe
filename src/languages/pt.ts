@@ -109,4 +109,11 @@ export const portugueseJson: ILanguageJSON = {
             
         ]
     }
+,
+sendMeAMessage:{
+    title:'Me envie uma Mensagem',
+    subject:'Assunto',
+    description:'Descrição',
+    send:'Enviar'
+}
 }

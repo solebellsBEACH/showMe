@@ -1,4 +1,6 @@
-export const theme = {
+import { ITheme } from "../interface";
+
+export const theme:ITheme = {
     templateColor1: "#ABABE3",
     templateColor2: "#6464DE",
     templateColor3: "#4D4DAB",

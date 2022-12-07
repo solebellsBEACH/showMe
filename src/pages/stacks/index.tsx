@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Footer, Header, TemplateDrawer, TextBox } from '../../components';
 import { IReduxState } from '../../interface';
-import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
+import { Container, Content, PageTitle } from '../../pageComplements/styles';
 
 const stacks = () => {
 
