@@ -4,6 +4,7 @@ import { Container, ContentLeft, ContentRight } from "./styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Links } from "../../mocks/links";
 
 const Footer = () => {
 
@@ -16,9 +17,15 @@ const Footer = () => {
         <div
         className="icons-content"
         >
-            <GitHubIcon className="icon"/>
-            <InstagramIcon className="icon"/>
-            <LinkedInIcon className="icon"/>
+            <a
+            href={Links().github}
+            ><GitHubIcon className="icon"/></a>
+            <a
+            href={Links().instagram}
+            ><InstagramIcon className="icon"/></a>
+            <a
+            href={Links().linkedin}
+            ><LinkedInIcon className="icon"/></a>
         </div>
         </ContentRight>
     </Container>

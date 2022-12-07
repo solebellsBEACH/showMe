@@ -24,3 +24,8 @@ export interface ILanguageJSON {
         }[]
     }
 }
+export interface  ILinks {
+    linkedin:string
+    instagram:string
+    github:string
+}

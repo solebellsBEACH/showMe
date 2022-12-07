@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container } from '../../pageComplements/home/styles';
 import { Bio, Header } from '../../pageComplements/home/components';
-import { DrawerButton, TemplateDrawer } from '../../components';
+import { DrawerButton, Footer, TemplateDrawer } from '../../components';
 import { useSelector } from 'react-redux'
 import { IReduxState } from '../../interface';
 
@@ -29,6 +29,7 @@ const HomeComponent = () => {
                     setShowGif={setShowGif}
                 />
                 {showGif && <Bio />}
+                <Footer/>
             </Container>
             {showGif && <DrawerButton onClick={handleOpenDrawer} />}
 
