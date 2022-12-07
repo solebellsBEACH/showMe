@@ -1,6 +1,8 @@
 import { ILanguageJSON } from "../interface";
 import image from '../assets/perfilImage.jpg'
 import { stackAssets } from '../assets/stacks'
+import { hobbiesAssets } from '../assets/hobbies'
+
 const { adonisjs,
     angular,
     express,
@@ -10,6 +12,15 @@ const { adonisjs,
     reactjs,
     reactnative,
     typescript, } = stackAssets
+
+const
+{
+    surf,
+    guitarra,
+    skate
+    }
+= hobbiesAssets
+
 export const portugueseJson: ILanguageJSON = {
     homePage: {
         footer:['Obrigado por ver meu perfil.', 'Acompanhe meus repositórios e histórias.'],
@@ -73,6 +84,29 @@ export const portugueseJson: ILanguageJSON = {
                 description: 'NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor. Foi criado por Kamil Mysliwiec e lançado em 2017. Sob o capô, por padrão, o NestJS faz uso do framework Express.js, sendo também compatível com o Fastify.',
                 myXP: "Sua arquitetura é fortemente inspirada no Angular."
             },
+        ]
+    },
+    hobbies:{
+        hobbiesDescription:[
+            {
+                image:surf,
+                title: 'Surf',
+                description: 'O surf começou na minha vida quando saí do interior e vim para o litoral por influência do meu pai, que surfava desde 1989. Comecei a 2 anos para curtir um dia de praia e acabei me viciando. ',
+                myXP: "A origem do surfe é disputada entre os povos peruanos e polinésios. A prática de deslizar sobre as ondas há muito tempo já era conhecida pelos povos polinésios, que povoaram grande parte das ilhas do Oceano Pacífico, além do litoral pacífico das Américas. Os primeiros relatos do surfe dizem que este foi introduzido no Havaí pelo rei polinésio Tahíto. Outros relatos dão conta de que, muito antes dos havaianos, antigos povos peruanos já utilizavam uma espécie de canoa confeccionada de junco para deslizar sobre as ondas. O primeiro relato escrito da observação de pessoas a fazerem surfe, foi feito pelo navegador inglês James Cook que gostou do esporte por se tratar de uma forma de relaxamento."
+            },
+            {
+                image:skate,
+                title: 'Skate',
+                description: 'Comecei andar de skate aos 12 anos, influenciado por amigos e pela banda Charlie Brown Jr, o skate veio pra mim por conta de ser muito ruim no futebol.',
+                myXP: 'Não se sabe ao certo do quê surgiu o skate, mas muitos falam que vieram do surf; outros de patins quebrados, que com suas partes se montavam um skate em um pedaço de madeira. No início da década de 1960, os surfistas da Califórnia mais ou menos na cidade de Los Angeles queriam fazer das pranchas um divertimento também nas ruas, em uma época de marés baixas e secas na região. Inicialmente, a nova "maneira de surfar" foi chamada de sidewalk surfing. Em 1965, surgiram os primeiros campeonatos, mas o skate só ficou mais reconhecido uma década depois.'
+            },
+            {
+                image:guitarra,
+                title: 'Guitarra',
+                description: 'Quando tinha 12 anos ganhei um simples violão de nylon, no qual não me interessei muito. Até o dia que conheci o Rolling Stones, depois disso ao conhecer Guns n Roses, comecei estudar horas e horas diariamente e também ao conhecer  Yngwie Malmsteen, que os estudos duravam o dia todo. ',
+                myXP: "Saul Hudson, conhecido pelo seu nome artístico Slash, é um guitarrista anglo-americano mundialmente famoso como integrante da formação clássica da banda Guns N' Roses, com quem alcançou sucesso mundial no final da década de 1980 e início dos anos 90. Em sua carreira posterior, Slash integrou algumas outras bandas de diversos estilos, bem sucedidas em sua maioria, e em 2011 iniciou uma carreira solo, em que até agora lançou cinco discos. Yngwie Malmsteen, nome artístico de Lars Johan Yngve Lannerbäck é um virtuoso guitarrista sueco, considerado um dos melhores de seu estilo. Influenciado pela música barroca de Bach e Vivaldi, Malmsteen é conhecido por ser um dos precursores do chamado metal neoclássico, que envolve heavy metal com elementos de música clássica."
+            },
+            
         ]
     }
 }

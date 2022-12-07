@@ -4,7 +4,7 @@ import { Footer, Header, TemplateDrawer, TextBox } from '../../components';
 import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
 
-const stacks = () => {
+const hobbies = () => {
 
     const { languageInformation } = useSelector((state: IReduxState) => state.application)
     const [openDrawer, setOpenDrawer] = useState(false)
@@ -19,17 +19,17 @@ const stacks = () => {
         <>
             <TemplateDrawer
                 anchor='right'
-                actualPage='Stacks'
+                actualPage='Hobbies'
                 openDrawer={openDrawer}
                 onClose={handleCloseDrawer}
             />
             <Container>
                 <Header 
-                               name='Stacks'
+                name='Hobbies'
                 handleOpenDrawer={handleOpenDrawer} />
                 <Content>
-                    <PageTitle>Stacks</PageTitle>
-                    {languageInformation.stacks.stacksDescription.map((e, i) => <TextBox
+                    <PageTitle>Hobbies</PageTitle>
+                    {languageInformation.hobbies.hobbiesDescription.map((e, i) => <TextBox
                         {...e}
                         align={i % 2 === 0 ? 'left' : 'right'} />)}
                 </Content>
@@ -39,4 +39,4 @@ const stacks = () => {
     )
 }
 
-export default stacks
+export default hobbies

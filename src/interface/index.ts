@@ -19,13 +19,19 @@ export interface ILanguageJSON {
         bio:string[]
     },
     stacks:{
-        stacksDescription:{title:string, description:string, myXP:string,
-        image:StaticImageData
-        }[]
+        stacksDescription:IListItems[]
+    },
+    hobbies:{
+        hobbiesDescription:IListItems[]
     }
 }
 export interface  ILinks {
     linkedin:string
     instagram:string
     github:string
+}
+
+export interface IListItems{
+    title:string, description:string, myXP:string,
+    image:StaticImageData
 }
