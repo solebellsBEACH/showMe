@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
-import { Header, TemplateDrawer, TextBox } from '../../components';
+import { Footer, Header, TemplateDrawer, TextBox } from '../../components';
 import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
 
@@ -31,6 +31,7 @@ const stacks = () => {
                         {...e}
                         align={i % 2 === 0 ? 'left' : 'right'} />)}
                 </Content>
+                <Footer/>
             </Container>
         </>
     )

@@ -14,6 +14,7 @@ export interface IReduxState {
 
 export interface ILanguageJSON {
     homePage: {
+        footer: string[]
         header: string[]
         bio:string[]
     },
