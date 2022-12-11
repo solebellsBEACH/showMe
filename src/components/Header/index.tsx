@@ -11,6 +11,7 @@ export const Header = ({handleOpenDrawer, name}: IHeaderProps) => {
 
     return (
         <Container>
+            <title>{name}</title>
            <h1>{name}</h1>
            <StyledMenuIcon
            onClick={handleOpenDrawer}

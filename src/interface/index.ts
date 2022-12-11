@@ -42,6 +42,11 @@ export interface IListItems{
     image:StaticImageData
 }
 
+export interface ISendMeAMessageForm {
+    subject:string,
+    description:string
+}
+
 export interface ITheme{
     templateColor1: string;
     templateColor2: string;

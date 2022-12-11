@@ -11,22 +11,22 @@ flex-direction:row;
 }
 margin:2vh 0;
 `
-export const ImageContainer = styled(Image)`;
+export const ImageContainer = styled(Image)`
 object-fit: cover;
     width:20vw;
     height:auto ;
     /* min-height: 10vw; */
     background:blue;
     margin-right:1vw;
-@media (max-width:1250px){
-    width:92vw;
-    height: 20vw;
-    }
+    @media (max-width:1250px){
+        width:92vw;
+        height: 20vw;
+        }
     @media (max-width:768px){
 
     height: 22vw;
     }
-
+    filter:saturate(0.7);
     border-radius:0.5vw;
 `
 

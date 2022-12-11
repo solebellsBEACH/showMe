@@ -63,7 +63,8 @@ export const TemplateDrawer = ({ openDrawer, onClose, actualPage, anchor = 'left
                 subheader={
                     <ListSubheader
                         sx={{
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            fontFamily:'roboto mono'
                         }}
                         component="div" id="nested-list-subheader">
                         Navegue pelas páginas
@@ -90,9 +91,10 @@ export const TemplateDrawer = ({ openDrawer, onClose, actualPage, anchor = 'left
                     <Divider variant="inset" component="li" />
                 </>)}
                 <ListSubheader
-                    sx={{
-                        fontWeight: 'bold'
-                    }}
+             sx={{
+                fontWeight: 'bold',
+                fontFamily:'roboto mono'
+            }}
                     component="div" id="nested-list-subheader">
                     Escolha o idioma
                 </ListSubheader>

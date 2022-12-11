@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width:100% ;
-padding: 2rem 10vw;
+padding: 1rem 10vw;
 background:${({ theme }) => theme.templateColor5};
 margin-top:5rem;
 display:flex;
@@ -35,13 +35,14 @@ align-items: center;
 flex-direction:column;
 width:auto;
 height: auto;
-background:white;
-padding: 1rem;
 font-size: 1.2rem;
+color:white;
 @media(max-width: 768px) {
     font-size: 0.8rem;
 }
-
+a{
+    color:white;
+}
 .icons-content{
     margin-top: 2vh;
     .icon{
