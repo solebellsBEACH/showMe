@@ -7,10 +7,11 @@ export interface ITextBoxProps {
     title: string,
     description: string,
     myXP: string,
-    image:StaticImageData
+    image:StaticImageData,
+    hobbieTemplate?: boolean,
 }
 
-export const TextBox = ({ align = 'left', description, title, myXP, image}: ITextBoxProps) => {
+export const TextBox = ({ align = 'left', description, title, myXP, image, hobbieTemplate=false}: ITextBoxProps) => {
     const matches = useMediaQuery('(max-width:1250px)');
 
     const Image = () => {
@@ -28,6 +29,7 @@ export const TextBox = ({ align = 'left', description, title, myXP, image}: ITex
                 {align === 'left' && <Image />}
                 <Content>
                     <h1>{title}</h1>
+                    {hobbieTemplate &&<h3>Isso não é um esporte, é um estilo de vida.</h3>}
                     <h2>{description}</h2>
                     <h2>{myXP}</h2>
                 </Content>
