@@ -25,12 +25,13 @@ const HomeComponent = () => {
                 onClose={handleCloseDrawer}
             />
             <Container>
+                <title>Home</title>
                 <Header
                     showGif={showGif}
                     setShowGif={setShowGif}
                 />
-                {showGif && <Bio />}
-                <Footer/>
+                {showGif && <><Bio /><Footer/></>}
+                
             </Container>
             {showGif && <DrawerButton onClick={handleOpenDrawer} />}
 

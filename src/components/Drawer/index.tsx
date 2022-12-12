@@ -71,15 +71,21 @@ export const TemplateDrawer = ({ openDrawer, onClose, actualPage, anchor = 'left
                     </ListSubheader>
                 }
             >
-                {pages.map((e, i) => <>
+                {pages.map((e, i) => <div
+                 key={`listItem => ${i} + ${e.name}`}
+                >
                     <ListItem
                         onClick={() => {
                             router.push(e.path)
                         }}
-                        key={`listItem => ${i}`}
+                       
                     >
-                        <ListItemAvatar>
-                            <Avatar
+                        <ListItemAvatar
+                         
+                          key={`listItemAvatar => ${i} + ${e.name}`}
+                        >
+                            <Avatar 
+                             key={`avatar => ${i} + ${e.name}`}
                                 sx={e.name === actualPage ? { bgcolor: blue[500] } : {}}
                             >
                                 {e.icon}
@@ -88,8 +94,10 @@ export const TemplateDrawer = ({ openDrawer, onClose, actualPage, anchor = 'left
                         <ListItemText
                             primary={e.name} secondary="" />
                     </ListItem>
-                    <Divider variant="inset" component="li" />
-                </>)}
+                    <Divider
+                    key={`divider => ${i} + ${e.name}`}
+                    variant="inset" component="li" />
+                </div>)}
                 <ListSubheader
              sx={{
                 fontWeight: 'bold',
