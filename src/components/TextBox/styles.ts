@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styled from 'styled-components'
+import { ITheme } from '../../interface'
 
 export const Container = styled.div`
 width:100% ;
@@ -11,12 +12,29 @@ flex-direction:row;
 }
 margin:2vh 0;
 `
-export const ImageContainer = styled(Image)`
+
+export const ContentImage = styled.div`
+display:flex;
+justify-content: center;
+
+
+
+h1{
+    margin:0 5%;
+    margin-top: 20%;
+    text-align: center;
+    position: absolute;
+    color:${({ theme }) => theme.white};
+    font-weight:500;
+}
+`
+
+export const ImageContainer = styled(Image)<{onHover:boolean}>`
     object-fit: cover;
     width:25vw;
     height:auto ;
     /* min-height: 10vw; */
-    background:blue;
+    background:${({ theme }) => theme.gray2};
     margin-right:1vw;
     @media (max-width:1250px){
         width:92vw;
@@ -26,6 +44,11 @@ export const ImageContainer = styled(Image)`
         height: 20rem;
     }
     border-radius:0.2vw;
+    filter:blur(${props=>props.onHover?'10px':'0px'});
+
+
+
+
 `
 
 export const Content = styled.div`
@@ -37,9 +60,11 @@ h1{
     font-size:25px;
     margin:2vh 0;
     color:${({ theme }) => theme.templateColor3};
+
     @media (max-width:768px){
-font-size:18px
+    font-size:18px
     }
+
 }
 
 h2{

@@ -22,7 +22,11 @@ export interface ILanguageJSON {
         stacksDescription:IListItems[]
     },
     hobbies:{
-        hobbiesDescription:IListItems[]
+        hobbiesDescription:{
+            title:string, description:string, myXP:string,
+            image:StaticImageData,
+            subject:string
+        }[]
     },
     sendMeAMessage:{
         title:string
@@ -30,6 +34,7 @@ export interface ILanguageJSON {
         description:string
         send:string
     }
+    textbox:string[]
 }
 export interface  ILinks {
     linkedin:string
