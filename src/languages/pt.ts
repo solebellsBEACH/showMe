@@ -119,5 +119,6 @@ sendMeAMessage:{
     description:'Descrição',
     send:'Enviar'
 },
-textbox:['Clique para abrir imagem']
+textbox:['Clique para abrir imagem'],
+drawer:['Navegue pelas páginas', 'Escolha o idioma']
 }

@@ -20,6 +20,7 @@ const HomeComponent = () => {
     return (
         <>
             <TemplateDrawer
+            anchor='right'
                 actualPage='Home'
                 openDrawer={openDrawer}
                 onClose={handleCloseDrawer}

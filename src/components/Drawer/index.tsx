@@ -17,11 +17,12 @@ import EmailIcon from "@mui/icons-material/Email";
 import { BrasilIcon, SwitchContainer, USAIcon } from "./styles";
 import USAPNG from "../../assets/usaLogo.png";
 import BrasilPNG from "../../assets/brasilLogo.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Creators as ApplicationActions } from "../../store/ducks/application";
 import { blue } from "@mui/material/colors";
 import { useRouter } from "next/router";
 import RouterItem from "./RouterItem";
+import { IReduxState } from "../../interface";
 export interface ITemplateDrawerProps {
   openDrawer: boolean;
   onClose: () => void;
@@ -48,7 +49,7 @@ export const TemplateDrawer = ({
   const [loading, setLoading] = useState<string|null>(null)
   const dispatch = useDispatch();
   const [isEnglish, setIsEnglish] = useState(false);
-
+  const {languageInformation}= useSelector((state: IReduxState) => state.application);
   const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(
       ApplicationActions.setLanguage({
@@ -75,7 +76,7 @@ export const TemplateDrawer = ({
             component="div"
             id="nested-list-subheader"
           >
-            Navegue pelas páginas
+            {languageInformation.drawer[0]}
           </ListSubheader>
         }
       >
@@ -94,7 +95,7 @@ export const TemplateDrawer = ({
           component="div"
           id="nested-list-subheader"
         >
-          Escolha o idioma
+          {languageInformation.drawer[1]}
         </ListSubheader>
         <SwitchContainer>
           <BrasilIcon

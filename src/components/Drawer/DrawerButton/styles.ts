@@ -8,7 +8,7 @@ background: none repeat scroll 0 0 ${({theme})=>theme.templateColor5};
 display:flex;
 justify-content: center;
 align-items: center;
-      left: 2%;
+      right: 2%;
       position: fixed;
       top:2%;
 border-radius:100vw;

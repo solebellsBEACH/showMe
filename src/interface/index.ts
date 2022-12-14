@@ -34,7 +34,8 @@ export interface ILanguageJSON {
         description:string
         send:string
     }
-    textbox: string[]
+    textbox: string[],
+    drawer:string[]
 }
 export interface  ILinks {
     linkedin:string
