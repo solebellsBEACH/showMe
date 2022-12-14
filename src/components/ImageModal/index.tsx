@@ -14,8 +14,8 @@ export const ImageModal = ({onClose,open, image}:IImageModal) => {
     >
         <Content>
         <ContentImage
-        alt='ImageModal'
-        src={image}
+        alt = 'ImageModal'
+        src = {image}
         />
         </Content>
     </Container>

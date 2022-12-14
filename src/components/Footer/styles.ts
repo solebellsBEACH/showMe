@@ -28,7 +28,7 @@ font-size: 2rem;
 export const ContentRight = styled.div`
 @media(max-width: 768px) {
     margin-top: 3vh;
-}
+}  
 display:flex;
 justify-content: center;
 align-items: center;
