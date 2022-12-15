@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
-import { Footer, Header, TemplateDrawer, TextBox } from '../../components';
+import { Footer, Header, IntroPages, TemplateDrawer, TextBox } from '../../components';
 import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
 
@@ -24,9 +24,10 @@ const hobbies = () => {
                 onClose={handleCloseDrawer}
             />
             <Container>
-                <Header 
+                <IntroPages/>
+                {/* <Header 
                 name='Hobbies'
-                handleOpenDrawer={handleOpenDrawer} />
+                handleOpenDrawer={handleOpenDrawer} /> */}
                 <Content>
                     <PageTitle>Hobbies</PageTitle>
                     {languageInformation.hobbies.hobbiesDescription.map((e, i) => <TextBox
