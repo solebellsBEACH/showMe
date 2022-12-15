@@ -87,6 +87,7 @@ export const portugueseJson: ILanguageJSON = {
         ]
     },
     hobbies:{
+        header:'Abaixo está tudo que faço quando não estou programando🏄',
         hobbiesDescription:[
             {
                 image:surf,
@@ -97,7 +98,7 @@ export const portugueseJson: ILanguageJSON = {
             },
             {
                 image:skate,
-                subject:"O melhor meio de transporte ja inventado.",
+                subject:"O melhor meio de transporte já inventado.",
                 title: 'Skate',
                 description: 'Comecei andar de skate aos 12 anos, influenciado por amigos e pela banda Charlie Brown Jr, o skate veio pra mim por conta de ser muito ruim no futebol.',
                 myXP: 'Não se sabe ao certo do quê surgiu o skate, mas muitos falam que vieram do surf; outros de patins quebrados, que com suas partes se montavam um skate em um pedaço de madeira. No início da década de 1960, os surfistas da Califórnia mais ou menos na cidade de Los Angeles queriam fazer das pranchas um divertimento também nas ruas, em uma época de marés baixas e secas na região. Inicialmente, a nova "maneira de surfar" foi chamada de sidewalk surfing. Em 1965, surgiram os primeiros campeonatos, mas o skate só ficou mais reconhecido uma década depois.'

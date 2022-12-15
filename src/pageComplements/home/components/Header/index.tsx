@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 import { IReduxState } from '../../../../interface';
 import { useSelector } from 'react-redux'
 export interface IHeaderProps {
-    showGif: boolean;
+    showGif   : boolean;
     setShowGif: React.Dispatch<React.SetStateAction<boolean>>
     
 }
@@ -16,12 +16,12 @@ export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
         <Container>
             {showGif &&
                 <BackgroundGif
-                    alt='gif-header'
-                    src={gif}
+                    alt = 'gif-header'
+                    src = {gif}
                 />
             }
             <ContentTypewriter
-                showGif={showGif}
+                showGif = {showGif}
             >
                 {!showGif?<Typewriter
                     onInit={(typewriter) => {

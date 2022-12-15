@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
-import { Footer, Header, IntroPages, TemplateDrawer, TextBox } from '../../components';
+import { DrawerButton, Footer, Header, IntroPages, TemplateDrawer, TextBox } from '../../components';
 import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
 
@@ -36,6 +36,7 @@ const hobbies = () => {
                         align={i % 2 === 0 ? 'left' : 'right'} />)}
                 </Content>
                 <Footer/>
+                <DrawerButton onClick={handleOpenDrawer} />
             </Container>
         </>
     )

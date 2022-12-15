@@ -22,6 +22,7 @@ export interface ILanguageJSON {
         stacksDescription:IListItems[]
     },
     hobbies:{
+        header:string
         hobbiesDescription:{
             title:string, description:string, myXP:string,
             image:StaticImageData,

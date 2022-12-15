@@ -85,6 +85,8 @@ export const englishJson: ILanguageJSON = {
         ]
     },
     hobbies:{
+        header:"Below is everything I do when I'm not programming🏄",
+
         hobbiesDescription:[
             {
                 image:surf,
