@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { DrawerButton, Footer, Header, IntroPages, TemplateDrawer, TextBox } from '../../components';
 import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/stacks/styles';
-
+import gif from '../../assets/hobbies/surfGif.gif'
 const hobbies = () => {
 
     const { languageInformation } = useSelector((state: IReduxState) => state.application)
@@ -24,7 +24,10 @@ const hobbies = () => {
                 onClose={handleCloseDrawer}
             />
             <Container>
-                <IntroPages/>
+                <IntroPages
+                gif={gif}
+                message={languageInformation.hobbies.header}
+                />
                 {/* <Header 
                 name='Hobbies'
                 handleOpenDrawer={handleOpenDrawer} /> */}

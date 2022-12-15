@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
-import { Footer, Header, TemplateDrawer, TextBox } from '../../components';
+import { DrawerButton, Footer, Header, IntroPages, TemplateDrawer, TextBox } from '../../components';
 import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/styles';
+import gif from '../../assets/stacks/codeGif.gif'
 
 const stacks = () => {
 
@@ -24,16 +25,19 @@ const stacks = () => {
                 onClose={handleCloseDrawer}
             />
             <Container>
-                <Header 
-                               name='Stacks'
-                handleOpenDrawer={handleOpenDrawer} />
+            <IntroPages
+                gif={gif}
+                message={languageInformation.stacks.header}
+                />
                 <Content>
                     <PageTitle>Stacks</PageTitle>
                     {languageInformation.stacks.stacksDescription.map((e, i) => <TextBox
+                    
                         {...e}
                         align={i % 2 === 0 ? 'left' : 'right'} />)}
                 </Content>
                 <Footer/>
+                <DrawerButton onClick={handleOpenDrawer} />
             </Container>
         </>
     )

@@ -8,7 +8,7 @@ import { ImageModal } from "../ImageModal";
 export interface ITextBoxProps {
   align?: "left" | "right";
   title: string;
-  subject: string | undefined;
+  subject?: string;
   description: string;
   myXP: string;
   image: StaticImageData;

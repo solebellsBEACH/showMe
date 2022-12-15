@@ -1,12 +1,15 @@
 import { BackgroundGif, Container, ContentTypewriter } from "./styles";
-import gif from '../../assets/hobbies/surfGif.gif'
+
 import Typewriter from "typewriter-effect";
 import { useSelector } from "react-redux";
 import { IReduxState } from "../../interface";
+import { StaticImageData } from "next/image";
 interface IntroPageProps {
+    gif: StaticImageData
+    message:string
 }
  
-const IntroPage = ({}:IntroPageProps) => {
+const IntroPage = ({gif, message}:IntroPageProps) => {
     const {languageInformation} = useSelector((state: IReduxState) => state.application);
     return <Container>
         <BackgroundGif
@@ -16,10 +19,8 @@ const IntroPage = ({}:IntroPageProps) => {
  <ContentTypewriter>
                 <Typewriter
                     onInit={(typewriter) => {
-
-
                         typewriter
-                            .typeString(languageInformation.hobbies.header)
+                            .typeString(message)
                             .start();
                     }}
                 />

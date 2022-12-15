@@ -19,6 +19,7 @@ export interface ILanguageJSON {
         bio:string[]
     },
     stacks:{
+        header:string
         stacksDescription:IListItems[]
     },
     hobbies:{
