@@ -46,10 +46,12 @@ export const TemplateDrawer = ({
     { name: "Stacks", path: "/stacks", icon: <CodeIcon /> },
     { name: "Fale Comigo", path: "/sendMeAMessage", icon: <EmailIcon /> },
   ];
-  const [loading, setLoading] = useState<string|null>(null)
+  const [loading, setLoading] = useState<string | null>(null);
   const dispatch = useDispatch();
   const [isEnglish, setIsEnglish] = useState(false);
-  const {languageInformation}= useSelector((state: IReduxState) => state.application);
+  const { languageInformation } = useSelector(
+    (state: IReduxState) => state.application
+  );
   const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(
       ApplicationActions.setLanguage({
@@ -80,13 +82,15 @@ export const TemplateDrawer = ({
           </ListSubheader>
         }
       >
-        {pages.map((e, i) => <RouterItem
-        loading={loading} 
-        setLoading={setLoading}
-        e={e}
-        actualPage={actualPage}
-        index={i}
-        />)}
+        {pages.map((e, i) => (
+          <RouterItem
+            loading={loading}
+            setLoading={setLoading}
+            e={e}
+            actualPage={actualPage}
+            index={i}
+          />
+        ))}
         <ListSubheader
           sx={{
             fontWeight: "bold",

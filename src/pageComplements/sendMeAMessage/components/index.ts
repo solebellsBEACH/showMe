@@ -1,5 +1,3 @@
-import ContentText from './ContentText'
+import ContentText from "./ContentText";
 
-export {
-    ContentText
-}
+export { ContentText };

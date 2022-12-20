@@ -10,7 +10,7 @@ export const Container = styled.div`
   @media (max-width: 1250px) {
     flex-direction: column;
   }
-  margin: 2vh 0; 
+  margin: 2vh 0;
 `;
 
 export const ContentImage = styled.div`
