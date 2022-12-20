@@ -4,6 +4,7 @@ import { DrawerButton, Footer, Header, IntroPages, TemplateDrawer, TextBox } fro
 import { IReduxState } from '../../interface';
 import { Container, Content, PageTitle } from '../../pageComplements/styles';
 import gif from '../../assets/stacks/codeGif.gif'
+import { TimeLine } from '../../pageComplements/stacks/components';
 
 const stacks = () => {
 
@@ -31,6 +32,7 @@ const stacks = () => {
                 />
                 <Content>
                     <PageTitle>Stacks</PageTitle>
+                    <TimeLine/>
                     {languageInformation.stacks.stacksDescription.map((e, i) => <TextBox
                     
                         {...e}

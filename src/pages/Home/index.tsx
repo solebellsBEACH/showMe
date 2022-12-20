@@ -31,11 +31,10 @@ const HomeComponent = () => {
                     showGif={showGif}
                     setShowGif={setShowGif}
                 />
-                {showGif && <><Bio /><Footer/></>}
-                
+                <Bio />
+                <Footer/>
             </Container>
-            {showGif && <DrawerButton onClick={handleOpenDrawer} />}
-
+            <DrawerButton onClick={handleOpenDrawer} />
         </>
     )
 }

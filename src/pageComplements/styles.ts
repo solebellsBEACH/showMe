@@ -17,5 +17,5 @@ export const PageTitle = styled.h1`
 }
 filter:contrast(1.2);
     color:${({ theme }) => theme.templateColor5};
-    margin-bottom:2vh;
+    margin-bottom:5vh;
 `
