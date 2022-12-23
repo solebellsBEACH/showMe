@@ -84,6 +84,7 @@ export const TemplateDrawer = ({
       >
         {pages.map((e, i) => (
           <RouterItem
+            key={"RouterItem" + i}
             loading={loading}
             setLoading={setLoading}
             e={e}

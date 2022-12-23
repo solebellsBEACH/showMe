@@ -39,7 +39,11 @@ const stacks = () => {
           <PageTitle>Stacks</PageTitle>
           <TimeLine />
           {languageInformation.stacks.stacksDescription.map((e, i) => (
-            <TextBox {...e} align={i % 2 === 0 ? "left" : "right"} />
+            <TextBox
+              key={"TextBox" + i}
+              {...e}
+              align={i % 2 === 0 ? "left" : "right"}
+            />
           ))}
         </Content>
         <Footer />

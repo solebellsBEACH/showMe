@@ -44,6 +44,7 @@ const hobbies = () => {
           <PageTitle>Hobbies</PageTitle>
           {languageInformation.hobbies.hobbiesDescription.map((e, i) => (
             <TextBox
+              key={"TextBox" + i}
               hobbieTemplate={true}
               {...e}
               align={i % 2 === 0 ? "left" : "right"}
