@@ -1,5 +1,8 @@
-import { all, fork, put, call, takeLatest } from 'redux-saga/effects';
-import { Creators as ApplicationActions, Types as ApplicationTypes } from '../../ducks/application';
+import { all, fork, put, call, takeLatest } from "redux-saga/effects";
+import {
+  Creators as ApplicationActions,
+  Types as ApplicationTypes,
+} from "../../ducks/application";
 
 // function* getUserCart(): any {
 //   try {
@@ -24,6 +27,5 @@ import { Creators as ApplicationActions, Types as ApplicationTypes } from '../..
 export default function* rootSagas() {
   yield all([
     // fork(getUserCartWatcher),
-
   ]);
 }

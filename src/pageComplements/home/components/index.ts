@@ -1,7 +1,4 @@
-import { Header } from './Header'
-import { Bio } from './Bio'
+import { Header } from "./Header";
+import { Bio } from "./Bio";
 
-export {
-    Header,
-    Bio
-}
+export { Header, Bio };

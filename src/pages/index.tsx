@@ -1,11 +1,8 @@
 import { NextPage } from "next";
 import HomeComponent from "./Home";
 
-
 const Index: NextPage = () => {
-  return (
-    <HomeComponent />
-  )
-}
+  return <HomeComponent />;
+};
 
-export default Index
+export default Index;
