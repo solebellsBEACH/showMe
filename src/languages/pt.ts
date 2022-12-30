@@ -21,7 +21,7 @@ export const portugueseJson: ILanguageJSON = {
   homePage: {
     footer: [
       "Obrigado por ver meu perfil.",
-      "Acompanhe meus repositórios e histórias.",
+      "Acompanhe meus repositórios e histórias",
     ],
     header: ["Olá Geek", "Seja bem vindo🚀"],
     bio: [
