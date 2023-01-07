@@ -1,9 +1,9 @@
-import { IApplicationDuckDuckInitialState } from "../../interface";
-import { getLanguageInformation } from "../../languages";
-import { portugueseJson } from "../../languages/pt";
+import { IApplicationDuckDuckInitialState } from '../../interface';
+import { getLanguageInformation } from '../../languages';
+import { portugueseJson } from '../../languages/pt';
 
 export const Types = {
-  SET_LANGUAGE: "SET_LANGUAGE",
+  SET_LANGUAGE: 'SET_LANGUAGE',
 };
 
 const INITIAL_STATE: IApplicationDuckDuckInitialState = {
@@ -11,7 +11,7 @@ const INITIAL_STATE: IApplicationDuckDuckInitialState = {
   error: false,
   data: null,
   success: false,
-  language: "pt",
+  language: 'pt',
   languageInformation: portugueseJson,
 };
 
@@ -31,7 +31,7 @@ export default function ApplicationDuck(state = INITIAL_STATE, action: any) {
 }
 
 export const Creators = {
-  setLanguage: (payload: { language: "pt" | "en" }) => ({
+  setLanguage: (payload: { language: 'pt' | 'en' }) => ({
     type: Types.SET_LANGUAGE,
     payload,
   }),

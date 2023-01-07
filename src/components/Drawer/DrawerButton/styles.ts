@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import MenuIcon from "@mui/icons-material/Menu";
+import styled from 'styled-components';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const Container = styled.button`
   background: none repeat scroll 0 0 ${({ theme }) => theme.templateColor5};

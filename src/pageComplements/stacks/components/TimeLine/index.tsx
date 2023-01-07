@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import { Container } from "./styles";
+import { FunctionComponent } from 'react';
+import { Container } from './styles';
 
 interface TimeLineProps {}
 

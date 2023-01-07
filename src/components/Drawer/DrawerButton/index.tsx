@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, StyledMenuIcon } from "./styles";
+import React from 'react';
+import { Container, StyledMenuIcon } from './styles';
 
 export interface IDrawerButtonProps {
   onClick: () => void;

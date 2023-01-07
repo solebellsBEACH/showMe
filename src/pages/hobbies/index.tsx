@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import {
   DrawerButton,
   Footer,
@@ -7,17 +7,17 @@ import {
   IntroPages,
   TemplateDrawer,
   TextBox,
-} from "../../components";
-import { IReduxState } from "../../interface";
+} from '../../components';
+import { IReduxState } from '../../interface';
 import {
   Container,
   Content,
   PageTitle,
-} from "../../pageComplements/stacks/styles";
-import gif from "../../assets/hobbies/surfGif.gif";
+} from '../../pageComplements/stacks/styles';
+import gif from '../../assets/hobbies/surfGif.gif';
 const hobbies = () => {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application
+    (state: IReduxState) => state.application,
   );
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
@@ -44,10 +44,10 @@ const hobbies = () => {
           <PageTitle>Hobbies</PageTitle>
           {languageInformation.hobbies.hobbiesDescription.map((e, i) => (
             <TextBox
-              key={"TextBox" + i}
+              key={'TextBox' + i}
               hobbieTemplate={true}
               {...e}
-              align={i % 2 === 0 ? "left" : "right"}
+              align={i % 2 === 0 ? 'left' : 'right'}
             />
           ))}
         </Content>

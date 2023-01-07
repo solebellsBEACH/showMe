@@ -1,8 +1,8 @@
-import { all, fork, put, call, takeLatest } from "redux-saga/effects";
+import { all, fork, put, call, takeLatest } from 'redux-saga/effects';
 import {
   Creators as ApplicationActions,
   Types as ApplicationTypes,
-} from "../../ducks/application";
+} from '../../ducks/application';
 
 // function* getUserCart(): any {
 //   try {

@@ -1,11 +1,11 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 
 export interface IApplicationDuckDuckInitialState {
   loading: boolean;
   error: boolean;
   data: null;
   success: boolean;
-  language: "pt" | "en";
+  language: 'pt' | 'en';
   languageInformation: ILanguageJSON;
 }
 export interface IReduxState {

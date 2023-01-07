@@ -1,14 +1,14 @@
-import { useSelector } from "react-redux";
-import { IReduxState } from "../../interface";
-import { Container, ContentLeft, ContentRight } from "./styles";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Links } from "../../mocks/links";
+import { useSelector } from 'react-redux';
+import { IReduxState } from '../../interface';
+import { Container, ContentLeft, ContentRight } from './styles';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Links } from '../../mocks/links';
 
 const Footer = () => {
   const applicationData = useSelector(
-    (state: IReduxState) => state.application
+    (state: IReduxState) => state.application,
   );
 
   return (

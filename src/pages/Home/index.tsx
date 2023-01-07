@@ -1,16 +1,22 @@
-import React, { useState } from "react";
-import { Container } from "../../pageComplements/styles";
-import { Bio, Header } from "../../pageComplements/home/components";
-import { DrawerButton, Footer, TemplateDrawer } from "../../components";
-import { useSelector } from "react-redux";
-import { IReduxState } from "../../interface";
+import React, { useState } from 'react';
+import { Container } from '../../pageComplements/styles';
+import { Bio } from '../../pageComplements/home/components';
+import {
+  DrawerButton,
+  Footer,
+  IntroPages,
+  TemplateDrawer,
+} from '../../components';
+import { useSelector } from 'react-redux';
+import { IReduxState } from '../../interface';
+import gif from '../../../src/assets/homeHeaderGif.gif';
 
 const HomeComponent = () => {
-  const applicationData = useSelector(
-    (state: IReduxState) => state.application
+  const { languageInformation } = useSelector(
+    (state: IReduxState) => state.application,
   );
+
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [showGif, setShowGif] = useState(false);
 
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
@@ -28,7 +34,10 @@ const HomeComponent = () => {
       />
       <Container>
         <title>Home</title>
-        <Header showGif={showGif} setShowGif={setShowGif} />
+        <IntroPages
+          gif={gif}
+          message={languageInformation.homePage.header[0]}
+        />
         <Bio />
         <Footer />
       </Container>

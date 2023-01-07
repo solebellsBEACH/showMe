@@ -1,6 +1,6 @@
-import Image from "next/image";
-import styled from "styled-components";
-import { ITheme } from "../../interface";
+import Image from 'next/image';
+import styled from 'styled-components';
+import { ITheme } from '../../interface';
 
 export const Container = styled.div`
   width: 100%;
@@ -42,7 +42,7 @@ export const ImageContainer = styled(Image)<{ onHover: boolean }>`
     height: 20rem;
   }
   border-radius: 0.2vw;
-  filter: blur(${(props) => (props.onHover ? "10px" : "0px")});
+  filter: blur(${props => (props.onHover ? '10px' : '0px')});
 `;
 
 export const Content = styled.div`

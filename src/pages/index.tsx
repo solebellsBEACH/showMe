@@ -1,5 +1,5 @@
-import { NextPage } from "next";
-import HomeComponent from "./Home";
+import { NextPage } from 'next';
+import HomeComponent from './Home';
 
 const Index: NextPage = () => {
   return <HomeComponent />;

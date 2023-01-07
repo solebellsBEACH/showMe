@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ITheme } from "../interface";
+import styled from 'styled-components';
+import { ITheme } from '../interface';
 
 export const Container = styled.div`
   background: ${({ theme }: { theme: ITheme }) => theme.white};

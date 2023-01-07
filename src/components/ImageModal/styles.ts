@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Modal } from "@mui/material";
-import Image from "next/image";
+import styled from 'styled-components';
+import { Modal } from '@mui/material';
+import Image from 'next/image';
 
 export const Container = styled(Modal)`
   display: flex;

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import {
   DrawerButton,
   Footer,
@@ -7,15 +7,15 @@ import {
   IntroPages,
   TemplateDrawer,
   TextBox,
-} from "../../components";
-import { IReduxState } from "../../interface";
-import { Container, Content, PageTitle } from "../../pageComplements/styles";
-import gif from "../../assets/stacks/codeGif.gif";
-import { TimeLine } from "../../pageComplements/stacks/components";
+} from '../../components';
+import { IReduxState } from '../../interface';
+import { Container, Content, PageTitle } from '../../pageComplements/styles';
+import gif from '../../assets/stacks/codeGif.gif';
+import { TimeLine } from '../../pageComplements/stacks/components';
 
 const stacks = () => {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application
+    (state: IReduxState) => state.application,
   );
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
@@ -40,9 +40,9 @@ const stacks = () => {
           <TimeLine />
           {languageInformation.stacks.stacksDescription.map((e, i) => (
             <TextBox
-              key={"TextBox" + i}
+              key={'TextBox' + i}
               {...e}
-              align={i % 2 === 0 ? "left" : "right"}
+              align={i % 2 === 0 ? 'left' : 'right'}
             />
           ))}
         </Content>
