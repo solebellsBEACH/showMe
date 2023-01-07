@@ -1,6 +1,6 @@
-import React from "react";
-import { TextBox } from "../TextBox";
-import { Container, StyledMenuIcon } from "./styles";
+import React from 'react';
+import { TextBox } from '../TextBox';
+import { Container, StyledMenuIcon } from './styles';
 
 interface IHeaderProps {
   handleOpenDrawer: () => void;

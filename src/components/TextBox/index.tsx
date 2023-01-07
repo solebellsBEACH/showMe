@@ -1,12 +1,12 @@
-import { Divider, useMediaQuery, Modal } from "@mui/material";
-import React, { useState } from "react";
-import { Container, ImageContainer, Content, ContentImage } from "./styles";
-import { StaticImageData } from "next/image";
-import { IReduxState } from "../../interface";
-import { useSelector } from "react-redux";
-import { ImageModal } from "../ImageModal";
+import { Divider, useMediaQuery, Modal } from '@mui/material';
+import React, { useState } from 'react';
+import { Container, ImageContainer, Content, ContentImage } from './styles';
+import { StaticImageData } from 'next/image';
+import { IReduxState } from '../../interface';
+import { useSelector } from 'react-redux';
+import { ImageModal } from '../ImageModal';
 export interface ITextBoxProps {
-  align?: "left" | "right";
+  align?: 'left' | 'right';
   title: string;
   subject?: string;
   description: string;
@@ -16,7 +16,7 @@ export interface ITextBoxProps {
 }
 
 export const TextBox = ({
-  align = "left",
+  align = 'left',
   description,
   title,
   myXP,
@@ -24,11 +24,11 @@ export const TextBox = ({
   hobbieTemplate = false,
   subject,
 }: ITextBoxProps) => {
-  const matches = useMediaQuery("(max-width:1250px)");
+  const matches = useMediaQuery('(max-width:1250px)');
   const [imageHover, setImageHover] = useState(false);
   const [openImageModal, setOpenImageModal] = useState(false);
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application
+    (state: IReduxState) => state.application,
   );
 
   const Image = () => {
@@ -51,7 +51,7 @@ export const TextBox = ({
           onMouseOver={onMouseOver}
           onMouseLeave={onMouseLeave}
           unoptimized
-          alt={"imageContainer" + title}
+          alt={'imageContainer' + title}
           src={image}
         />
         {imageHover && hobbieTemplate && (
@@ -74,15 +74,15 @@ export const TextBox = ({
         }}
       />
       <Container>
-        {align === "right" && matches && <Image />}
-        {align === "left" && <Image />}
+        {align === 'right' && matches && <Image />}
+        {align === 'left' && <Image />}
         <Content>
           <h1>{title}</h1>
           {hobbieTemplate && subject && <h3>{subject}</h3>}
           <h2>{description}</h2>
           <h2>{myXP}</h2>
         </Content>
-        {align === "right" && !matches && <Image />}
+        {align === 'right' && !matches && <Image />}
       </Container>
       <Divider />
     </>

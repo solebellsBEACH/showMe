@@ -1,12 +1,12 @@
-import React from "react";
-import { Container, Content, PerfilContainer } from "./styles";
-import perfil from "../../../../assets/perfilImage.jpg";
-import { IReduxState } from "../../../../interface";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { Container, Content, PerfilContainer } from './styles';
+import perfil from '../../../../assets/perfilImage.jpg';
+import { IReduxState } from '../../../../interface';
+import { useSelector } from 'react-redux';
 
 export const Bio = () => {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application
+    (state: IReduxState) => state.application,
   );
 
   return (

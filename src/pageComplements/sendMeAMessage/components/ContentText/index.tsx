@@ -1,9 +1,9 @@
-import { Container } from "./styles";
-import TextField from "@mui/material/TextField";
-import { useSelector } from "react-redux";
-import { IReduxState, ISendMeAMessageForm } from "../../../../interface";
-import Button from "@mui/material/Button";
-import { Dispatch, SetStateAction } from "react";
+import { Container } from './styles';
+import TextField from '@mui/material/TextField';
+import { useSelector } from 'react-redux';
+import { IReduxState, ISendMeAMessageForm } from '../../../../interface';
+import Button from '@mui/material/Button';
+import { Dispatch, SetStateAction } from 'react';
 interface IContentTextProps {
   form: ISendMeAMessageForm;
   setForm: Dispatch<SetStateAction<ISendMeAMessageForm>>;
@@ -11,13 +11,13 @@ interface IContentTextProps {
 
 const ContentText = ({ form, setForm }: IContentTextProps) => {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application
+    (state: IReduxState) => state.application,
   );
 
   return (
     <Container>
       <TextField
-        onChange={(e) => {
+        onChange={e => {
           setForm({ ...form, subject: e.target.value });
         }}
         className="assunto"
@@ -25,7 +25,7 @@ const ContentText = ({ form, setForm }: IContentTextProps) => {
         variant="outlined"
       />
       <TextField
-        onChange={(e) => {
+        onChange={e => {
           setForm({ ...form, description: e.target.value });
         }}
         className="conteudo"
