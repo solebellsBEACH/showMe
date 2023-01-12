@@ -1,10 +1,12 @@
 import { useSelector } from 'react-redux';
-import { IReduxState } from '../../interface';
-import { Container, ContentLeft, ContentRight } from './styles';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+import { IReduxState } from '../../interface';
 import { Links } from '../../mocks/links';
+import { Container, ContentLeft, ContentRight } from './styles';
 
 const Footer = () => {
   const applicationData = useSelector(

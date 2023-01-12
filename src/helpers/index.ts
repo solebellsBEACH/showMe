@@ -7,5 +7,5 @@ export const cutDescription = (description: string) => {
       description: description.slice(descriptionSplitted[0].length),
     };
 
-  return { title: description.slice(0, -15) + '...', description: null };
+  return { title: `${description.slice(0, -15)}...`, description: null };
 };

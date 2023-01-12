@@ -1,9 +1,12 @@
-import { Container } from './styles';
-import TextField from '@mui/material/TextField';
-import { useSelector } from 'react-redux';
-import { IReduxState, ISendMeAMessageForm } from '../../../../interface';
-import Button from '@mui/material/Button';
 import { Dispatch, SetStateAction } from 'react';
+import { useSelector } from 'react-redux';
+
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
+import { IReduxState, ISendMeAMessageForm } from '../../../../interface';
+import { Container } from './styles';
+
 interface IContentTextProps {
   form: ISendMeAMessageForm;
   setForm: Dispatch<SetStateAction<ISendMeAMessageForm>>;

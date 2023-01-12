@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Container } from '../../pageComplements/styles';
-import { Bio } from '../../pageComplements/home/components';
+import { useSelector } from 'react-redux';
+
+import gif from '../../assets/homeHeaderGif.gif';
 import {
   DrawerButton,
   Footer,
   IntroPages,
   TemplateDrawer,
 } from '../../components';
-import { useSelector } from 'react-redux';
 import { IReduxState } from '../../interface';
-import gif from '../../../src/assets/homeHeaderGif.gif';
+import { Bio } from '../../pageComplements/home/components';
+import { Container } from '../../pageComplements/styles';
 
 const HomeComponent = () => {
   const { languageInformation } = useSelector(

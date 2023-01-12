@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Content, PerfilContainer } from './styles';
+import { useSelector } from 'react-redux';
+
 import perfil from '../../../../assets/perfilImage.jpg';
 import { IReduxState } from '../../../../interface';
-import { useSelector } from 'react-redux';
+import { Container, Content, PerfilContainer } from './styles';
 
 export const Bio = () => {
   const { languageInformation } = useSelector(

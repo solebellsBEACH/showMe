@@ -1,10 +1,13 @@
-import { Divider, useMediaQuery, Modal } from '@mui/material';
 import React, { useState } from 'react';
-import { Container, ImageContainer, Content, ContentImage } from './styles';
-import { StaticImageData } from 'next/image';
-import { IReduxState } from '../../interface';
 import { useSelector } from 'react-redux';
+
+import { Divider, useMediaQuery } from '@mui/material';
+import { StaticImageData } from 'next/image';
+
+import { IReduxState } from '../../interface';
 import { ImageModal } from '../ImageModal';
+import { Container, ImageContainer, Content, ContentImage } from './styles';
+
 export interface ITextBoxProps {
   align?: 'left' | 'right';
   title: string;
@@ -51,7 +54,7 @@ export const TextBox = ({
           onMouseOver={onMouseOver}
           onMouseLeave={onMouseLeave}
           unoptimized
-          alt={'imageContainer' + title}
+          alt={`imageContainer${title}`}
           src={image}
         />
         {imageHover && hobbieTemplate && (

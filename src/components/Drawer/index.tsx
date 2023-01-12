@@ -1,28 +1,19 @@
-import {
-  Avatar,
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  ListSubheader,
-  Switch,
-} from '@mui/material';
 import React, { ReactElement, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import CabinIcon from '@mui/icons-material/Cabin';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import CodeIcon from '@mui/icons-material/Code';
 import EmailIcon from '@mui/icons-material/Email';
-import { BrasilIcon, SwitchContainer, USAIcon } from './styles';
-import USAPNG from '../../assets/usaLogo.png';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Drawer, List, ListSubheader, Switch } from '@mui/material';
+
 import BrasilPNG from '../../assets/brasilLogo.png';
-import { useDispatch, useSelector } from 'react-redux';
-import { Creators as ApplicationActions } from '../../store/ducks/application';
-import { blue } from '@mui/material/colors';
-import { useRouter } from 'next/router';
-import RouterItem from './RouterItem';
+import USAPNG from '../../assets/usaLogo.png';
 import { IReduxState } from '../../interface';
+import { Creators as ApplicationActions } from '../../store/ducks/application';
+import RouterItem from './RouterItem';
+import { BrasilIcon, SwitchContainer, USAIcon } from './styles';
+
 export interface ITemplateDrawerProps {
   openDrawer: boolean;
   onClose: () => void;
@@ -84,7 +75,7 @@ export const TemplateDrawer = ({
       >
         {pages.map((e, i) => (
           <RouterItem
-            key={'RouterItem' + i}
+            key={`RouterItem${i}`}
             loading={loading}
             setLoading={setLoading}
             e={e}
