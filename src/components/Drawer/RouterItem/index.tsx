@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 import {
   Avatar,
   Divider,
@@ -8,7 +10,6 @@ import {
 } from '@mui/material';
 import { blue } from '@mui/material/colors';
 import { useRouter } from 'next/router';
-import { ReactElement, useState } from 'react';
 
 interface IRouterItemProps {
   index: number;

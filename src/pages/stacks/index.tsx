@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+
+import gif from '../../assets/stacks/codeGif.gif';
 import {
   DrawerButton,
   Footer,
-  Header,
   IntroPages,
   TemplateDrawer,
   TextBox,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { Container, Content, PageTitle } from '../../pageComplements/styles';
-import gif from '../../assets/stacks/codeGif.gif';
 import { TimeLine } from '../../pageComplements/stacks/components';
+import { Container, Content, PageTitle } from '../../pageComplements/styles';
 
-const stacks = () => {
+const Stacks = () => {
   const { languageInformation } = useSelector(
     (state: IReduxState) => state.application,
   );
@@ -40,7 +40,7 @@ const stacks = () => {
           <TimeLine />
           {languageInformation.stacks.stacksDescription.map((e, i) => (
             <TextBox
-              key={'TextBox' + i}
+              key={`TextBox${i}`}
               {...e}
               align={i % 2 === 0 ? 'left' : 'right'}
             />
@@ -53,4 +53,4 @@ const stacks = () => {
   );
 };
 
-export default stacks;
+export default Stacks;

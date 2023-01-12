@@ -1,7 +1,7 @@
-import { ILanguageJSON } from '../interface';
-import image from '../assets/perfilImage.jpg';
-import { stackAssets } from '../assets/stacks';
 import { hobbiesAssets } from '../assets/hobbies';
+import { stackAssets } from '../assets/stacks';
+import { ILanguageJSON } from '../interface';
+
 const {
   adonisjs,
   angular,

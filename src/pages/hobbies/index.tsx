@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+
+import gif from '../../assets/hobbies/surfGif.gif';
 import {
   DrawerButton,
   Footer,
-  Header,
   IntroPages,
   TemplateDrawer,
   TextBox,
@@ -14,11 +15,12 @@ import {
   Content,
   PageTitle,
 } from '../../pageComplements/stacks/styles';
-import gif from '../../assets/hobbies/surfGif.gif';
-const hobbies = () => {
-  const { languageInformation } = useSelector(
+
+const Hobbies = () => {
+  const useApplication = useSelector(
     (state: IReduxState) => state.application,
   );
+  const { languageInformation } = useApplication
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
@@ -44,8 +46,8 @@ const hobbies = () => {
           <PageTitle>Hobbies</PageTitle>
           {languageInformation.hobbies.hobbiesDescription.map((e, i) => (
             <TextBox
-              key={'TextBox' + i}
-              hobbieTemplate={true}
+              key={`TextBox${i}`}
+              hobbieTemplate
               {...e}
               align={i % 2 === 0 ? 'left' : 'right'}
             />
@@ -58,4 +60,4 @@ const hobbies = () => {
   );
 };
 
-export default hobbies;
+export default Hobbies;
