@@ -17,6 +17,7 @@ export interface ILanguageJSON {
     footer: string[];
     header: string[];
     bio: string[];
+    howIHelpYou: string[];
   };
   stacks: {
     header: string;
