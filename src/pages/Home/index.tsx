@@ -9,7 +9,7 @@ import {
   TemplateDrawer,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { Bio } from '../../pageComplements/home/components';
+import { Bio, HowIHelpYou } from '../../pageComplements/home/components';
 import { Container } from '../../pageComplements/styles';
 
 const HomeComponent = () => {
@@ -39,6 +39,7 @@ const HomeComponent = () => {
           gif={gif}
           message={languageInformation.homePage.header[0]}
         />
+        <HowIHelpYou/>
         <Bio />
         <Footer />
       </Container>
