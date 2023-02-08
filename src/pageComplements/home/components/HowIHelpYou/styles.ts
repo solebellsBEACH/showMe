@@ -9,13 +9,54 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: column;
   padding: 5vh 5vw;
+
 `
+
+export const ContentTop = styled.div`
+  display: flex;
+  align-items:center;
+  flex-direction:row;
+
+  img{
+    height: 30rem;
+    margin:-7rem -2rem ;
+
+    @media(max-width:768px){
+      height: 15rem;
+    margin:0rem -2rem 0rem -3rem;
+    }
+
+    @media(max-width:600px){
+      height: 10rem;
+    margin:0rem -5rem 0rem -6rem;
+    }
+
+    @media(max-width:500px){
+      height: 5rem;
+    margin:0rem -5rem 0rem -6rem;
+}
+  }
+  h1{
+      font-size: 5rem;
+      color: ${({ theme }) => theme.templateColor4};
+      @media(max-width:768px){
+        font-size: 3rem;
+    }
+    @media(max-width:600px){
+        font-size: 2rem;
+    }
+    @media(max-width:500px){
+      font-size: 1.5rem;
+}
+  }
+
+  `
 
 export const InformationBox = styled.div`
 width: auto;
 margin: 1rem 0;
-transition : box-shadow ease-in-out .45s;
 padding: 2rem;
+
 h2{
   font-size: 24px;
     font-weight: 500;
