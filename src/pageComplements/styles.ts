@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ITheme } from '../interface';
 
 export const Container = styled.div`
-  background: ${({ theme }: { theme: ITheme }) => theme.white};
+  background: ${({ theme }: { theme: ITheme }) => theme.background};
 `;
 export const Content = styled.div`
   margin: 4vh 4vw;

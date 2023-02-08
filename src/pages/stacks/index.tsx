@@ -10,7 +10,7 @@ import {
   TextBox,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { TimeLine } from '../../pageComplements/stacks/components';
+import { StackTextBox, TimeLine } from '../../pageComplements/stacks/components';
 import { Container, Content, PageTitle } from '../../pageComplements/styles';
 
 const Stacks = () => {
@@ -39,10 +39,9 @@ const Stacks = () => {
           <PageTitle>Stacks</PageTitle>
           <TimeLine />
           {languageInformation.stacks.stacksDescription.map((e, i) => (
-            <TextBox
-              key={`TextBox${i}`}
+            <StackTextBox
+              key={`StackTextBox${i}`}
               {...e}
-              align={i % 2 === 0 ? 'left' : 'right'}
             />
           ))}
         </Content>

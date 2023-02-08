@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   min-height: 30rem;
-  background: ${({ theme }) => theme.white};
   display: flex;
   justify-content: center;
   align-items: center;

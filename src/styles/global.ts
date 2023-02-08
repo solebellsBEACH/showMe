@@ -7,7 +7,6 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family:'Roboto Mono';
-
       &::-webkit-scrollbar {
     width: 5px;
     height: 3px; /* A altura só é vista quando a rolagem é horizontal */

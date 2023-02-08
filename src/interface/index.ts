@@ -75,4 +75,5 @@ export interface ITheme {
   gray2: string;
   gray3: string;
   gray4: string;
+  background: string;
 }
