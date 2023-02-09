@@ -1,17 +1,17 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react'
 import { Container, ContentImage, ContentInfo } from './styles';
-import Icon from '../../../../assets/stacks/react.svg'
 
 export interface IStackTextBox {
     align?: 'left' | 'right';
     title: string;
+    image: StaticImageData;
     description: string;
     myXP: string;
     hobbieTemplate?: boolean;
 }
 
-export const StackTextBox: React.FC<IStackTextBox> = ({ myXP, description }) => {
+export const StackTextBox: React.FC<IStackTextBox> = ({ myXP, description, image }) => {
     return (
         <Container>
             <ContentInfo>
@@ -20,7 +20,7 @@ export const StackTextBox: React.FC<IStackTextBox> = ({ myXP, description }) => 
                 <h2>Incluído na compra de AirPods e produtos Beats selecionados*.</h2>
             </ContentInfo>
             <ContentImage>
-                <Image src={Icon} alt='icon' />
+                <Image src={image} alt='icon' />
             </ContentImage>
         </Container>
     )
