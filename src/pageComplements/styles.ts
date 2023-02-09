@@ -4,11 +4,12 @@ import { ITheme } from '../interface';
 
 export const Container = styled.div`
   background: ${({ theme }: { theme: ITheme }) => theme.background};
+  min-height: 40rem;
+  width: auto;
 `;
 export const Content = styled.div`
   margin: 4vh 4vw;
-  min-height: 40rem;
-  width: auto;
+
 `;
 export const PageTitle = styled.h1`
   font-size: 2rem;

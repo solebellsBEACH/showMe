@@ -10,8 +10,9 @@ import {
 } from '../../components';
 import { IReduxState } from '../../interface';
 import { StackTextBox, TimeLine } from '../../pageComplements/stacks/components';
-import { StackGrid } from '../../pageComplements/stacks/styles';
+import { StacksContent } from '../../pageComplements/stacks/styles';
 import { Container, Content, PageTitle, } from '../../pageComplements/styles';
+import { Carousel } from '@trendyol-js/react-carousel';
 
 const Stacks = () => {
   const { languageInformation } = useSelector(
@@ -38,15 +39,24 @@ const Stacks = () => {
         <Content>
           <PageTitle>Stacks</PageTitle>
           <TimeLine />
-          <StackGrid>
-            {languageInformation.stacks.stacksDescription.map((e, i) => (
-              <StackTextBox
-                key={`StackTextBox${i}`}
-                {...e}
-              />
-            ))}
-          </StackGrid>
+          <StacksContent>
+            <h1 className='title'>FrontEnd</h1>
+            <Carousel
+              className='carousel'
+              show={3}
+              slide={1}
+              swiping
+            >
+              {languageInformation.stacks.stacksDescription.frontEndStacks.map((e, i) => (
+                <StackTextBox
+                  key={`StackTextBox${i}`}
+                  {...e}
+                />
+              ))}
+            </Carousel>
+          </StacksContent>
         </Content>
+
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />
       </Container>

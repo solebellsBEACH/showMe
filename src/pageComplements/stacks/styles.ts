@@ -17,16 +17,19 @@ export const PageTitle = styled.h1`
 `;
 
 
-export const StackGrid = styled.div`
-display: grid;
-grid-template-columns: auto auto auto;
+export const StacksContent = styled.div`
+width: 100%;
 
-@media (max-width: 1350px) {
-  grid-template-columns: auto auto;
+.title{
+
+    font-size: 4rem;
+    font-weight: 600;
+    margin-left:1rem;
+    color: ${({ theme }) => theme.templateColor5};
   }
 
-  @media (max-width: 920px) {
-  grid-template-columns: auto;
-  }
-
+.carousel{
+  /* width: 80%;
+  margin-left:20%; */
+}
 `

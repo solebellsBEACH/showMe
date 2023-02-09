@@ -31,70 +31,77 @@ export const portugueseJson: ILanguageJSON = {
   },
   stacks: {
     header: 'Essas são algumas das tecnologias que tive contato👨🏽‍💻',
-    stacksDescription: [
-      {
-        image: reactjs,
-        title: 'React Js',
-        description:
-          'O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.',
-        myXP:
-          'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
-      },
-      {
-        image: reactnative,
-        title: 'React Native',
-        description:
-          'React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.',
-        myXP:
-          'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
-      },
-      {
-        image: nextjs,
-        title: 'NextJS',
-        description:
-          'Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.',
-        myXP:
-          'Uma excelente tecnologia para usar em projetos com grande número de renderizações.',
-      },
-      {
-        image: nodejs,
-        title: 'NodeJS',
-        description:
-          'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada a eventos.',
-        myXP:
-          'Uma das principais tecnologias usadas para criação de APIs Rest, na qual trabalhei principalmente com o auxílio do ExpressJS',
-      },
-      {
-        image: typescript,
-        title: 'TypeScript',
-        description:
-          'TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.',
-        myXP:
-          'Tecnologia super importante quando utilizada para implementar os princípios de orientação a objetos em seu código Javascript.',
-      },
-      {
-        image: adonisjs,
-        title: 'Adonis JS',
-        description:
-          'O AdonisJS é um framerwork Node. js que surgiu para trazer facilidades ao desenvolvedor incluindo padrões de estruturação do projeto.',
-        myXP:
-          'Por causa disso, o Adonis é conhecido por ser um framework opinado, isto é, ele segue um padrão de desenvolvimento e "força" o desenvolvedor a segui-lo.',
-      },
-      {
-        image: express,
-        title: 'ExpressJS',
-        description:
-          'Express.js é um framework para Node.js que fornece recursos mínimos para construção de servidores web. Foi lançado como software livre e de código aberto sob a Licença MIT. ',
-        myXP: 'É um dos mais populares frameworks para servidores em Node.js',
-      },
-      {
-        image: nestjs,
-        title: 'NestJS',
-        description:
-          'NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor. Foi criado por Kamil Mysliwiec e lançado em 2017. Sob o capô, por padrão, o NestJS faz uso do framework Express.js, sendo também compatível com o Fastify.',
-        myXP: 'Sua arquitetura é fortemente inspirada no Angular.',
-      },
-    ],
+    stacksDescription: {
+      frontEndStacks: [
+        {
+          image: reactjs,
+          title: 'React Js',
+          description:
+            'O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.',
+          myXP:
+            'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
+        },
+        {
+          image: reactnative,
+          title: 'React Native',
+          description:
+            'React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.',
+          myXP:
+            'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
+        },
+        {
+          image: nextjs,
+          title: 'NextJS',
+          description:
+            'Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.',
+          myXP:
+            'Uma excelente tecnologia para usar em projetos com grande número de renderizações.',
+        },
+        {
+          image: typescript,
+          title: 'TypeScript',
+          description:
+            'TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.',
+          myXP:
+            'Tecnologia super importante quando utilizada para implementar os princípios de orientação a objetos em seu código Javascript.',
+        },
+      ],
+      backEndStacks: [
+        {
+          image: adonisjs,
+          title: 'Adonis JS',
+          description:
+            'O AdonisJS é um framerwork Node. js que surgiu para trazer facilidades ao desenvolvedor incluindo padrões de estruturação do projeto.',
+          myXP:
+            'Por causa disso, o Adonis é conhecido por ser um framework opinado, isto é, ele segue um padrão de desenvolvimento e "força" o desenvolvedor a segui-lo.',
+        },
+        {
+          image: express,
+          title: 'ExpressJS',
+          description:
+            'Express.js é um framework para Node.js que fornece recursos mínimos para construção de servidores web. Foi lançado como software livre e de código aberto sob a Licença MIT. ',
+          myXP: 'É um dos mais populares frameworks para servidores em Node.js',
+        },
+        {
+          image: nestjs,
+          title: 'NestJS',
+          description:
+            'NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor. Foi criado por Kamil Mysliwiec e lançado em 2017. Sob o capô, por padrão, o NestJS faz uso do framework Express.js, sendo também compatível com o Fastify.',
+          myXP: 'Sua arquitetura é fortemente inspirada no Angular.',
+        },
+        {
+          image: nodejs,
+          title: 'NodeJS',
+          description:
+            'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada a eventos.',
+          myXP:
+            'Uma das principais tecnologias usadas para criação de APIs Rest, na qual trabalhei principalmente com o auxílio do ExpressJS',
+        },
+      ]
+    }
+
+
+
   },
   hobbies: {
     header: 'Abaixo está tudo que faço quando não estou programando🏄',

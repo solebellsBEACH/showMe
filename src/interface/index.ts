@@ -21,7 +21,7 @@ export interface ILanguageJSON {
   };
   stacks: {
     header: string;
-    stacksDescription: IListItems[];
+    stacksDescription: { frontEndStacks: IListItems[], backEndStacks: IListItems[] };
   };
   hobbies: {
     header: string;

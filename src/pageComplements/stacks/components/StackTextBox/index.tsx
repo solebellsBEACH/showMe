@@ -13,7 +13,8 @@ export interface IStackTextBox {
 
 export const StackTextBox: React.FC<IStackTextBox> = ({ myXP, description, image }) => {
     return (
-        <Container>
+        <Container
+        >
             <ContentInfo>
                 <h3>React Js</h3>
                 <h1>Ganhe seis meses de Apple Music</h1>
