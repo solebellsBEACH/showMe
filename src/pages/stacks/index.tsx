@@ -6,12 +6,12 @@ import {
   DrawerButton,
   Footer,
   IntroPages,
-  TemplateDrawer,
-  TextBox,
+  TemplateDrawer
 } from '../../components';
 import { IReduxState } from '../../interface';
 import { StackTextBox, TimeLine } from '../../pageComplements/stacks/components';
-import { Container, Content, PageTitle } from '../../pageComplements/styles';
+import { StackGrid } from '../../pageComplements/stacks/styles';
+import { Container, Content, PageTitle, } from '../../pageComplements/styles';
 
 const Stacks = () => {
   const { languageInformation } = useSelector(
@@ -38,12 +38,14 @@ const Stacks = () => {
         <Content>
           <PageTitle>Stacks</PageTitle>
           <TimeLine />
-          {languageInformation.stacks.stacksDescription.map((e, i) => (
-            <StackTextBox
-              key={`StackTextBox${i}`}
-              {...e}
-            />
-          ))}
+          <StackGrid>
+            {languageInformation.stacks.stacksDescription.map((e, i) => (
+              <StackTextBox
+                key={`StackTextBox${i}`}
+                {...e}
+              />
+            ))}
+          </StackGrid>
         </Content>
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />

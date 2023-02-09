@@ -1,16 +1,14 @@
-import adonisjs from './adonisjs.png';
-import angular from './angular.png';
-import express from './express.png';
-import nestjs from './nestjs.png';
-import nextjs from './nextjs.png';
-import nodejs from './nodejs.jpg';
-import reactjs from './reactjs.png';
-import reactnative from './reactnative.png';
-import typescript from './typescript.png';
+import adonisjs from './adonis.svg';
+import express from './express.svg';
+import nestjs from './nestjs.svg';
+import nextjs from './nextjs.svg';
+import nodejs from './nodejs.svg';
+import reactjs from './react.svg';
+import reactnative from './reactnative.svg';
+import typescript from './typescript.svg';
 
 export const stackAssets = {
   adonisjs,
-  angular,
   express,
   nestjs,
   nextjs,

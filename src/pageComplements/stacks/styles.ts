@@ -15,3 +15,18 @@ export const PageTitle = styled.h1`
   color: ${({ theme }) => theme.templateColor5};
   margin-bottom: 2vh;
 `;
+
+
+export const StackGrid = styled.div`
+display: grid;
+grid-template-columns: auto auto auto;
+
+@media (max-width: 1350px) {
+  grid-template-columns: auto auto;
+  }
+
+  @media (max-width: 920px) {
+  grid-template-columns: auto;
+  }
+
+`

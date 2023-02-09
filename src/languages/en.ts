@@ -4,7 +4,6 @@ import { ILanguageJSON } from '../interface';
 
 const {
   adonisjs,
-  angular,
   express,
   nestjs,
   nextjs,
@@ -66,14 +65,6 @@ export const englishJson: ILanguageJSON = {
           "Node.js is open-source, cross-platform software based on Google's V8 interpreter that allows you to run JavaScript code outside of a web browser.The main feature of Node.js is its asynchronous and event- driven architecture.",
         myXP:
           'One of the main technologies used for creating Rest APIs, in which I worked mainly with the help of ExpressJS',
-      },
-      {
-        image: angular,
-        title: 'AngularJS',
-        description:
-          'AngularJS is an open source JavaScript framework, maintained by Google, which assists in running single-page applications.',
-        myXP:
-          'Excellent technology for creating web applications, using an architecture based on modules.',
       },
       {
         image: typescript,
