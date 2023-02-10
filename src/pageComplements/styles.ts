@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: auto;
 `;
 export const Content = styled.div`
-  margin: 4vh 4vw;
+  margin: 4vh 0vw;
 
 `;
 export const PageTitle = styled.h1`

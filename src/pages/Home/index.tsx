@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { homeAssets } from '../../assets/home';
 
-import gif from '../../assets/homeHeaderGif.gif';
 import {
   DrawerButton,
   Footer,
@@ -36,10 +36,10 @@ const HomeComponent = () => {
       <Container>
         <title>Home</title>
         <IntroPages
-          gif={gif}
+          gif={homeAssets.homeGif}
           message={languageInformation.homePage.header[0]}
         />
-        <HowIHelpYou/>
+        <HowIHelpYou />
         <Bio />
         <Footer />
       </Container>

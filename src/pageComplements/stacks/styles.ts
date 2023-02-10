@@ -19,24 +19,19 @@ export const PageTitle = styled.h1`
 
 export const StacksContent = styled.div`
 width: 100vw;
-margin-left:-4vw;
 .title{
-
-    font-size: 3rem;
+    font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 2.2rem;
     font-weight: 600;
-    margin-left:10vw;
+    margin-left:2vw;
     @media(max-width:590px){
     margin-left:4vw;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-    color: ${({ theme }) => theme.templateColor5};
+    color: ${({ theme }) => theme.gray4};
   }
 
 .carousel{
-  padding-left:10vw;
-
-  @media(max-width:590px){
-    padding-left:0;
-  }
 }
+
 `

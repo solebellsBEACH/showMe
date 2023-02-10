@@ -8,9 +8,9 @@ import {
   TemplateDrawer
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { StackTextBox, TimeLine } from '../../pageComplements/stacks/components';
+import { StackTextBox } from '../../pageComplements/stacks/components';
 import { StacksContent } from '../../pageComplements/stacks/styles';
-import { Container, Content, PageTitle, } from '../../pageComplements/styles';
+import { Container, Content, } from '../../pageComplements/styles';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from '../../pageComplements/stacks/responsive';
@@ -42,17 +42,18 @@ const Stacks = () => {
         <IntroPages gif={stackAssets.codeGif} message={languageInformation.stacks.header} />
         <Content>
           <StacksContent>
-            <h1 className='title'>FrontEnd</h1>
+            <div className='title'>Frameworks de front-end</div>
             <Carousel
               className='carousel'
               responsive={responsive}
             >
-              {languageInformation.stacks.stacksDescription.frontEndStacks.map((e, i) => (
-                <StackTextBox
+              {languageInformation.stacks.stacksDescription.frontEndStacks.map((e, i) => {
+                return <StackTextBox
                   key={`StackTextBox${i}`}
                   {...e}
                 />
-              ))}
+              }
+              )}
             </Carousel>
           </StacksContent>
         </Content>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { hobbiesAssets } from '../../assets/hobbies';
 
 import gif from '../../assets/hobbies/surfGif.gif';
 import {
@@ -38,10 +39,7 @@ const Hobbies = () => {
         onClose={handleCloseDrawer}
       />
       <Container>
-        <IntroPages gif={gif} message={languageInformation.hobbies.header} />
-        {/* <Header 
-                name='Hobbies'
-                handleOpenDrawer={handleOpenDrawer} /> */}
+        <IntroPages gif={hobbiesAssets.hobbieGif} message={languageInformation.hobbies.header} />
         <Content>
           <PageTitle>Hobbies</PageTitle>
           {languageInformation.hobbies.hobbiesDescription.map((e, i) => (

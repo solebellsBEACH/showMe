@@ -8,7 +8,6 @@ export const Container = styled.div`
     background-color: #fff;
     border-radius: 18px;
     margin: 1rem;
-
     white-space: normal;
     box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
     transition: all .3s cubic-bezier(0,0,.5,1);
