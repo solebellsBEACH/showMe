@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/image';
+
 
 export interface IApplicationDuckDuckInitialState {
   loading: boolean;
@@ -29,7 +29,7 @@ export interface ILanguageJSON {
       title: string;
       description: string;
       myXP: string;
-      image: StaticImageData;
+      image: string;
       subject: string;
     }[];
   };
@@ -52,7 +52,7 @@ export interface IListItems {
   title: string;
   description: string;
   myXP: string;
-  image: StaticImageData;
+  image: string;
 }
 
 export interface ISendMeAMessageForm {

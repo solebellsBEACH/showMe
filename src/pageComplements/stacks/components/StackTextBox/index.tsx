@@ -1,11 +1,10 @@
-import Image, { StaticImageData } from 'next/image';
 import React from 'react'
 import { Container, ContentImage, ContentInfo } from './styles';
 
 export interface IStackTextBox {
     align?: 'left' | 'right';
     title: string;
-    image: StaticImageData;
+    image: string;
     description: string;
     myXP: string;
     hobbieTemplate?: boolean;
@@ -20,7 +19,7 @@ export const StackTextBox: React.FC<IStackTextBox> = ({ myXP, description, image
                 <h2>Incluído na compra de AirPods e produtos Beats selecionados*.</h2>
             </ContentInfo>
             <ContentImage>
-                <Image src={image} alt='icon' />
+                <img src={image} alt='icon' />
             </ContentImage>
         </Container>
     )

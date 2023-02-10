@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import gif from '../../assets/stacks/codeGif.gif';
 import {
   DrawerButton,
   Footer,
@@ -15,6 +14,7 @@ import { Container, Content, PageTitle, } from '../../pageComplements/styles';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from '../../pageComplements/stacks/responsive';
+import { stackAssets } from '../../assets/stacks';
 
 const Stacks = () => {
 
@@ -39,7 +39,7 @@ const Stacks = () => {
 
       />
       <Container>
-        <IntroPages gif={gif} message={languageInformation.stacks.header} />
+        <IntroPages gif={stackAssets.codeGif} message={languageInformation.stacks.header} />
         <Content>
           <StacksContent>
             <h1 className='title'>FrontEnd</h1>

@@ -14,11 +14,16 @@ export const Container = styled.section`
 export const ContentTop = styled.div`
   display: flex;
   align-items:center;
-  flex-direction:row;
+
+
+
+  @media(max-width:960px){
+      flex-direction:column;
+      text-align: center;
+    }
 
   img{
     height: 30rem;
-    margin:-7rem -2rem ;
 
     @media(max-width:768px){
       height: 15rem;
@@ -27,13 +32,12 @@ export const ContentTop = styled.div`
 
     @media(max-width:600px){
       height: 10rem;
-    margin:0rem -5rem 0rem -6rem;
     }
 
     @media(max-width:500px){
       height: 5rem;
-    margin:0rem -5rem 0rem -6rem;
-}
+      flex-direction:column;
+    }
   }
   h1{
       font-size: 5rem;

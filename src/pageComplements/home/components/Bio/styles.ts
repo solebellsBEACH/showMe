@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -37,7 +36,7 @@ export const Content = styled.div`
   }
 `;
 
-export const PerfilContainer = styled(Image)`
+export const PerfilContainer = styled.img`
   width: 100vw;
   height: 30vw;
   border-radius: 0.2vw;

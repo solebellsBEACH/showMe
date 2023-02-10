@@ -1,11 +1,15 @@
-import adonisjs from './adonis.svg';
-import express from './express.svg';
-import nestjs from './nestjs.svg';
-import nextjs from './nextjs.svg';
-import nodejs from './nodejs.svg';
-import reactjs from './react.svg';
-import reactnative from './reactnative.svg';
-import typescript from './typescript.svg';
+const prefix = 'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/stacks'
+
+const adonisjs = `${prefix}/adonis.svg`;
+const express = `${prefix}/express.svg`;
+const nestjs = `${prefix}/nestjs.svg`;
+const nextjs = `${prefix}/nextjs.svg`;
+const nodejs = `${prefix}/nodejs.svg`;
+const reactjs = `${prefix}/react.svg`;
+const reactnative = `${prefix}/reactnative.svg`;
+const typescript = `${prefix}/typescript.svg`;
+
+const codeGif = `${prefix}/codeGif.gif`;
 
 export const stackAssets = {
   adonisjs,
@@ -16,4 +20,5 @@ export const stackAssets = {
   reactjs,
   reactnative,
   typescript,
+  codeGif
 };
