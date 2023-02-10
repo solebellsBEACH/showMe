@@ -18,18 +18,25 @@ export const PageTitle = styled.h1`
 
 
 export const StacksContent = styled.div`
-width: 100%;
-
+width: 100vw;
+margin-left:-4vw;
 .title{
 
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
-    margin-left:1rem;
+    margin-left:10vw;
+    @media(max-width:590px){
+    margin-left:4vw;
+    font-size: 2rem;
+  }
     color: ${({ theme }) => theme.templateColor5};
   }
 
 .carousel{
-  /* width: 80%;
-  margin-left:20%; */
+  padding-left:10vw;
+
+  @media(max-width:590px){
+    padding-left:0;
+  }
 }
 `

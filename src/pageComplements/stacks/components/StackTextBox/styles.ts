@@ -18,34 +18,37 @@ export const Container = styled.div`
       transform: scale3d(1.01,1.01,1.01);
     }
 
-    width: 22rem;
-    min-height: 26rem;
+    width: 18rem;
+    height: 20rem;
 
     @media (max-width: 460px) {
         width: 85vw;
   }
 
   h2{
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.23536;
     font-weight: 400;
     letter-spacing: -.022em;
-    padding-top: 10px;
+    margin-top: 1rem;
+    margin-right: 1rem;
 
   }
   h1{
-    font-size: 26px;
+    font-size: 21px;
     line-height: 1.14286;
     font-weight: 600;
     letter-spacing: .007em;
     margin-bottom: 1rem;
+    margin-right: 1rem;
   }
   h3{
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.33337;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    margin-right: 1rem;
   }
 `
 
@@ -62,7 +65,7 @@ align-items: center;
 justify-content: center;
 
 img{
- height: 10rem;
- width: 10rem;
+ height: 6rem;
+ width: 6rem;
 }
 `

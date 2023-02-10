@@ -65,6 +65,38 @@ export const portugueseJson: ILanguageJSON = {
           myXP:
             'Tecnologia super importante quando utilizada para implementar os princípios de orientação a objetos em seu código Javascript.',
         },
+        {
+          image: reactjs,
+          title: 'React Js',
+          description:
+            'O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.',
+          myXP:
+            'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
+        },
+        {
+          image: reactnative,
+          title: 'React Native',
+          description:
+            'React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.',
+          myXP:
+            'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
+        },
+        {
+          image: nextjs,
+          title: 'NextJS',
+          description:
+            'Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.',
+          myXP:
+            'Uma excelente tecnologia para usar em projetos com grande número de renderizações.',
+        },
+        {
+          image: typescript,
+          title: 'TypeScript',
+          description:
+            'TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.',
+          myXP:
+            'Tecnologia super importante quando utilizada para implementar os princípios de orientação a objetos em seu código Javascript.',
+        },
       ],
       backEndStacks: [
         {
