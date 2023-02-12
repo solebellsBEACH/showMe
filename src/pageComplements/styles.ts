@@ -8,7 +8,6 @@ export const Container = styled.div`
   width: auto;
 `;
 export const Content = styled.div`
-  margin: 10vh 0vw;
 
 `;
 
@@ -33,6 +32,7 @@ justify-content: center;
 
   @media(max-width: 764px){
     flex-direction: column-reverse;
+    margin-bottom: 5vh;
     p{
     width: 95vw;
     

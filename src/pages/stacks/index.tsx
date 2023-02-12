@@ -36,7 +36,6 @@ const Stacks = () => {
         actualPage="Stacks"
         openDrawer={openDrawer}
         onClose={handleCloseDrawer}
-
       />
       <Container>
         <IntroPages gif={stackAssets.codeGif} message={languageInformation.stacks.header} />

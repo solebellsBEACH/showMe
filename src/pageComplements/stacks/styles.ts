@@ -31,7 +31,4 @@ width: auto;
     color: ${({ theme }) => theme.gray4};
   }
 
-.carousel{
-}
-
 `
