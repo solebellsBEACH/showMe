@@ -13,11 +13,37 @@ export const Content = styled.div`
 `;
 
 export const ContentText = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
   margin: 4vh 0 0 8vw;
   height: auto;
   width: 90vw;
-font-weight:400;
+  font-weight:400;
   font-size: 2vw;
+  p{
+    width: 45vw;
+    
+  }
+  img{
+    margin-left: 5vw;
+    width:25vw;
+    height: 25vw;
+  }
+
+  @media(max-width: 764px){
+    flex-direction: column-reverse;
+    p{
+    width: 95vw;
+    
+  }
+    img{    
+      margin-left: -5vw;
+    width:70vw;
+    height: 70vw;
+  }
+  }
+
   @media(max-width: 1024px){
     font-size:1.5rem;
   }

@@ -10,6 +10,7 @@ const reactnative = `${prefix}/reactnative.svg`;
 const typescript = `${prefix}/typescript.svg`;
 
 const codeGif = `${prefix}/codeGif.gif`;
+const carrerAsset = `${prefix}/carrerAsset.svg`;
 
 export const stackAssets = {
   adonisjs,
@@ -20,5 +21,6 @@ export const stackAssets = {
   reactjs,
   reactnative,
   typescript,
-  codeGif
+  codeGif,
+  carrerAsset
 };

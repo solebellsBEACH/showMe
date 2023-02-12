@@ -40,7 +40,10 @@ const Stacks = () => {
       />
       <Container>
         <IntroPages gif={stackAssets.codeGif} message={languageInformation.stacks.header} />
-        <ContentText>{languageInformation.stacks.stacksDescription[0].myXP}</ContentText>
+        <ContentText>
+          <p>{languageInformation.stacks.stacksDescription[0].myXP}</p>
+          <img src={stackAssets.carrerAsset} alt="carrerAsset" />
+        </ContentText>
         <Content>
           <StacksContent>
             <div className='title'>Tecnologias que usei em minha carreira</div>
