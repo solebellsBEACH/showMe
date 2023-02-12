@@ -1,22 +1,26 @@
-import React from 'react'
-import { Container, ContentImage, ContentInfo } from './styles';
+import React, { useState } from 'react'
+import { Container, ContentImage, ContentInfo, Description, MyXPContent, ReduceContent } from './styles';
 
 export interface IStackTextBox {
-    align?: 'left' | 'right';
     title: string;
     image: string;
     description: string;
     myXP: string;
-    hobbieTemplate?: boolean;
 }
 
-export const StackTextBox: React.FC<IStackTextBox> = ({ myXP, description, image }) => {
+export const StackTextBox: React.FC<IStackTextBox> = ({ myXP, description, image, title }) => {
+    const [seeMore, setSeeMore] = useState(false)
+    const [seeMoreXP, setSeeMoreXP] = useState(false)
+    const descriptionFormation = !seeMore ? description.slice(0, 100) + ' ...' : description
+    const myXPFormation = !seeMoreXP ? myXP.slice(0, 50) + ' ...' : myXP
     return (
         <Container>
             <ContentInfo>
-                <h3>React Js</h3>
-                <h1>Ganhe seis meses de Apple Music</h1>
-                <h2>Incluído na compra de AirPods e produtos Beats selecionados*.</h2>
+                <h3>{title}</h3>
+                <Description seeMore={seeMore}>{descriptionFormation}</Description>
+                <ReduceContent onClick={() => setSeeMore(!seeMore)}>{!seeMore ? 'Ver mais' : 'Ver menos'}</ReduceContent>
+                <MyXPContent seeMore={seeMoreXP}>{myXPFormation}</MyXPContent>
+                <ReduceContent onClick={() => setSeeMoreXP(!seeMoreXP)}>{!seeMoreXP ? 'Ver mais' : 'Ver menos'}</ReduceContent>
             </ContentInfo>
             <ContentImage>
                 <img src={image} alt='icon' />

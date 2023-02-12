@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Collapse } from 'react-collapse';
 
 export const Container = styled.div`
     display: flex;
@@ -8,6 +9,7 @@ export const Container = styled.div`
     background-color: #fff;
     border-radius: 18px;
     margin: 1rem;
+    padding-bottom: 1rem;
     white-space: normal;
     box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
     transition: all .3s cubic-bezier(0,0,.5,1);
@@ -17,30 +19,13 @@ export const Container = styled.div`
       transform: scale3d(1.01,1.01,1.01);
     }
 
-    width: 18rem;
-    height: 20rem;
+    min-width: 18rem;
+    min-height: 20rem;
 
     @media (max-width: 460px) {
         width: 85vw;
   }
 
-  h2{
-    font-size: 14px;
-    line-height: 1.23536;
-    font-weight: 400;
-    letter-spacing: -.022em;
-    margin-top: 1rem;
-    margin-right: 1rem;
-
-  }
-  h1{
-    font-size: 21px;
-    line-height: 1.14286;
-    font-weight: 600;
-    letter-spacing: .007em;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-  }
   h3{
     font-size: 12px;
     line-height: 1.33337;
@@ -50,6 +35,25 @@ export const Container = styled.div`
     margin-right: 1rem;
   }
 `
+export const Description = styled.div<{ seeMore: boolean }> `
+    font-size: 18px;
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: .007em;
+    margin-bottom: 0.5rem;
+    height: ${props => props.seeMore ? 'auto' : '7em'};
+`
+
+export const MyXPContent = styled.div<{ seeMore: boolean }> `
+        font-size: 14px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    margin: 0.5rem 0;
+    margin-right: 1rem;
+    height: ${props => props.seeMore ? 'auto' : '3m'};
+`
+
 
 export const ContentInfo = styled.section`
   padding: 30px;
@@ -67,4 +71,7 @@ img{
  height: 6rem;
  width: 6rem;
 }
+`
+
+export const ReduceContent = styled.h3`
 `
