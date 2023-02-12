@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import CabinIcon from '@mui/icons-material/Cabin';
 import CodeIcon from '@mui/icons-material/Code';
-import EmailIcon from '@mui/icons-material/Email';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Drawer, List, ListSubheader, Switch } from '@mui/material';
 

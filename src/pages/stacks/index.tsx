@@ -10,7 +10,7 @@ import {
 import { IReduxState } from '../../interface';
 import { StackTextBox } from '../../pageComplements/stacks/components';
 import { StacksContent } from '../../pageComplements/stacks/styles';
-import { Container, Content, } from '../../pageComplements/styles';
+import { Container, Content, ContentText, } from '../../pageComplements/styles';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from '../../pageComplements/stacks/responsive';
@@ -40,9 +40,10 @@ const Stacks = () => {
       />
       <Container>
         <IntroPages gif={stackAssets.codeGif} message={languageInformation.stacks.header} />
+        <ContentText>{languageInformation.stacks.stacksDescription[0].myXP}</ContentText>
         <Content>
           <StacksContent>
-            <div className='title'>Frameworks de front-end</div>
+            <div className='title'>Tecnologias que usei em minha carreira</div>
             <Carousel
               className='carousel'
               responsive={responsive}
@@ -56,7 +57,6 @@ const Stacks = () => {
               )}
             </Carousel>
           </StacksContent>
-
         </Content>
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />

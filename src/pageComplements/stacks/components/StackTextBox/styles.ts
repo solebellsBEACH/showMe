@@ -18,7 +18,7 @@ export const Container = styled.div`
       transform: scale3d(1.01,1.01,1.01);
     }
 
-    min-width: 18rem;
+    width: 20rem;
     min-height: 20rem;
 
     @media (max-width: 460px) {
@@ -36,10 +36,11 @@ export const Container = styled.div`
 `
 export const Description = styled.div<{ seeMore: boolean }> `
     font-size: 18px;
-    line-height: 1.14286;
-    font-weight: 600;
+    line-height: 1.1;
+    font-weight: 300;
     letter-spacing: .007em;
     margin-bottom: 0.5rem;
+    color: black;
     height: ${props => props.seeMore ? 'auto' : '7em'};
 `
 
@@ -56,8 +57,8 @@ export const MyXPContent = styled.div<{ seeMore: boolean }> `
 
 export const ContentInfo = styled.section`
   padding: 30px;
+  padding-bottom: 0px;
   width: 20rem;
-
 `
 
 export const ContentImage = styled.div`
@@ -67,8 +68,8 @@ align-items: center;
 justify-content: center;
 
 img{
- height: 6rem;
- width: 6rem;
+ height: 7rem;
+ width: 7rem;
 }
 `
 

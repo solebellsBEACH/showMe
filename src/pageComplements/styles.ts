@@ -8,9 +8,25 @@ export const Container = styled.div`
   width: auto;
 `;
 export const Content = styled.div`
-  margin: 4vh 0vw;
+  margin: 10vh 0vw;
 
 `;
+
+export const ContentText = styled.div`
+  margin: 4vh 0 0 8vw;
+  height: auto;
+  width: 90vw;
+font-weight:400;
+  font-size: 2vw;
+  @media(max-width: 1024px){
+    font-size:1.5rem;
+  }
+
+  @media(max-width: 425px){
+    font-size:1.2rem;
+  }
+`;
+
 export const PageTitle = styled.h1`
   font-size: 2rem;
   @media (max-width: 768px) {

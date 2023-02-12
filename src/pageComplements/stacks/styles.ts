@@ -18,7 +18,7 @@ export const PageTitle = styled.h1`
 
 
 export const StacksContent = styled.div`
-width: 100vw;
+width: auto;
 .title{
     font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 2.2rem;

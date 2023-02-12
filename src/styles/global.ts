@@ -23,6 +23,7 @@ export default createGlobalStyle`
   }
   body, input, button {
     font-size:15px;
+    color:#3D3D3D
   }
 
   button {
