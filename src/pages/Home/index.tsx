@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { homeAssets } from '../../assets/home';
 
-import gif from '../../assets/homeHeaderGif.gif';
 import {
   DrawerButton,
   Footer,
@@ -9,7 +9,7 @@ import {
   TemplateDrawer,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { Bio } from '../../pageComplements/home/components';
+import { Bio, HowIHelpYou } from '../../pageComplements/home/components';
 import { Container } from '../../pageComplements/styles';
 
 const HomeComponent = () => {
@@ -36,9 +36,10 @@ const HomeComponent = () => {
       <Container>
         <title>Home</title>
         <IntroPages
-          gif={gif}
+          gif={homeAssets.homeGif}
           message={languageInformation.homePage.header[0]}
         />
+        <HowIHelpYou />
         <Bio />
         <Footer />
       </Container>

@@ -3,21 +3,19 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import CabinIcon from '@mui/icons-material/Cabin';
 import CodeIcon from '@mui/icons-material/Code';
-import EmailIcon from '@mui/icons-material/Email';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Drawer, List, ListSubheader, Switch } from '@mui/material';
 
-import BrasilPNG from '../../assets/brasilLogo.png';
-import USAPNG from '../../assets/usaLogo.png';
 import { IReduxState } from '../../interface';
 import { Creators as ApplicationActions } from '../../store/ducks/application';
 import RouterItem from './RouterItem';
 import { BrasilIcon, SwitchContainer, USAIcon } from './styles';
+import { assets } from '../../assets';
 
 export interface ITemplateDrawerProps {
   openDrawer: boolean;
   onClose: () => void;
-  actualPage: 'Home' | 'Hobbies' | 'Stacks' | 'Fale Comigo';
+  actualPage: 'Home' | 'Hobbies' | 'Stacks';
   anchor?: 'left' | 'right';
 }
 
@@ -32,11 +30,10 @@ export const TemplateDrawer = ({
     path: string;
     icon: ReactElement<any, any>;
   }[] = [
-    { name: 'Home', path: '/', icon: <CabinIcon /> },
-    { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
-    { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
-    { name: 'Fale Comigo', path: '/sendMeAMessage', icon: <EmailIcon /> },
-  ];
+      { name: 'Home', path: '/', icon: <CabinIcon /> },
+      { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
+      { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
+    ];
   const [loading, setLoading] = useState<string | null>(null);
   const dispatch = useDispatch();
   const [isEnglish, setIsEnglish] = useState(false);
@@ -96,14 +93,14 @@ export const TemplateDrawer = ({
         <SwitchContainer>
           <BrasilIcon
             alt="BrasilICON"
-            src={BrasilPNG}
+            src={assets.brasilIcon}
             className={isEnglish ? '' : 'selected'}
           />
           <Switch onChange={e => handleChecked(e)} checked={isEnglish} />
           <USAIcon
             className={!isEnglish ? '' : 'selected'}
             alt="USAICON"
-            src={USAPNG}
+            src={assets.usaIcon}
           />
         </SwitchContainer>
       </List>

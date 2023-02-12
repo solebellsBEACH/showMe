@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { Divider, useMediaQuery } from '@mui/material';
-import { StaticImageData } from 'next/image';
+
 
 import { IReduxState } from '../../interface';
 import { ImageModal } from '../ImageModal';
@@ -14,7 +14,7 @@ export interface ITextBoxProps {
   subject?: string;
   description: string;
   myXP: string;
-  image: StaticImageData;
+  image: string;
   hobbieTemplate?: boolean;
 }
 

@@ -4,7 +4,6 @@ import { ILanguageJSON } from '../interface';
 
 const {
   adonisjs,
-  angular,
   express,
   nestjs,
   nextjs,
@@ -28,6 +27,7 @@ export const portugueseJson: ILanguageJSON = {
       'Programo desde 2019, onde iniciei minhas aulas de lógica no Ifes. Sou uma pessoa bem comunicativa e tenho facilidade para trabalhar no contato ao cliente levantando requisitos, sem dificuldades para trabalhar em time. Trabalho atualmente de desenvolvedor Full Stack, com foco em Front-End na Empresa AdGrowth. ',
       'Durante esse período atuei em diversos projetos com uma atenção a mais em React Js, TypeScript e NodeJS, atualmente estou integralmente em um projeto mobile, trabalhando com React Native, oque tem sido o meu foco nos últimos meses.',
     ],
+    howIHelpYou: ['Como posso te ajudar?']
   },
   stacks: {
     header: 'Essas são algumas das tecnologias que tive contato👨🏽‍💻',
@@ -55,22 +55,6 @@ export const portugueseJson: ILanguageJSON = {
           'Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.',
         myXP:
           'Uma excelente tecnologia para usar em projetos com grande número de renderizações.',
-      },
-      {
-        image: nodejs,
-        title: 'NodeJS',
-        description:
-          'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada a eventos.',
-        myXP:
-          'Uma das principais tecnologias usadas para criação de APIs Rest, na qual trabalhei principalmente com o auxílio do ExpressJS',
-      },
-      {
-        image: angular,
-        title: 'AngularJS',
-        description:
-          'AngularJS é um framework JavaScript código aberto, mantido pelo Google, que auxilia na execução de single-page applications.',
-        myXP:
-          'Excelente tecnologia para criação de aplicações web, com uso de uma arquitetura baseada em módulos.',
       },
       {
         image: typescript,
@@ -102,7 +86,15 @@ export const portugueseJson: ILanguageJSON = {
           'NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor. Foi criado por Kamil Mysliwiec e lançado em 2017. Sob o capô, por padrão, o NestJS faz uso do framework Express.js, sendo também compatível com o Fastify.',
         myXP: 'Sua arquitetura é fortemente inspirada no Angular.',
       },
-    ],
+      {
+        image: nodejs,
+        title: 'NodeJS',
+        description:
+          'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript.',
+        myXP:
+          'Uma das principais tecnologias usadas para criação de APIs Rest, na qual trabalhei principalmente com o auxílio do ExpressJS',
+      },
+    ]
   },
   hobbies: {
     header: 'Abaixo está tudo que faço quando não estou programando🏄',

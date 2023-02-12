@@ -1,11 +1,9 @@
-import { StaticImageData } from 'next/image';
-
 import { Container, Content, ContentImage } from './styles';
 
 interface IImageModal {
   open: boolean;
   onClose: () => void;
-  image: StaticImageData;
+  image: string;
 }
 
 export const ImageModal = ({ onClose, open, image }: IImageModal) => {

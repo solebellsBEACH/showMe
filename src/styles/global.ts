@@ -7,14 +7,27 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family:'Roboto Mono';
+      &::-webkit-scrollbar {
+    width: 5px;
+    height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
   }
   body, input, button {
     font-size:15px;
+    color:#3D3D3D
   }
 
   button {
     cursor: pointer;
   }
 
-  // Adicione quais mais regras desejar!
 `;

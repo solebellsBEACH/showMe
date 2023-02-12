@@ -14,6 +14,8 @@ export const theme: ITheme = {
   white: 'white',
   black: '#1D1D26',
 
+  background: '#f5f5f7',
+
   gray1: '#DEDEDE',
   gray2: '#B3B3B3',
   gray3: '#696969',
