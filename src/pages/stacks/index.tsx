@@ -47,7 +47,7 @@ const Stacks = () => {
               className='carousel'
               responsive={responsive}
             >
-              {languageInformation.stacks.stacksDescription.frontEndStacks.map((e, i) => {
+              {languageInformation.stacks.stacksDescription.map((e, i) => {
                 return <StackTextBox
                   key={`StackTextBox${i}`}
                   {...e}
@@ -56,6 +56,7 @@ const Stacks = () => {
               )}
             </Carousel>
           </StacksContent>
+
         </Content>
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />

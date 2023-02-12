@@ -16,7 +16,7 @@ import { assets } from '../../assets';
 export interface ITemplateDrawerProps {
   openDrawer: boolean;
   onClose: () => void;
-  actualPage: 'Home' | 'Hobbies' | 'Stacks' | 'Fale Comigo';
+  actualPage: 'Home' | 'Hobbies' | 'Stacks';
   anchor?: 'left' | 'right';
 }
 
@@ -34,7 +34,6 @@ export const TemplateDrawer = ({
       { name: 'Home', path: '/', icon: <CabinIcon /> },
       { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
       { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
-      { name: 'Fale Comigo', path: '/sendMeAMessage', icon: <EmailIcon /> },
     ];
   const [loading, setLoading] = useState<string | null>(null);
   const dispatch = useDispatch();
