@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -9,7 +8,7 @@ export const Container = styled.div`
   height: 100vh;
   background: ${({ theme }) => theme.black};
 `;
-export const BackgroundGif = styled(Image)`
+export const BackgroundGif = styled.img`
   width: 100%;
   object-fit: cover;
   height: 100vh;

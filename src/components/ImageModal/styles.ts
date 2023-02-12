@@ -1,5 +1,4 @@
 import { Modal } from '@mui/material';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Container = styled(Modal)`
@@ -8,7 +7,7 @@ export const Container = styled(Modal)`
   align-items: center;
 `;
 export const Content = styled.div``;
-export const ContentImage = styled(Image)`
+export const ContentImage = styled.img`
   width: 60vw;
   height: auto;
   @media (max-width: 900px) {

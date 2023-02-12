@@ -4,7 +4,6 @@ import { ILanguageJSON } from '../interface';
 
 const {
   adonisjs,
-  angular,
   express,
   nestjs,
   nextjs,
@@ -58,22 +57,6 @@ export const portugueseJson: ILanguageJSON = {
           'Uma excelente tecnologia para usar em projetos com grande número de renderizações.',
       },
       {
-        image: nodejs,
-        title: 'NodeJS',
-        description:
-          'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web. A principal característica do Node.js é sua arquitetura assíncrona e orientada a eventos.',
-        myXP:
-          'Uma das principais tecnologias usadas para criação de APIs Rest, na qual trabalhei principalmente com o auxílio do ExpressJS',
-      },
-      {
-        image: angular,
-        title: 'AngularJS',
-        description:
-          'AngularJS é um framework JavaScript código aberto, mantido pelo Google, que auxilia na execução de single-page applications.',
-        myXP:
-          'Excelente tecnologia para criação de aplicações web, com uso de uma arquitetura baseada em módulos.',
-      },
-      {
         image: typescript,
         title: 'TypeScript',
         description:
@@ -103,7 +86,15 @@ export const portugueseJson: ILanguageJSON = {
           'NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor. Foi criado por Kamil Mysliwiec e lançado em 2017. Sob o capô, por padrão, o NestJS faz uso do framework Express.js, sendo também compatível com o Fastify.',
         myXP: 'Sua arquitetura é fortemente inspirada no Angular.',
       },
-    ],
+      {
+        image: nodejs,
+        title: 'NodeJS',
+        description:
+          'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript.',
+        myXP:
+          'Uma das principais tecnologias usadas para criação de APIs Rest, na qual trabalhei principalmente com o auxílio do ExpressJS',
+      },
+    ]
   },
   hobbies: {
     header: 'Abaixo está tudo que faço quando não estou programando🏄',

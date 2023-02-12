@@ -1,9 +1,9 @@
-import { StaticImageData } from 'next/image';
+
 
 import { BackgroundGif, Container, ContentTypewriter } from './styles';
 
 interface IntroPageProps {
-  gif: StaticImageData;
+  gif: string;
   message: string;
 }
 

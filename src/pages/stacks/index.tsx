@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import gif from '../../assets/stacks/codeGif.gif';
 import {
   DrawerButton,
   Footer,
   IntroPages,
-  TemplateDrawer,
-  TextBox,
+  TemplateDrawer
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { TimeLine } from '../../pageComplements/stacks/components';
-import { Container, Content, PageTitle } from '../../pageComplements/styles';
+import { StackTextBox } from '../../pageComplements/stacks/components';
+import { StacksContent } from '../../pageComplements/stacks/styles';
+import { Container, Content, ContentText, } from '../../pageComplements/styles';
+import Carousel from 'react-multi-carousel';
+import "react-multi-carousel/lib/styles.css";
+import { responsive } from '../../pageComplements/stacks/responsive';
+import { stackAssets } from '../../assets/stacks';
 
 const Stacks = () => {
+
   const { languageInformation } = useSelector(
     (state: IReduxState) => state.application,
   );
@@ -34,17 +38,27 @@ const Stacks = () => {
         onClose={handleCloseDrawer}
       />
       <Container>
-        <IntroPages gif={gif} message={languageInformation.stacks.header} />
+        <IntroPages gif={stackAssets.codeGif} message={languageInformation.stacks.header} />
+        <ContentText>
+          <p>{languageInformation.stacks.stacksDescription[0].myXP}</p>
+          <img src={stackAssets.carrerAsset} alt="carrerAsset" />
+        </ContentText>
         <Content>
-          <PageTitle>Stacks</PageTitle>
-          <TimeLine />
-          {languageInformation.stacks.stacksDescription.map((e, i) => (
-            <TextBox
-              key={`TextBox${i}`}
-              {...e}
-              align={i % 2 === 0 ? 'left' : 'right'}
-            />
-          ))}
+          <StacksContent>
+            <div className='title'>Tecnologias que usei em minha carreira</div>
+            <Carousel
+              className='carousel'
+              responsive={responsive}
+            >
+              {languageInformation.stacks.stacksDescription.map((e, i) => {
+                return <StackTextBox
+                  key={`StackTextBox${i}`}
+                  {...e}
+                />
+              }
+              )}
+            </Carousel>
+          </StacksContent>
         </Content>
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />

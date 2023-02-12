@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -26,7 +25,7 @@ export const ContentImage = styled.div`
   }
 `;
 
-export const ImageContainer = styled(Image)<{ onHover: boolean }>`
+export const ImageContainer = styled.img <{ onHover: boolean }>`
   object-fit: cover;
   width: 25vw;
   height: auto;
