@@ -16,18 +16,25 @@ export const PageTitle = styled.h1`
   margin-bottom: 2vh;
 `;
 
-export const StacksContent = styled.div`
+export const StacksContent = styled.div<{ slideValue: number }>`
   width: auto;
   .title {
     font-family: SF Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue,
       Helvetica, Arial, sans-serif;
     font-size: 2.2rem;
     font-weight: 600;
-    margin-left: 2vw;
+    margin-left: 15vw;
     @media (max-width: 590px) {
       margin-left: 4vw;
       font-size: 1.8rem;
     }
     color: ${({ theme }) => theme.gray4};
+  }
+  .carousel{
+    padding-left:${props => props.slideValue === 0 ? '14vw' : '0vw'};
+
+    @media(max-width:470px){
+    padding-left: 0;
+    }
   }
 `;

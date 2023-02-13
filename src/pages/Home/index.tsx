@@ -37,7 +37,7 @@ const HomeComponent = () => {
         <title>Home</title>
         <IntroPages
           gif={homeAssets.homeGif}
-          message={languageInformation.homePage.howIHelpYou.label}
+          message={languageInformation.homePage.header[0]}
         />
         <HowIHelpYou />
         <Bio />
