@@ -49,7 +49,10 @@ export const portugueseJson: ILanguageJSON = {
     },
   },
   stacks: {
+    seeMore: 'Ver mais',
+    seeLess: 'Ver menos',
     header: 'Essas são algumas das tecnologias que tive contato👨🏽‍💻',
+    stacksTitle: "Tecnologias que usei em minha carreira",
     stacksDescription: [
       {
         image: reactjs,

@@ -47,7 +47,7 @@ const Stacks = () => {
         </ContentText>
         <Content>
           <StacksContent>
-            <div className="title">Tecnologias que usei em minha carreira</div>
+            <div className="title">{languageInformation.stacks.stacksTitle}</div>
             <Carousel className="carousel" responsive={responsive}>
               {languageInformation.stacks.stacksDescription.map((e, i) => {
                 return <StackTextBox key={`StackTextBox${i}`} {...e} />;

@@ -18,7 +18,10 @@ export interface ILanguageJSON {
     howIHelpYou: { label: string; context: { header: string; text: string }[] };
   };
   stacks: {
+    seeMore: string;
+    seeLess: string;
     header: string;
+    stacksTitle: string;
     stacksDescription: IListItems[];
   };
   hobbies: {
