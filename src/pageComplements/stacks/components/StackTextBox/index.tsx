@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { IReduxState } from '../../../../interface';
 import {
   Container,
   ContentImage,
@@ -21,9 +23,14 @@ export const StackTextBox: React.FC<IStackTextBox> = ({
   image,
   title,
 }) => {
-  const [seeMore, setSeeMore] = useState(false);
+
+  const { seeLess, seeMore } = useSelector(
+    (state: IReduxState) => state.application,
+  ).languageInformation.stacks
+
+  const [seeMoreState, setSeeMoreState] = useState(false);
   const [seeMoreXP, setSeeMoreXP] = useState(false);
-  const descriptionFormation = !seeMore
+  const descriptionFormation = !seeMoreState
     ? description.slice(0, 100) + ' ...'
     : description;
   const myXPFormation = !seeMoreXP ? myXP.slice(0, 50) + ' ...' : myXP;
@@ -31,13 +38,13 @@ export const StackTextBox: React.FC<IStackTextBox> = ({
     <Container>
       <ContentInfo>
         <h3>{title}</h3>
-        <Description seeMore={seeMore}>{descriptionFormation}</Description>
-        <ReduceContent onClick={() => setSeeMore(!seeMore)}>
-          {!seeMore ? 'Ver mais' : 'Ver menos'}
+        <Description seeMore={seeMoreState}>{descriptionFormation}</Description>
+        <ReduceContent onClick={() => setSeeMoreState(!seeMoreState)}>
+          {!seeMoreState ? seeMore : seeLess}
         </ReduceContent>
         <MyXPContent seeMore={seeMoreXP}>{myXPFormation}</MyXPContent>
         <ReduceContent onClick={() => setSeeMoreXP(!seeMoreXP)}>
-          {!seeMoreXP ? 'Ver mais' : 'Ver menos'}
+          {!seeMoreXP ? seeMore : seeLess}
         </ReduceContent>
       </ContentInfo>
       <ContentImage>
