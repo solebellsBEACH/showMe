@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 import { Divider, useMediaQuery } from '@mui/material';
 
-
 import { IReduxState } from '../../interface';
 import { ImageModal } from '../ImageModal';
 import { Container, ImageContainer, Content, ContentImage } from './styles';
@@ -53,7 +52,6 @@ export const TextBox = ({
           onHover={imageHover}
           onMouseOver={onMouseOver}
           onMouseLeave={onMouseLeave}
-          unoptimized
           alt={`imageContainer${title}`}
           src={image}
         />

@@ -1,5 +1,3 @@
-
-
 import { BackgroundGif, Container, ContentTypewriter } from './styles';
 
 interface IntroPageProps {

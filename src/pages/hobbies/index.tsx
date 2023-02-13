@@ -18,10 +18,8 @@ import {
 } from '../../pageComplements/stacks/styles';
 
 const Hobbies = () => {
-  const useApplication = useSelector(
-    (state: IReduxState) => state.application,
-  );
-  const { languageInformation } = useApplication
+  const useApplication = useSelector((state: IReduxState) => state.application);
+  const { languageInformation } = useApplication;
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
@@ -39,7 +37,10 @@ const Hobbies = () => {
         onClose={handleCloseDrawer}
       />
       <Container>
-        <IntroPages gif={hobbiesAssets.hobbieGif} message={languageInformation.hobbies.header} />
+        <IntroPages
+          gif={hobbiesAssets.hobbieGif}
+          message={languageInformation.hobbies.header}
+        />
         <Content>
           <PageTitle>Hobbies</PageTitle>
           {languageInformation.hobbies.hobbiesDescription.map((e, i) => (
