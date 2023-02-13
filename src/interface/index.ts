@@ -1,5 +1,3 @@
-
-
 export interface IApplicationDuckDuckInitialState {
   loading: boolean;
   error: boolean;
@@ -17,7 +15,7 @@ export interface ILanguageJSON {
     footer: string[];
     header: string[];
     bio: string[];
-    howIHelpYou: string[];
+    howIHelpYou: { label: string; context: { header: string; text: string }[] };
   };
   stacks: {
     header: string;

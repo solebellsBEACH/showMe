@@ -1,4 +1,5 @@
-const prefix = 'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/stacks'
+const prefix =
+  'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/stacks';
 
 const adonisjs = `${prefix}/adonis.svg`;
 const express = `${prefix}/express.svg`;
@@ -22,5 +23,5 @@ export const stackAssets = {
   reactnative,
   typescript,
   codeGif,
-  carrerAsset
+  carrerAsset,
 };

@@ -25,7 +25,7 @@ export const ContentImage = styled.div`
   }
 `;
 
-export const ImageContainer = styled.img <{ onHover: boolean }>`
+export const ImageContainer = styled.img<{ onHover: boolean }>`
   object-fit: cover;
   width: 25vw;
   height: auto;
