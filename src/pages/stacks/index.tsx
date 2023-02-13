@@ -21,6 +21,7 @@ const Stacks = () => {
     (state: IReduxState) => state.application,
   );
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [slideValue, setSlideValue] = useState(0)
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
   };
@@ -46,9 +47,13 @@ const Stacks = () => {
           <img src={stackAssets.carrerAsset} alt="carrerAsset" />
         </ContentText>
         <Content>
-          <StacksContent>
+          <StacksContent
+            slideValue={slideValue}
+          >
             <div className="title">{languageInformation.stacks.stacksTitle}</div>
-            <Carousel className="carousel" responsive={responsive}>
+            <Carousel
+              beforeChange={e => setSlideValue(e)}
+              className="carousel" responsive={responsive}>
               {languageInformation.stacks.stacksDescription.map((e, i) => {
                 return <StackTextBox key={`StackTextBox${i}`} {...e} />;
               })}
