@@ -23,10 +23,9 @@ export const StackTextBox: React.FC<IStackTextBox> = ({
   image,
   title,
 }) => {
-
   const { seeLess, seeMore } = useSelector(
     (state: IReduxState) => state.application,
-  ).languageInformation.stacks
+  ).languageInformation.stacks;
 
   const [seeMoreState, setSeeMoreState] = useState(false);
   const [seeMoreXP, setSeeMoreXP] = useState(false);
