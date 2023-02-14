@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: auto;
 `;
 export const Content = styled.div`
-margin-top: 10vh;
+  margin-top: 10vh;
 `;
 
 export const ContentText = styled.div`

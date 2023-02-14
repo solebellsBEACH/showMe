@@ -51,9 +51,10 @@ export const portugueseJson: ILanguageJSON = {
   stacks: {
     seeMore: 'Ver mais',
     seeLess: 'Ver menos',
-    stackContextText: 'Ao longo de minha carreira sempre tive uma mente aberta para novas linguagens e experiencias, entendo que se fechar para o mercado e se manter em uma frente de atuação somente é um grande erro quando se trata de tecnologia.',
+    stackContextText:
+      'Ao longo de minha carreira sempre tive uma mente aberta para novas linguagens e experiencias, entendo que se fechar para o mercado e se manter em uma frente de atuação somente é um grande erro quando se trata de tecnologia.',
     header: 'Essas são algumas das tecnologias que tive contato👨🏽‍💻',
-    stacksTitle: "Tecnologias que usei em minha carreira",
+    stacksTitle: 'Tecnologias que usei em minha carreira',
     stacksDescription: [
       {
         image: reactjs,

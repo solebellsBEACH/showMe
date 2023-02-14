@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { hobbiesAssets } from '../../assets/hobbies';
 
-
 import {
   DrawerButton,
   Footer,

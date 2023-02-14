@@ -30,11 +30,11 @@ export const StacksContent = styled.div<{ slideValue: number }>`
     }
     color: ${({ theme }) => theme.gray4};
   }
-  .carousel{
-    padding-left:${props => props.slideValue === 0 ? '14vw' : '0vw'};
+  .carousel {
+    padding-left: ${props => (props.slideValue === 0 ? '14vw' : '0vw')};
 
-    @media(max-width:470px){
-    padding-left: 0;
+    @media (max-width: 470px) {
+      padding-left: 0;
     }
   }
 `;
