@@ -43,7 +43,7 @@ const Stacks = () => {
           message={languageInformation.stacks.header}
         />
         <ContentText>
-          <p>{languageInformation.stacks.stacksDescription[0].myXP}</p>
+          <p>{languageInformation.stacks.stackContextText}</p>
           <img src={stackAssets.carrerAsset} alt="carrerAsset" />
         </ContentText>
         <Content>

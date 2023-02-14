@@ -18,6 +18,7 @@ export interface ILanguageJSON {
     howIHelpYou: { label: string; context: { header: string; text: string }[] };
   };
   stacks: {
+    stackContextText: string;
     seeMore: string;
     seeLess: string;
     header: string;

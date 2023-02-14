@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { hobbiesAssets } from '../../assets/hobbies';
 
-import gif from '../../assets/hobbies/surfGif.gif';
+
 import {
   DrawerButton,
   Footer,

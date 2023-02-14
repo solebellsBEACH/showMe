@@ -51,6 +51,7 @@ export const englishJson: ILanguageJSON = {
     seeLess: 'See less',
     header: 'These are some of the technologies I came into contact with',
     stacksTitle: "Technologies I've Used in My Career",
+    stackContextText: "Throughout my career I've always had an open mind for new languages and experiences, I understand that closing yourself off from the market and sticking to a single front is a big mistake when it comes to technology.",
     stacksDescription:
       [
         {
