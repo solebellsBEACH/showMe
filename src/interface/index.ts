@@ -25,6 +25,7 @@ export interface ILanguageJSON {
     howIHelpYou: { label: string; context: { header: string; text: string }[] };
   };
   stacks: {
+    bio: IBio[];
     stackContextText: string;
     seeMore: string;
     seeLess: string;
