@@ -10,11 +10,18 @@ export interface IReduxState {
   application: IApplicationDuckDuckInitialState;
 }
 
+export interface IBio {
+  header: string;
+  primaryText: string;
+  secondaryText: string;
+  image_url: string
+}
+
 export interface ILanguageJSON {
   homePage: {
     footer: string[];
     header: string[];
-    bio: string[];
+    bio: IBio[];
     howIHelpYou: { label: string; context: { header: string; text: string }[] };
   };
   stacks: {

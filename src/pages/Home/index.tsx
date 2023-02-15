@@ -3,13 +3,14 @@ import { useSelector } from 'react-redux';
 import { homeAssets } from '../../assets/home';
 
 import {
+  Bio,
   DrawerButton,
   Footer,
   IntroPages,
   TemplateDrawer,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { Bio, HowIHelpYou } from '../../pageComplements/home/components';
+import { HowIHelpYou } from '../../pageComplements/home/components';
 import { Container } from '../../pageComplements/styles';
 
 const HomeComponent = () => {
@@ -40,7 +41,7 @@ const HomeComponent = () => {
           message={languageInformation.homePage.header[0]}
         />
         <HowIHelpYou />
-        <Bio />
+        {languageInformation.homePage.bio.map((e, i) => <Bio {...e} aling={i % 2 !== 0 ? 'rigth' : 'left'} />)}
         <Footer />
       </Container>
       <DrawerButton onClick={handleOpenDrawer} />
