@@ -14,7 +14,7 @@ const {
   typescript,
 } = stackAssets;
 
-const { perfilImage } = homeAssets
+const { perfilImage, frontImage, backImage } = homeAssets
 
 const { surf, guitarra, skate } = hobbiesAssets;
 
@@ -36,13 +36,15 @@ export const portugueseJson: ILanguageJSON = {
         header: 'Desenvolvimento Front-end',
         primaryText: 'O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript',
         secondaryText: 'Durante meu periodo como desenvolvedor front-end trabalhei com projetos de diversas naturezas, sempre com foco em ReactJs e frameworks como NextJs',
-        image_url: perfilImage
+        image_url: frontImage,
+        hasEffect: false
       },
       {
         header: 'Desenvolvimento Back-end',
         primaryText: 'Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás” da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. ',
         secondaryText: 'Com desenvolvimento back-end aprendi muito nos primeiros anos de profissão, e por trabalhar em uma fábrica de software atuei em vários projetos, desde os mais comuns com simples CRUDs a projetos com uma complexa regra de negócio e integrações externas',
-        image_url: perfilImage
+        image_url: backImage,
+        hasEffect: false
       },
     ],
     howIHelpYou: {

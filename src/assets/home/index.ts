@@ -8,10 +8,10 @@ const perfilImage =
   'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/perfilImage.jpg';
 
 const backImage =
-  'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/backImage.jpg';
+  'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/home/backImage.svg';
 
 const frontImage =
-  'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/frontImage.jpg';
+  'https://raw.githubusercontent.com/solebellsBEACH/showMeAssets/main/assets/home/frontImage.svg';
 
 export const homeAssets = {
   team_icon,

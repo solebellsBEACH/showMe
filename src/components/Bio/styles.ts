@@ -41,7 +41,7 @@ export const PerfilContainer = styled.img`
   height: 30vw;
   border-radius: 0.2vw;
   object-fit: cover;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   margin: 0 1vw;
 
   @media (max-width: 1200px) {

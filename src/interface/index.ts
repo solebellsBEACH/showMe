@@ -15,6 +15,7 @@ export interface IBio {
   primaryText: string;
   secondaryText: string;
   image_url: string
+  hasEffect?: boolean
 }
 
 export interface ILanguageJSON {

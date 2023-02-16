@@ -15,7 +15,7 @@ const {
 } = stackAssets;
 
 const { surf, guitarra, skate } = hobbiesAssets;
-const { perfilImage } = homeAssets
+const { perfilImage, frontImage, backImage } = homeAssets
 
 export const englishJson: ILanguageJSON = {
   homePage: {
@@ -34,13 +34,15 @@ export const englishJson: ILanguageJSON = {
       header: 'Front-end Development',
       primaryText: 'The professional front-end developer is responsible for putting into practice, through codes, the design of a website or interface. While web design designs the look of a website, front-end development implements that design through code such as HTML, CSS and JavaScript',
       secondaryText: 'During my period as a front-end developer I worked with projects of different natures, always focusing on ReactJs and frameworks like NextJs',
-      image_url: perfilImage
+      image_url: frontImage,
+      hasEffect: false
     },
     {
       header: 'Back-end Development',
       primaryText: 'As the name suggests, the back-end developer works at the “back” of the application. He is responsible, in general terms, for the implementation of the business rule. In a web application, this developer, when focused, does not touch the visual part of the application. ',
       secondaryText: 'With back-end development I learned a lot in the first years of the profession, and because I worked in a software factory I worked on several projects, from the most common ones with simple CRUDs to projects with a complex business rule and external integrations',
-      image_url: perfilImage
+      image_url: backImage,
+      hasEffect: false
     },
     ],
     howIHelpYou: {
