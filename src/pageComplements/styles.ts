@@ -60,3 +60,7 @@ export const PageTitle = styled.h1`
   color: ${({ theme }) => theme.templateColor5};
   margin-bottom: 5vh;
 `;
+
+export const BioContent = styled.div`
+padding: 0 5vw;
+`
