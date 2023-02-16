@@ -36,6 +36,7 @@ const Hobbies = () => {
         onClose={handleCloseDrawer}
       />
       <Container>
+        <title>Hobbies</title>
         <IntroPages
           gif={hobbiesAssets.hobbieGif}
           message={languageInformation.hobbies.header}

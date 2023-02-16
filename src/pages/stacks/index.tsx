@@ -39,6 +39,7 @@ const Stacks = () => {
         onClose={handleCloseDrawer}
       />
       <Container>
+        <title>Stacks</title>
         <IntroPages
           gif={stackAssets.codeGif}
           message={languageInformation.stacks.header}
