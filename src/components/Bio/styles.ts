@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ aling: 'left' | 'rigth' }>`
   width: 100%;
   min-height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: ${props => (props.aling === 'left' ? 'row' : 'row-reverse')};
   padding: 5vh 5vw;
 
   @media (max-width: 1200px) {
@@ -41,11 +41,11 @@ export const PerfilContainer = styled.img`
   height: 30vw;
   border-radius: 0.2vw;
   object-fit: cover;
-  filter: grayscale(100%);
-  margin-right: 1vw;
+  /* filter: grayscale(100%); */
+  margin: 0 1vw;
 
   @media (max-width: 1200px) {
-    margin-right: none;
+    margin: 0;
     margin-bottom: 0.8vh;
     border-radius: 1vw;
     width: 100%;

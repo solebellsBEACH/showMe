@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import {
+  Bio,
   DrawerButton,
   Footer,
   IntroPages,
@@ -10,7 +11,7 @@ import {
 import { IReduxState } from '../../interface';
 import { StackTextBox } from '../../pageComplements/stacks/components';
 import { StacksContent } from '../../pageComplements/stacks/styles';
-import { Container, Content, ContentText } from '../../pageComplements/styles';
+import { Container, Content, ContentText, BioContent } from '../../pageComplements/styles';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../pageComplements/stacks/responsive';
@@ -62,6 +63,11 @@ const Stacks = () => {
               })}
             </Carousel>
           </StacksContent>
+          <BioContent>
+            {languageInformation.stacks.bio.map((e, i) => (
+              <Bio {...e} aling={i % 2 !== 0 ? 'rigth' : 'left'} />
+            ))}
+          </BioContent>
         </Content>
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />

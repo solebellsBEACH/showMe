@@ -1,5 +1,6 @@
 import { hobbiesAssets } from '../assets/hobbies';
 import { stackAssets } from '../assets/stacks';
+import { homeAssets } from '../assets/home';
 import { ILanguageJSON } from '../interface';
 
 const {
@@ -11,7 +12,10 @@ const {
   reactjs,
   reactnative,
   typescript,
+  testIcon
 } = stackAssets;
+
+const { perfilImage, frontImage, backImage } = homeAssets;
 
 const { surf, guitarra, skate } = hobbiesAssets;
 
@@ -23,9 +27,15 @@ export const portugueseJson: ILanguageJSON = {
     ],
     header: ['Olá Geek, seja bem vindo🚀'],
     bio: [
-      'FullStack Developer',
-      'Programo desde 2019, onde iniciei minhas aulas de lógica no Ifes. Sou uma pessoa bem comunicativa e tenho facilidade para trabalhar no contato ao cliente levantando requisitos, sem dificuldades para trabalhar em time. Trabalho atualmente de desenvolvedor Full Stack, com foco em Front-End na Empresa AdGrowth. ',
-      'Durante esse período atuei em diversos projetos com uma atenção a mais em React Js, TypeScript e NodeJS, atualmente estou integralmente em um projeto mobile, trabalhando com React Native, oque tem sido o meu foco nos últimos meses.',
+      {
+        header: 'FullStack Developer',
+        primaryText:
+          'Programo desde 2019, onde iniciei minhas aulas de lógica no Ifes. Sou uma pessoa bem comunicativa e tenho facilidade para trabalhar no contato ao cliente levantando requisitos, sem dificuldades para trabalhar em time. Trabalho atualmente de desenvolvedor Full Stack, com foco em Front-End na Empresa AdGrowth. ',
+        secondaryText:
+          'Durante esse período atuei em diversos projetos com uma atenção a mais em React Js, TypeScript e NodeJS, atualmente estou integralmente em um projeto mobile, trabalhando com React Native, oque tem sido o meu foco nos últimos meses.',
+        image_url: perfilImage,
+      },
+
     ],
     howIHelpYou: {
       label: 'Como posso te ajudar?',
@@ -49,12 +59,42 @@ export const portugueseJson: ILanguageJSON = {
     },
   },
   stacks: {
+    bio: [
+      {
+        header: 'Desenvolvimento Front-end',
+        primaryText:
+          'O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript',
+        secondaryText:
+          'Durante meu periodo como desenvolvedor front-end trabalhei com projetos de diversas naturezas, sempre com foco em ReactJs e frameworks como NextJs',
+        image_url: frontImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Desenvolvimento Back-end',
+        primaryText:
+          'Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás” da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. ',
+        secondaryText:
+          'Com desenvolvimento back-end aprendi muito nos primeiros anos de profissão, e por trabalhar em uma fábrica de software atuei em vários projetos, desde os mais comuns com simples CRUDs a projetos com uma complexa regra de negócio e integrações externas',
+        image_url: backImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Programação orientada a testes',
+        primaryText:
+          'Ela consiste em um ciclo curto de repetições onde o desenvolvedor escreve casos de testes automatizados que possam tanto validar um requisito quanto implementar uma nova funcionalidade. Utilizando TDD durante o desenvolvimento de um software a rotina adotada pela maioria dos programadores muda um pouco. ',
+        secondaryText:
+          'Durante minha carreira a necessidade de testes foi muito constante, por trabalhar em diversos projetos os testes automatizados e unitários ajudam a validar fluxos como um formulário com diversos campos por exemplo.',
+        image_url: testIcon,
+        hasEffect: false,
+      },
+    ],
     seeMore: 'Ver mais',
     seeLess: 'Ver menos',
     stackContextText:
       'Ao longo de minha carreira sempre tive uma mente aberta para novas linguagens e experiencias, entendo que se fechar para o mercado e se manter em uma frente de atuação somente é um grande erro quando se trata de tecnologia.',
     header: 'Essas são algumas das tecnologias que tive contato👨🏽‍💻',
     stacksTitle: 'Tecnologias que usei em minha carreira',
+
     stacksDescription: [
       {
         image: reactjs,

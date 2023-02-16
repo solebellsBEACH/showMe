@@ -1,6 +1,7 @@
 import { hobbiesAssets } from '../assets/hobbies';
 import { stackAssets } from '../assets/stacks';
 import { ILanguageJSON } from '../interface';
+import { homeAssets } from '../assets/home';
 
 const {
   adonisjs,
@@ -11,9 +12,11 @@ const {
   reactjs,
   reactnative,
   typescript,
+  testIcon
 } = stackAssets;
 
 const { surf, guitarra, skate } = hobbiesAssets;
+const { perfilImage, frontImage, backImage } = homeAssets;
 
 export const englishJson: ILanguageJSON = {
   homePage: {
@@ -23,9 +26,14 @@ export const englishJson: ILanguageJSON = {
     ],
     header: ['Hi Geek, welcome🚀'],
     bio: [
-      'FullStack Developer',
-      'I have been programming since 2019, when I started my logic classes at Ifes. I am a very communicative person and I find it easy to work in contact with the customer, raising requirements, without difficulties to work in a team. I currently work as a Full Stack developer, focusing on Front-End at AdGrowth Company.',
-      'During this period I worked on several projects with an extra attention to React Js, TypeScript and NodeJS, I am currently working entirely on a mobile project, working with React Native, which has been my focus in recent months.',
+      {
+        header: 'FullStack Developer',
+        primaryText:
+          'I have been programming since 2019, when I started my logic classes at Ifes. I am a very communicative person and I find it easy to work in contact with the customer, raising requirements, without difficulties to work in a team. I currently work as a Full Stack developer, focusing on Front-End at AdGrowth Company.',
+        secondaryText:
+          'During this period I worked on several projects with an extra attention to React Js, TypeScript and NodeJS, I am currently working entirely on a mobile project, working with React Native, which has been my focus in recent months.',
+        image_url: perfilImage,
+      },
     ],
     howIHelpYou: {
       label: 'How can I help you?',
@@ -49,6 +57,35 @@ export const englishJson: ILanguageJSON = {
     },
   },
   stacks: {
+    bio: [
+      {
+        header: 'Front-end Development',
+        primaryText:
+          'The professional front-end developer is responsible for putting into practice, through codes, the design of a website or interface. While web design designs the look of a website, front-end development implements that design through code such as HTML, CSS and JavaScript',
+        secondaryText:
+          'During my period as a front-end developer I worked with projects of different natures, always focusing on ReactJs and frameworks like NextJs',
+        image_url: frontImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Back-end Development',
+        primaryText:
+          'As the name suggests, the back-end developer works at the “back” of the application. He is responsible, in general terms, for the implementation of the business rule. In a web application, this developer, when focused, does not touch the visual part of the application. ',
+        secondaryText:
+          'With back-end development I learned a lot in the first years of the profession, and because I worked in a software factory I worked on several projects, from the most common ones with simple CRUDs to projects with a complex business rule and external integrations',
+        image_url: backImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Test driven programming',
+        primaryText:
+          'It consists of a short cycle of repetitions where the developer writes automated test cases that can both validate a requirement and implement a new functionality. Using TDD during software development, the routine adopted by most programmers changes a little. ',
+        secondaryText:
+          'During my career the need for testing was very constant, as I work on several projects, automated and unit tests help to validate flows such as a form with several fields for example',
+        image_url: testIcon,
+        hasEffect: false,
+      },
+    ],
     seeMore: 'See more',
     seeLess: 'See less',
     header: 'These are some of the technologies I came into contact with',
