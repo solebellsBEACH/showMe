@@ -12,6 +12,8 @@ const typescript = `${prefix}/typescript.svg`;
 
 const codeGif = `${prefix}/codeGif.gif`;
 const carrerAsset = `${prefix}/carrerAsset.svg`;
+const testIcon = `${prefix}/testIcon.svg`;
+const teamIcon = `${prefix}/teamIcon.svg`;
 
 export const stackAssets = {
   adonisjs,
@@ -24,4 +26,6 @@ export const stackAssets = {
   typescript,
   codeGif,
   carrerAsset,
+  testIcon,
+  teamIcon
 };
