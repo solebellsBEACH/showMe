@@ -14,7 +14,7 @@ const {
   typescript,
 } = stackAssets;
 
-const { perfilImage, frontImage, backImage } = homeAssets
+const { perfilImage, frontImage, backImage } = homeAssets;
 
 const { surf, guitarra, skate } = hobbiesAssets;
 
@@ -28,23 +28,29 @@ export const portugueseJson: ILanguageJSON = {
     bio: [
       {
         header: 'FullStack Developer',
-        primaryText: 'Programo desde 2019, onde iniciei minhas aulas de lógica no Ifes. Sou uma pessoa bem comunicativa e tenho facilidade para trabalhar no contato ao cliente levantando requisitos, sem dificuldades para trabalhar em time. Trabalho atualmente de desenvolvedor Full Stack, com foco em Front-End na Empresa AdGrowth. ',
-        secondaryText: 'Durante esse período atuei em diversos projetos com uma atenção a mais em React Js, TypeScript e NodeJS, atualmente estou integralmente em um projeto mobile, trabalhando com React Native, oque tem sido o meu foco nos últimos meses.',
-        image_url: perfilImage
+        primaryText:
+          'Programo desde 2019, onde iniciei minhas aulas de lógica no Ifes. Sou uma pessoa bem comunicativa e tenho facilidade para trabalhar no contato ao cliente levantando requisitos, sem dificuldades para trabalhar em time. Trabalho atualmente de desenvolvedor Full Stack, com foco em Front-End na Empresa AdGrowth. ',
+        secondaryText:
+          'Durante esse período atuei em diversos projetos com uma atenção a mais em React Js, TypeScript e NodeJS, atualmente estou integralmente em um projeto mobile, trabalhando com React Native, oque tem sido o meu foco nos últimos meses.',
+        image_url: perfilImage,
       },
       {
         header: 'Desenvolvimento Front-end',
-        primaryText: 'O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript',
-        secondaryText: 'Durante meu periodo como desenvolvedor front-end trabalhei com projetos de diversas naturezas, sempre com foco em ReactJs e frameworks como NextJs',
+        primaryText:
+          'O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript',
+        secondaryText:
+          'Durante meu periodo como desenvolvedor front-end trabalhei com projetos de diversas naturezas, sempre com foco em ReactJs e frameworks como NextJs',
         image_url: frontImage,
-        hasEffect: false
+        hasEffect: false,
       },
       {
         header: 'Desenvolvimento Back-end',
-        primaryText: 'Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás” da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. ',
-        secondaryText: 'Com desenvolvimento back-end aprendi muito nos primeiros anos de profissão, e por trabalhar em uma fábrica de software atuei em vários projetos, desde os mais comuns com simples CRUDs a projetos com uma complexa regra de negócio e integrações externas',
+        primaryText:
+          'Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás” da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. ',
+        secondaryText:
+          'Com desenvolvimento back-end aprendi muito nos primeiros anos de profissão, e por trabalhar em uma fábrica de software atuei em vários projetos, desde os mais comuns com simples CRUDs a projetos com uma complexa regra de negócio e integrações externas',
         image_url: backImage,
-        hasEffect: false
+        hasEffect: false,
       },
     ],
     howIHelpYou: {

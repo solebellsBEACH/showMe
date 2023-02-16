@@ -14,8 +14,8 @@ export interface IBio {
   header: string;
   primaryText: string;
   secondaryText: string;
-  image_url: string
-  hasEffect?: boolean
+  image_url: string;
+  hasEffect?: boolean;
 }
 
 export interface ILanguageJSON {

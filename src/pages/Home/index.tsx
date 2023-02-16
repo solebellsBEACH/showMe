@@ -41,7 +41,9 @@ const HomeComponent = () => {
           message={languageInformation.homePage.header[0]}
         />
         <HowIHelpYou />
-        {languageInformation.homePage.bio.map((e, i) => <Bio {...e} aling={i % 2 !== 0 ? 'rigth' : 'left'} />)}
+        {languageInformation.homePage.bio.map((e, i) => (
+          <Bio {...e} aling={i % 2 !== 0 ? 'rigth' : 'left'} />
+        ))}
         <Footer />
       </Container>
       <DrawerButton onClick={handleOpenDrawer} />

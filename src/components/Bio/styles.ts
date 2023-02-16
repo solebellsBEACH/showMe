@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.div < { aling: 'left' | 'rigth' } > `
+export const Container = styled.div<{ aling: 'left' | 'rigth' }>`
   width: 100%;
   min-height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: ${props => props.aling === 'left' ? 'row' : 'row-reverse'};
+  flex-direction: ${props => (props.aling === 'left' ? 'row' : 'row-reverse')};
   padding: 5vh 5vw;
 
   @media (max-width: 1200px) {

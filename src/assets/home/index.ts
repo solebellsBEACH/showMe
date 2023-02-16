@@ -18,5 +18,5 @@ export const homeAssets = {
   homeGif,
   perfilImage,
   frontImage,
-  backImage
+  backImage,
 };
