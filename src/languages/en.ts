@@ -34,30 +34,6 @@ export const englishJson: ILanguageJSON = {
           'During this period I worked on several projects with an extra attention to React Js, TypeScript and NodeJS, I am currently working entirely on a mobile project, working with React Native, which has been my focus in recent months.',
         image_url: perfilImage,
       },
-    ],
-    howIHelpYou: {
-      label: 'How can I help you?',
-      context: [
-        {
-          header: 'Quality and High Performance',
-          text:
-            "I've always worked with current technologies, getting 100% involved with the project and the end result. ",
-        },
-        {
-          header: 'Experience and Knowledge',
-          text:
-            "Throughout my history, I've worked with different segments and developed the necessary know- how to work on the most diverse projects.",
-        },
-        {
-          header: 'Agility in Development',
-          text:
-            'I work with agile methodologies that rely on embedded processes and tools and the necessary skills.',
-        },
-      ],
-    },
-  },
-  stacks: {
-    bio: [
       {
         header: 'Front-end Development',
         primaryText:
@@ -83,6 +59,67 @@ export const englishJson: ILanguageJSON = {
         secondaryText:
           'During my career the need for testing was very constant, as I work on several projects, automated and unit tests help to validate flows such as a form with several fields for example',
         image_url: testIcon,
+        hasEffect: false,
+      },
+    ],
+    howIHelpYou: {
+      label: 'How can I help you?',
+      context: [
+        {
+          header: 'Quality and High Performance',
+          text:
+            "I've always worked with current technologies, getting 100% involved with the project and the end result. ",
+        },
+        {
+          header: 'Experience and Knowledge',
+          text:
+            "Throughout my history, I've worked with different segments and developed the necessary know- how to work on the most diverse projects.",
+        },
+        {
+          header: 'Agility in Development',
+          text:
+            'I work with agile methodologies that rely on embedded processes and tools and the necessary skills.',
+        },
+      ],
+    },
+  },
+  stacks: {
+    bio: [],
+    projects: [
+      {
+        header: 'AFPESP',
+        primaryText: 'in this project I worked on the creation of a mobile application, in which I worked on the flow of services in which I created all the crud for purchasing meals, digital menu, points of sale, in addition to having worked on creating authentication via digital and easy and on notification screen.',
+        secondaryText: "",
+        image_url: frontImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Ranking dos Políticos',
+        primaryText: 'This was a very interesting project, in which it was a ranking of politicians who were evaluated based on their votes for bills.',
+        secondaryText: "In this project I worked on the creation of the ranking itself, in addition to the blog with news about the candidates.",
+        image_url: frontImage,
+        hasEffect: false,
+      },
+
+      {
+        header: 'Prevent Senior',
+        primaryText: 'On this front, I worked on creating some features of the admin portal that the patient had his data and vital information, such as heartbeats, blood pressure, among others...',
+        secondaryText: "It communicated with an API that was powered by a smartwatch that stayed as a patient, and if there was something dangerous to the patient's health, it would alert those responsible.",
+        image_url: frontImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Kolping',
+        primaryText: 'In this project I worked on the back end of a solution that had many different payment integrations.',
+        secondaryText: "The main one was with IuguJS, in addition, I was responsible for creating the user flow and for configuring all permissions for each one, implementing a solution based on enums linked to a table of roles.",
+        image_url: frontImage,
+        hasEffect: false,
+      },
+      {
+        header: 'AZO APP',
+        primaryText: 'In this project I worked on creating a page where the admin user could see a list of professionals and their information, a calendar widget where the professional could see their schedules, a graph that filtered consultations by period and type from that professional and fixed a bug in Google authentication.',
+        secondaryText: "",
+        image_url: frontImage,
         hasEffect: false,
       },
     ],

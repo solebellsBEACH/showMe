@@ -17,7 +17,14 @@ export interface IBio {
   image_url: string;
   hasEffect?: boolean;
 }
-
+export interface IProject {
+  header: string;
+  primaryText: string;
+  secondaryText: string;
+  image_url: string;
+  hasEffect?: boolean;
+  tecnologies?: string[]
+}
 export interface ILanguageJSON {
   homePage: {
     footer: string[];
@@ -27,6 +34,7 @@ export interface ILanguageJSON {
   };
   stacks: {
     bio: IBio[];
+    projects: IProject[];
     stackContextText: string;
     seeMore: string;
     seeLess: string;

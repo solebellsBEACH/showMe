@@ -35,7 +35,33 @@ export const portugueseJson: ILanguageJSON = {
           'Durante esse período atuei em diversos projetos com uma atenção a mais em React Js, TypeScript e NodeJS, atualmente estou integralmente em um projeto mobile, trabalhando com React Native, oque tem sido o meu foco nos últimos meses.',
         image_url: perfilImage,
       },
-
+      {
+        header: 'Desenvolvimento Front-end',
+        primaryText:
+          'O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript',
+        secondaryText:
+          'Durante meu periodo como desenvolvedor front-end trabalhei com projetos de diversas naturezas, sempre com foco em ReactJs e frameworks como NextJs',
+        image_url: frontImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Desenvolvimento Back-end',
+        primaryText:
+          'Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás" da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. ',
+        secondaryText:
+          'Com desenvolvimento back-end aprendi muito nos primeiros anos de profissão, e por trabalhar em uma fábrica de software atuei em vários projetos, desde os mais comuns com simples CRUDs a projetos com uma complexa regra de negócio e integrações externas',
+        image_url: backImage,
+        hasEffect: false,
+      },
+      {
+        header: 'Programação orientada a testes',
+        primaryText:
+          'Ela consiste em um ciclo curto de repetições onde o desenvolvedor escreve casos de testes automatizados que possam tanto validar um requisito quanto implementar uma nova funcionalidade. Utilizando TDD durante o desenvolvimento de um software a rotina adotada pela maioria dos programadores muda um pouco. ',
+        secondaryText:
+          'Durante minha carreira a necessidade de testes foi muito constante, por trabalhar em diversos projetos os testes automatizados e unitários ajudam a validar fluxos como um formulário com diversos campos por exemplo.',
+        image_url: testIcon,
+        hasEffect: false,
+      },
     ],
     howIHelpYou: {
       label: 'Como posso te ajudar?',
@@ -59,32 +85,42 @@ export const portugueseJson: ILanguageJSON = {
     },
   },
   stacks: {
-    bio: [
+    bio: [],
+    projects: [
       {
-        header: 'Desenvolvimento Front-end',
-        primaryText:
-          'O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript',
-        secondaryText:
-          'Durante meu periodo como desenvolvedor front-end trabalhei com projetos de diversas naturezas, sempre com foco em ReactJs e frameworks como NextJs',
+        header: 'AFPESP',
+        primaryText: 'nesse projeto atuei na criação de uma aplicação mobile, nela atuei no fluxo de serviços na qual criei todo crud de compra de refeições, cardápio digital, pontos de venda, além de ter atuado na criação da autenticação via digital e fáceis e na tela de notificações.',
+        secondaryText: "",
         image_url: frontImage,
         hasEffect: false,
       },
       {
-        header: 'Desenvolvimento Back-end',
-        primaryText:
-          'Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás” da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. ',
-        secondaryText:
-          'Com desenvolvimento back-end aprendi muito nos primeiros anos de profissão, e por trabalhar em uma fábrica de software atuei em vários projetos, desde os mais comuns com simples CRUDs a projetos com uma complexa regra de negócio e integrações externas',
-        image_url: backImage,
+        header: 'Ranking dos políticos',
+        primaryText: 'Esse foi um projeto muito interessante, na qual se tratava de um ranking de políticos que eram avaliados baseado em seus votos de projetos de lei.',
+        secondaryText: "Nesse projeto atuei na criação do próprio ranking, além do blog de notícias sobre os candidatos.",
+        image_url: frontImage,
+        hasEffect: false,
+      },
+
+      {
+        header: 'Prevent Sênior',
+        primaryText: 'Nessa frente, atuei na criação de algumas features do portal admin que o paciente tinha seus dados e informações vitais, como batimentos, pressão arterial, entre outros..',
+        secondaryText: "Ele comunicava com uma API que era alimentada por um smartwatch que ficava como paciente, e caso tivesse algo de perigoso a saúde do mesmo, alertava seus responsáveis.",
+        image_url: frontImage,
         hasEffect: false,
       },
       {
-        header: 'Programação orientada a testes',
-        primaryText:
-          'Ela consiste em um ciclo curto de repetições onde o desenvolvedor escreve casos de testes automatizados que possam tanto validar um requisito quanto implementar uma nova funcionalidade. Utilizando TDD durante o desenvolvimento de um software a rotina adotada pela maioria dos programadores muda um pouco. ',
-        secondaryText:
-          'Durante minha carreira a necessidade de testes foi muito constante, por trabalhar em diversos projetos os testes automatizados e unitários ajudam a validar fluxos como um formulário com diversos campos por exemplo.',
-        image_url: testIcon,
+        header: 'Kolping',
+        primaryText: 'Nesse projeto atuei no back end de uma solução que contava com muitas integrações de pagamento diferentes.',
+        secondaryText: "A principal delas era com o IuguJS, além disso, fui o responsável por criar o fluxo de usuários e por configurar todas permissões de cada um, implementando uma solução baseada em enums atrelados a uma tabela de roles.",
+        image_url: frontImage,
+        hasEffect: false,
+      },
+      {
+        header: 'AZO APP',
+        primaryText: 'Nesse projeto atuei na criação de uma página na qual o usuário admin podia ver uma lista de profissionais e suas informações, um widget de calendário em que o profissional poderia ver seus horários, um gráfico que filtrava por período e por tipo as consultas daquele profissional e corrigi um bug na autenticação pelo Google.',
+        secondaryText: "",
+        image_url: frontImage,
         hasEffect: false,
       },
     ],

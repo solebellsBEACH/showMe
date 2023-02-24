@@ -16,7 +16,7 @@ export const Container = styled.div<{ aling: 'left' | 'rigth' }>`
 
 export const Content = styled.div`
   width: 100%;
-  min-height: 30rem;
+  min-height: 25rem;
   margin-left: 1vw;
   @media (max-width: 1200px) {
     margin-top: 4vh;
@@ -48,7 +48,7 @@ export const PerfilContainer = styled.img`
     margin: 0;
     margin-bottom: 0.8vh;
     border-radius: 1vw;
-    width: 100%;
+    width: auto;
     height: 40vw;
   }
 `;
