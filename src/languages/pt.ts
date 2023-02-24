@@ -1,6 +1,7 @@
 import { hobbiesAssets } from '../assets/hobbies';
 import { stackAssets } from '../assets/stacks';
 import { homeAssets } from '../assets/home';
+import { projectAssets } from '../assets/stacks/projects';
 import { ILanguageJSON } from '../interface';
 
 const {
@@ -18,6 +19,8 @@ const {
 const { perfilImage, frontImage, backImage } = homeAssets;
 
 const { surf, guitarra, skate } = hobbiesAssets;
+const { afpesp, azo, kolping, ranking, prevent } = projectAssets
+
 
 export const portugueseJson: ILanguageJSON = {
   homePage: {
@@ -92,7 +95,7 @@ export const portugueseJson: ILanguageJSON = {
         header: 'AFPESP',
         primaryText: 'nesse projeto atuei na criação de uma aplicação mobile, nela atuei no fluxo de serviços na qual criei todo crud de compra de refeições, cardápio digital, pontos de venda, além de ter atuado na criação da autenticação via digital e fáceis e na tela de notificações.',
         secondaryText: "",
-        image_url: frontImage,
+        image_url: afpesp.logo,
         hasEffect: false,
         tecnologies: ["React Native",
           "Styled Components",
@@ -103,7 +106,7 @@ export const portugueseJson: ILanguageJSON = {
         header: 'Ranking dos políticos',
         primaryText: 'Esse foi um projeto muito interessante, na qual se tratava de um ranking de políticos que eram avaliados baseado em seus votos de projetos de lei.',
         secondaryText: "Nesse projeto atuei na criação do próprio ranking, além do blog de notícias sobre os candidatos.",
-        image_url: frontImage,
+        image_url: ranking.logo,
         hasEffect: false,
         tecnologies: ["NextJs",
           "Redux Saga",
@@ -114,7 +117,7 @@ export const portugueseJson: ILanguageJSON = {
         header: 'Prevent Sênior',
         primaryText: 'Nessa frente, atuei na criação de algumas features do portal admin que o paciente tinha seus dados e informações vitais, como batimentos, pressão arterial, entre outros..',
         secondaryText: "Ele comunicava com uma API que era alimentada por um smartwatch que ficava como paciente, e caso tivesse algo de perigoso a saúde do mesmo, alertava seus responsáveis.",
-        image_url: frontImage,
+        image_url: prevent.logo,
         hasEffect: false,
         tecnologies: ["NextJs",
           "Typescript ",
@@ -125,7 +128,7 @@ export const portugueseJson: ILanguageJSON = {
         header: 'Kolping',
         primaryText: 'Nesse projeto atuei no back end de uma solução que contava com muitas integrações de pagamento diferentes.',
         secondaryText: "A principal delas era com o IuguJS, além disso, fui o responsável por criar o fluxo de usuários e por configurar todas permissões de cada um, implementando uma solução baseada em enums atrelados a uma tabela de roles.",
-        image_url: frontImage,
+        image_url: kolping.logo,
         hasEffect: false,
         tecnologies: ["ExpressJs ",
           "Typescript",
@@ -136,7 +139,7 @@ export const portugueseJson: ILanguageJSON = {
         header: 'AZO APP',
         primaryText: 'Nesse projeto atuei na criação de uma página na qual o usuário admin podia ver uma lista de profissionais e suas informações, um widget de calendário em que o profissional poderia ver seus horários, um gráfico que filtrava por período e por tipo as consultas daquele profissional e corrigi um bug na autenticação pelo Google.',
         secondaryText: "",
-        image_url: frontImage,
+        image_url: azo.logo,
         hasEffect: false,
         tecnologies: ["React Js",
           "Bootstrap ",

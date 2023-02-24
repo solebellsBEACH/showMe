@@ -98,3 +98,27 @@ export interface ITheme {
   gray4: string;
   background: string;
 }
+
+
+export interface IProjectAssets {
+  afpesp: {
+    logo: string;
+    assets: string[];
+  };
+  ranking: {
+    logo: string;
+    assets: string[];
+  };
+  azo: {
+    logo: string;
+    assets: string[];
+  };
+  prevent: {
+    logo: string;
+    assets: string[];
+  };
+  kolping: {
+    logo: string;
+    assets: string[];
+  };
+}
