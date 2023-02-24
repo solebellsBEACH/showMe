@@ -17,16 +17,26 @@ export interface IBio {
   image_url: string;
   hasEffect?: boolean;
 }
-
+export interface IProject {
+  header: string;
+  primaryText: string;
+  secondaryText: string;
+  image_url: string;
+  hasEffect?: boolean;
+  tecnologies?: string[]
+}
 export interface ILanguageJSON {
   homePage: {
+    moreAboutMyCareer: string;
     footer: string[];
     header: string[];
-    bio: IBio[];
+    bios: IBio[];
+    bio: IBio;
     howIHelpYou: { label: string; context: { header: string; text: string }[] };
   };
   stacks: {
     bio: IBio[];
+    projects: IProject[];
     stackContextText: string;
     seeMore: string;
     seeLess: string;
@@ -87,4 +97,28 @@ export interface ITheme {
   gray3: string;
   gray4: string;
   background: string;
+}
+
+
+export interface IProjectAssets {
+  afpesp: {
+    logo: string;
+    assets: string[];
+  };
+  ranking: {
+    logo: string;
+    assets: string[];
+  };
+  azo: {
+    logo: string;
+    assets: string[];
+  };
+  prevent: {
+    logo: string;
+    assets: string[];
+  };
+  kolping: {
+    logo: string;
+    assets: string[];
+  };
 }
