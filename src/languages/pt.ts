@@ -94,6 +94,10 @@ export const portugueseJson: ILanguageJSON = {
         secondaryText: "",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["React Native",
+          "Styled Components",
+          "Typescript ",
+          "Expo CLI",]
       },
       {
         header: 'Ranking dos políticos',
@@ -101,6 +105,9 @@ export const portugueseJson: ILanguageJSON = {
         secondaryText: "Nesse projeto atuei na criação do próprio ranking, além do blog de notícias sobre os candidatos.",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["NextJs",
+          "Redux Saga",
+          "Styled Components ",]
       },
 
       {
@@ -109,6 +116,10 @@ export const portugueseJson: ILanguageJSON = {
         secondaryText: "Ele comunicava com uma API que era alimentada por um smartwatch que ficava como paciente, e caso tivesse algo de perigoso a saúde do mesmo, alertava seus responsáveis.",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["NextJs",
+          "Typescript ",
+          "SASS",
+          "Context API",]
       },
       {
         header: 'Kolping',
@@ -116,6 +127,10 @@ export const portugueseJson: ILanguageJSON = {
         secondaryText: "A principal delas era com o IuguJS, além disso, fui o responsável por criar o fluxo de usuários e por configurar todas permissões de cada um, implementando uma solução baseada em enums atrelados a uma tabela de roles.",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["ExpressJs ",
+          "Typescript",
+          "PostgreSQL",
+          "TypeORM",]
       },
       {
         header: 'AZO APP',
@@ -123,6 +138,11 @@ export const portugueseJson: ILanguageJSON = {
         secondaryText: "",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["React Js",
+          "Bootstrap ",
+          "Styled Components",
+          "Axios ",
+          "Redux toolkit",]
       },
     ],
     seeMore: 'Ver mais',

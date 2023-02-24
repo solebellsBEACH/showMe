@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import {
-  Bio,
   DrawerButton,
   Footer,
   IntroPages,
@@ -16,6 +15,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../pageComplements/stacks/responsive';
 import { stackAssets } from '../../assets/stacks';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 const Stacks = () => {
   const { languageInformation } = useSelector(
@@ -63,8 +63,11 @@ const Stacks = () => {
               })}
             </Carousel>
           </StacksContent>
+          <h1 className='myProjects'>Projetos que participei</h1>
           <BioContent>
-            <ProjectComponent />
+            {languageInformation.stacks.projects.map((e, i) => (
+              <ProjectComponent {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
+            ))}
           </BioContent>
         </Content>
         <Footer />

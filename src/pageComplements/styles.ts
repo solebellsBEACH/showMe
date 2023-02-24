@@ -6,28 +6,28 @@ export const Container = styled.div`
   background: ${({ theme }: { theme: ITheme }) => theme.background};
   min-height: 40rem;
   width: auto;
-  
-  .more-about-me{
-    width: 100%;
-    margin: 5vh 7vw;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    font-size: x-large;
-    transition: color 0.3s;
-
-    &:hover{
-      color:${props => props.theme.templateColor3}
-    }
-  }
-
-  #icon{
-    height: 70px;
-    width: 70px;
-  }
+   
 `;
 export const Content = styled.div`
   margin-top: 10vh;
+  .myProjects{
+    margin-top: 5rem;
+    margin-left:10vw;
+    width: 80vw;
+    font-size:4rem;
+    font-weight: 500;
+    margin-bottom:2rem;
+
+    @media(max-width:768px){
+      font-size:3.5rem;
+    }
+    @media(max-width:425px){
+      font-size:2.5rem;
+    }
+    @media(max-width:375px){
+      font-size:2rem;
+    }
+  }
 `;
 
 export const ContentText = styled.div`

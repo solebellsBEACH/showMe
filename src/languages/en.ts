@@ -93,6 +93,10 @@ export const englishJson: ILanguageJSON = {
         secondaryText: "",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["React Native",
+          "Styled Components",
+          "Typescript ",
+          "Expo CLI",]
       },
       {
         header: 'Ranking dos Políticos',
@@ -100,6 +104,9 @@ export const englishJson: ILanguageJSON = {
         secondaryText: "In this project I worked on the creation of the ranking itself, in addition to the blog with news about the candidates.",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["NextJs",
+          "Redux Saga",
+          "Styled Components ",]
       },
 
       {
@@ -115,6 +122,10 @@ export const englishJson: ILanguageJSON = {
         secondaryText: "The main one was with IuguJS, in addition, I was responsible for creating the user flow and for configuring all permissions for each one, implementing a solution based on enums linked to a table of roles.",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["NextJs",
+          "Typescript ",
+          "SASS",
+          "Context API",]
       },
       {
         header: 'AZO APP',
@@ -122,6 +133,10 @@ export const englishJson: ILanguageJSON = {
         secondaryText: "",
         image_url: frontImage,
         hasEffect: false,
+        tecnologies: ["ExpressJs ",
+          "Typescript",
+          "PostgreSQL",
+          "TypeORM",]
       },
     ],
     seeMore: 'See more',

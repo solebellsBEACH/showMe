@@ -33,4 +33,23 @@ a{
     cursor: pointer;
   }
 
+  .more-about-me{
+    width: 100%;
+    margin: 5vh 7vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: x-large;
+    transition: color 0.3s;
+
+    &:hover{
+      color:#4D4DAB;
+    }
+  }
+
+  #icon{
+    height: 70px;
+    width: 70px;
+  }
+
 `;
