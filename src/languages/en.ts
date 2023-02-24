@@ -20,6 +20,7 @@ const { perfilImage, frontImage, backImage } = homeAssets;
 
 export const englishJson: ILanguageJSON = {
   homePage: {
+    moreAboutMyCareer: 'More about my career',
     footer: [
       'Thanks for see my profile👨🏽‍💻',
       'Follow my repositories and stories.',

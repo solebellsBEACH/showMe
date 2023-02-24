@@ -9,7 +9,7 @@ import {
   TemplateDrawer,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { StackTextBox } from '../../pageComplements/stacks/components';
+import { ProjectComponent, StackTextBox } from '../../pageComplements/stacks/components';
 import { StacksContent } from '../../pageComplements/stacks/styles';
 import { Container, Content, ContentText, BioContent } from '../../pageComplements/styles';
 import Carousel from 'react-multi-carousel';
@@ -64,9 +64,7 @@ const Stacks = () => {
             </Carousel>
           </StacksContent>
           <BioContent>
-            {languageInformation.stacks.bio.map((e, i) => (
-              <Bio {...e} aling={i % 2 !== 0 ? 'rigth' : 'left'} />
-            ))}
+            <ProjectComponent />
           </BioContent>
         </Content>
         <Footer />

@@ -21,6 +21,7 @@ const { surf, guitarra, skate } = hobbiesAssets;
 
 export const portugueseJson: ILanguageJSON = {
   homePage: {
+    moreAboutMyCareer: 'Mais sobre minha carreira',
     footer: [
       'Obrigado por ver meu perfil.',
       'Acompanhe meus repositórios e histórias',

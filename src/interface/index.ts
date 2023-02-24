@@ -27,6 +27,7 @@ export interface IProject {
 }
 export interface ILanguageJSON {
   homePage: {
+    moreAboutMyCareer: string;
     footer: string[];
     header: string[];
     bios: IBio[];
