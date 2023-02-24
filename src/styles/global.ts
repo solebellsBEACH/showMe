@@ -25,7 +25,10 @@ export default createGlobalStyle`
     font-size:15px;
     color:#3D3D3D
   }
-
+a{
+  text-decoration: none;
+  color:#3D3D3D
+}
   button {
     cursor: pointer;
   }

@@ -29,7 +29,8 @@ export interface ILanguageJSON {
   homePage: {
     footer: string[];
     header: string[];
-    bio: IBio[];
+    bios: IBio[];
+    bio: IBio;
     howIHelpYou: { label: string; context: { header: string; text: string }[] };
   };
   stacks: {

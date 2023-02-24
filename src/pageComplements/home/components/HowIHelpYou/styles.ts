@@ -51,10 +51,12 @@ export const ContentTop = styled.div`
   }
 `;
 
-export const InformationBox = styled.div`
+export const InformationBox = styled.a`
   width: auto;
   margin: 1rem 0;
   padding: 2rem;
+text-decoration: none;
+color:black;    
 
   h2 {
     font-size: 24px;

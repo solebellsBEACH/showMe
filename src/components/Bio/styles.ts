@@ -48,7 +48,7 @@ export const PerfilContainer = styled.img`
     margin: 0;
     margin-bottom: 0.8vh;
     border-radius: 1vw;
-    width: auto;
+    width: 100%;
     height: 40vw;
   }
 `;
