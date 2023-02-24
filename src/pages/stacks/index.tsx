@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import {
-  Bio,
   DrawerButton,
   Footer,
   IntroPages,
   TemplateDrawer,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { StackTextBox } from '../../pageComplements/stacks/components';
+import { ProjectComponent, StackTextBox } from '../../pageComplements/stacks/components';
 import { StacksContent } from '../../pageComplements/stacks/styles';
 import { Container, Content, ContentText, BioContent } from '../../pageComplements/styles';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../pageComplements/stacks/responsive';
 import { stackAssets } from '../../assets/stacks';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 const Stacks = () => {
   const { languageInformation } = useSelector(
@@ -63,9 +63,10 @@ const Stacks = () => {
               })}
             </Carousel>
           </StacksContent>
+          <h1 className='myProjects'>Projetos que participei</h1>
           <BioContent>
-            {languageInformation.stacks.bio.map((e, i) => (
-              <Bio {...e} aling={i % 2 !== 0 ? 'rigth' : 'left'} />
+            {languageInformation.stacks.projects.map((e, i) => (
+              <ProjectComponent {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
             ))}
           </BioContent>
         </Content>

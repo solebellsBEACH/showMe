@@ -12,6 +12,7 @@ import {
 import { IReduxState } from '../../interface';
 import { HowIHelpYou } from '../../pageComplements/home/components';
 import { Container } from '../../pageComplements/styles';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 const HomeComponent = () => {
   const { languageInformation } = useSelector(
@@ -41,8 +42,10 @@ const HomeComponent = () => {
           message={languageInformation.homePage.header[0]}
         />
         <HowIHelpYou />
-        {languageInformation.homePage.bio.map((e, i) => (
-          <Bio {...e} aling={i % 2 !== 0 ? 'rigth' : 'left'} />
+        <Bio {...languageInformation.homePage.bio} />
+        <a href='/stacks' className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></a>
+        {languageInformation.homePage.bios.map((e, i) => (
+          <Bio {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
         ))}
         <Footer />
       </Container>

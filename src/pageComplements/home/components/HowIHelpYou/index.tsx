@@ -15,7 +15,7 @@ export function HowIHelpYou() {
   }
   const Information = ({ header, text }: IInformationProps) => {
     return (
-      <InformationBox>
+      <InformationBox href='/stacks'>
         <section>
           <div>
             <h2>{header}</h2>

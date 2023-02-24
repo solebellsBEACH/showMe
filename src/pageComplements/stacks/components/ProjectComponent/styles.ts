@@ -27,12 +27,24 @@ export const Content = styled.div`
   }
 
   h2 {
-    margin-left: 2vw;
+    margin-left: 1rem;
     text-align: left;
     font-size: 21px;
     margin-bottom: 2vh;
     margin-top: 2vh;
     font-weight: 300;
+  }
+
+  ul{
+    margin-left: 2rem;
+  }
+  li{
+  font-size: larger;
+  transition: color 0.3s;
+
+  &:hover{
+    color:#4D4DAB;
+  }
   }
 `;
 
