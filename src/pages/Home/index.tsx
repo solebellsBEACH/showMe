@@ -43,7 +43,7 @@ const HomeComponent = () => {
         />
         <HowIHelpYou />
         <Bio {...languageInformation.homePage.bio} />
-        <a href='/stacks' className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></a>
+        <a href='showMe/stacks' className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></a>
         {languageInformation.homePage.bios.map((e, i) => (
           <Bio {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
         ))}
