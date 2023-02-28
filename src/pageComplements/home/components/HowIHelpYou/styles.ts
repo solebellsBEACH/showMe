@@ -51,7 +51,7 @@ export const ContentTop = styled.div`
   }
 `;
 
-export const InformationBox = styled.a`
+export const InformationBox = styled.div`
   width: auto;
   margin: 1rem 0;
   padding: 2rem;

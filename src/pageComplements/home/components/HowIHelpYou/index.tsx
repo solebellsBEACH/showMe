@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { homeAssets } from '../../../../assets/home';
@@ -8,14 +9,17 @@ export function HowIHelpYou() {
   const { languageInformation } = useSelector(
     (state: IReduxState) => state.application,
   );
-
+  const router = useRouter()
   interface IInformationProps {
     header: string;
     text: string;
   }
   const Information = ({ header, text }: IInformationProps) => {
+
     return (
-      <InformationBox href='showMe/stacks'>
+      <InformationBox
+        onClick={() => router.push('/stacks')}
+      >
         <section>
           <div>
             <h2>{header}</h2>
