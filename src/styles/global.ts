@@ -34,7 +34,7 @@ a{
   }
 
   .more-about-me{
-    width: 100%;
+    width: auto;
     margin: 5vh 7vw;
     display: flex;
     align-items: center;

@@ -13,12 +13,13 @@ import { IReduxState } from '../../interface';
 import { HowIHelpYou } from '../../pageComplements/home/components';
 import { Container } from '../../pageComplements/styles';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import { useRouter } from 'next/router';
 
 const HomeComponent = () => {
   const { languageInformation } = useSelector(
     (state: IReduxState) => state.application,
   );
-
+  const router = useRouter()
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleOpenDrawer = () => {
@@ -43,7 +44,7 @@ const HomeComponent = () => {
         />
         <HowIHelpYou />
         <Bio {...languageInformation.homePage.bio} />
-        <a href='showMe/stacks' className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></a>
+        <div onClick={() => router.push('/stacks')} className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></div>
         {languageInformation.homePage.bios.map((e, i) => (
           <Bio {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
         ))}
