@@ -65,7 +65,7 @@ const Stacks = () => {
           <h1 className='myProjects'>Projetos que participei</h1>
           <BioContent>
             {languageInformation.stacks.projects.map((e, i) => (
-              <ProjectComponent {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
+              <ProjectComponent {...e} key={`ProjectComponents->${i}`} aling={i % 2 === 0 ? 'rigth' : 'left'} />
             ))}
           </BioContent>
         </Content>
