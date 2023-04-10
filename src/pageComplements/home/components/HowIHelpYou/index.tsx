@@ -17,8 +17,8 @@ export function HowIHelpYou() {
         <h1>{languageInformation.homePage.howIHelpYou.label}</h1>
       </ContentTop>
       <ContentBottom>
-        {languageInformation.homePage.howIHelpYou.context.map(e => (
-          <Information {...e} />
+        {languageInformation.homePage.howIHelpYou.context.map((e, i) => (
+          <Information {...e} key={`Information_index-${i}`} />
         ))}
       </ContentBottom>
     </Container>

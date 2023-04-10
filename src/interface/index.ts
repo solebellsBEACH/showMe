@@ -1,3 +1,5 @@
+import { HowICanHelpYouIconsEnum } from "./enums";
+
 export interface IApplicationDuckDuckInitialState {
   loading: boolean;
   error: boolean;
@@ -32,7 +34,7 @@ export interface ILanguageJSON {
     header: string[];
     bios: IBio[];
     bio: IBio;
-    howIHelpYou: { label: string; context: { header: string; text: string }[] };
+    howIHelpYou: { label: string; context: { header: string; text: string, icon: HowICanHelpYouIconsEnum }[], };
   };
   stacks: {
     bio: IBio[];

@@ -46,7 +46,7 @@ const HomeComponent = () => {
         <Bio {...languageInformation.homePage.bio} />
         <div onClick={() => router.push('/stacks')} className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></div>
         {languageInformation.homePage.bios.map((e, i) => (
-          <Bio {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
+          <Bio key={`Bio_Component_index-${i}`} {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
         ))}
         <Footer />
       </Container>

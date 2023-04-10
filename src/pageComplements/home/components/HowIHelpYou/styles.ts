@@ -59,7 +59,7 @@ export const ContentBottom = styled.div`
   align-items: center;
   flex-direction: column;
 
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 30% 30% 30%;
 
   @media (max-width: 768px) {
     grid-template-columns: auto;
