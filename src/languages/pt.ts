@@ -3,6 +3,7 @@ import { stackAssets } from '../assets/stacks';
 import { homeAssets } from '../assets/home';
 import { projectAssets } from '../assets/stacks/projects';
 import { ILanguageJSON } from '../interface';
+import { HowICanHelpYouIconsEnum } from '../interface/enums';
 
 const {
   adonisjs,
@@ -74,16 +75,19 @@ export const portugueseJson: ILanguageJSON = {
           header: 'Qualidade e Alta Performance',
           text:
             'Sempre trabalhei com tecnologias atuais, se envolvendo 100% com o projeto e com o resultado final. ',
+          icon: HowICanHelpYouIconsEnum.highPerformace
         },
         {
           header: 'Experiência e Conhecimento',
           text:
             'Ao longo da minha história, trabalhei com diversos segmentos e desenvolvi o know-how necessário para atuar nos mais diversificados projetos.',
+          icon: HowICanHelpYouIconsEnum.experience
         },
         {
           header: 'Agilidade no Desenvolvimento',
           text:
             'Trabalho com metodologias ágeis que contam com processos e ferramentas embarcadas e as skills necessárias.',
+          icon: HowICanHelpYouIconsEnum.speed
         },
       ],
     },

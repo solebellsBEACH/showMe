@@ -1,34 +1,14 @@
-import { useRouter } from 'next/router';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { homeAssets } from '../../../../assets/home';
 import { IReduxState } from '../../../../interface';
-import { Container, InformationBox, ContentBottom, ContentTop } from './styles';
+import { Container, ContentBottom, ContentTop } from './styles';
+import { Information } from '../InformationBox';
 
 export function HowIHelpYou() {
   const { languageInformation } = useSelector(
     (state: IReduxState) => state.application,
   );
-  const router = useRouter()
-  interface IInformationProps {
-    header: string;
-    text: string;
-  }
-  const Information = ({ header, text }: IInformationProps) => {
-
-    return (
-      <InformationBox
-        onClick={() => router.push('/stacks')}
-      >
-        <section>
-          <div>
-            <h2>{header}</h2>
-          </div>
-          <p>{text}</p>
-        </section>
-      </InformationBox>
-    );
-  };
 
   return (
     <Container>
@@ -37,8 +17,8 @@ export function HowIHelpYou() {
         <h1>{languageInformation.homePage.howIHelpYou.label}</h1>
       </ContentTop>
       <ContentBottom>
-        {languageInformation.homePage.howIHelpYou.context.map(e => (
-          <Information {...e} />
+        {languageInformation.homePage.howIHelpYou.context.map((e, i) => (
+          <Information {...e} key={`Information_index-${i}`} />
         ))}
       </ContentBottom>
     </Container>
