@@ -1,11 +1,11 @@
-import { HowICanHelpYouIconsEnum } from "./enums";
+import { HowICanHelpYouIconsEnum, LanguageCodeEnum } from "./enums";
 
 export interface IApplicationDuckDuckInitialState {
   loading: boolean;
   error: boolean;
   data: null;
   success: boolean;
-  language: 'pt' | 'en';
+  language: LanguageCodeEnum;
   languageInformation: ILanguageJSON;
 }
 export interface IReduxState {

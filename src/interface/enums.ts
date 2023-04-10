@@ -3,3 +3,8 @@ export enum HowICanHelpYouIconsEnum {
     highPerformace = 'highPerformace',
     experience = 'experience'
 }
+
+export enum LanguageCodeEnum {
+    english = 'en',
+    portuguese = 'pt'
+}
