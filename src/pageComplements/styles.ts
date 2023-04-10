@@ -6,7 +6,14 @@ export const Container = styled.div`
   background: ${({ theme }: { theme: ITheme }) => theme.background};
   min-height: 40rem;
   width: auto;
-   
+  @media(max-width:320px){
+    .react-multiple-carousel__arrow--right{
+      min-width: 30px;
+    min-height: 30px;
+    margin-right: -12px;
+}
+  }
+
 `;
 export const Content = styled.div`
   margin-top: 10vh;
@@ -52,7 +59,7 @@ export const ContentText = styled.div`
     flex-direction: column-reverse;
     margin-bottom: 5vh;
     p {
-      width: 95vw;
+      width: 85%;
     }
     img {
       margin-left: -5vw;

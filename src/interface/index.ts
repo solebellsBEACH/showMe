@@ -1,9 +1,11 @@
+import { HowICanHelpYouIconsEnum, LanguageCodeEnum } from "./enums";
+
 export interface IApplicationDuckDuckInitialState {
   loading: boolean;
   error: boolean;
   data: null;
   success: boolean;
-  language: 'pt' | 'en';
+  language: LanguageCodeEnum;
   languageInformation: ILanguageJSON;
 }
 export interface IReduxState {
@@ -32,7 +34,7 @@ export interface ILanguageJSON {
     header: string[];
     bios: IBio[];
     bio: IBio;
-    howIHelpYou: { label: string; context: { header: string; text: string }[] };
+    howIHelpYou: { label: string; context: { header: string; text: string, icon: HowICanHelpYouIconsEnum }[], };
   };
   stacks: {
     bio: IBio[];

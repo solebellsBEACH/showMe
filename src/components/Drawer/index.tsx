@@ -11,6 +11,7 @@ import { Creators as ApplicationActions } from '../../store/ducks/application';
 import RouterItem from './RouterItem';
 import { BrasilIcon, SwitchContainer, USAIcon } from './styles';
 import { assets } from '../../assets';
+import { LanguageCodeEnum } from '../../interface/enums';
 
 export interface ITemplateDrawerProps {
   openDrawer: boolean;
@@ -30,14 +31,14 @@ export const TemplateDrawer = ({
     path: string;
     icon: ReactElement<any, any>;
   }[] = [
-    { name: 'Home', path: '/', icon: <CabinIcon /> },
-    { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
-    { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
-  ];
+      { name: 'Home', path: '/', icon: <CabinIcon /> },
+      { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
+      { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
+    ];
   const [loading, setLoading] = useState<string | null>(null);
   const dispatch = useDispatch();
-  const [isEnglish, setIsEnglish] = useState(false);
-  const { languageInformation } = useSelector(
+
+  const { languageInformation, language } = useSelector(
     (state: IReduxState) => state.application,
   );
   const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,9 +47,8 @@ export const TemplateDrawer = ({
         language: e.target.checked ? 'en' : 'pt',
       }),
     );
-    setIsEnglish(e.target.checked);
   };
-
+  const isEnglish = language === LanguageCodeEnum.english;
   return (
     <Drawer open={openDrawer} anchor={anchor} onClose={onClose}>
       <List

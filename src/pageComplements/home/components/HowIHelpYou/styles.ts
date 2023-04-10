@@ -51,31 +51,6 @@ export const ContentTop = styled.div`
   }
 `;
 
-export const InformationBox = styled.div`
-  width: auto;
-  margin: 1rem 0;
-  padding: 2rem;
-text-decoration: none;
-color:black;    
-
-  h2 {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.25;
-    margin-bottom: 12px;
-  }
-  p {
-    font-weight: 300;
-  }
-  &:hover {
-    box-shadow: 0px 0px 40px rgb(0 0 0 / 16%);
-  }
-
-  @media (max-width: 768px) {
-    width: 80vw;
-    box-shadow: 0px 0px 40px rgb(0 0 0 / 10%);
-  }
-`;
 
 export const ContentBottom = styled.div`
   margin-top: 5vh;
@@ -84,7 +59,7 @@ export const ContentBottom = styled.div`
   align-items: center;
   flex-direction: column;
 
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 30% 30% 30%;
 
   @media (max-width: 768px) {
     grid-template-columns: auto;

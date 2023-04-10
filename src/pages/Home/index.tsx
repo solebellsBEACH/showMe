@@ -16,9 +16,12 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useRouter } from 'next/router';
 
 const HomeComponent = () => {
-  const { languageInformation } = useSelector(
+  const statedfff = useSelector(
     (state: IReduxState) => state.application,
   );
+  const { languageInformation } = statedfff
+
+  console.log(statedfff)
   const router = useRouter()
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -46,7 +49,7 @@ const HomeComponent = () => {
         <Bio {...languageInformation.homePage.bio} />
         <div onClick={() => router.push('/stacks')} className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></div>
         {languageInformation.homePage.bios.map((e, i) => (
-          <Bio {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
+          <Bio key={`Bio_Component_index-${i}`} {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
         ))}
         <Footer />
       </Container>
