@@ -1,18 +1,20 @@
 import { IApplicationDuckDuckInitialState } from '../../interface';
+import { LanguageCodeEnum } from '../../interface/enums';
 import { getLanguageInformation } from '../../languages';
-import { portugueseJson } from '../../languages/pt';
 
 export const Types = {
   SET_LANGUAGE: 'SET_LANGUAGE',
 };
+
+const defaultLanguage = LanguageCodeEnum.english
 
 const INITIAL_STATE: IApplicationDuckDuckInitialState = {
   loading: false,
   error: false,
   data: null,
   success: false,
-  language: 'pt',
-  languageInformation: portugueseJson,
+  language: defaultLanguage,
+  languageInformation: getLanguageInformation(defaultLanguage),
 };
 
 export default function ApplicationDuck(state = INITIAL_STATE, action: any) {

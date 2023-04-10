@@ -16,9 +16,12 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useRouter } from 'next/router';
 
 const HomeComponent = () => {
-  const { languageInformation } = useSelector(
+  const statedfff = useSelector(
     (state: IReduxState) => state.application,
   );
+  const { languageInformation } = statedfff
+
+  console.log(statedfff)
   const router = useRouter()
   const [openDrawer, setOpenDrawer] = useState(false);
 
