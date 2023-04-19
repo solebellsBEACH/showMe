@@ -17,8 +17,8 @@ import {
 } from '../../pageComplements/stacks/styles';
 
 const Hobbies = () => {
-  const useApplication = useSelector((state: IReduxState) => state.application);
-  const { languageInformation } = useApplication;
+  const useHome = useSelector((state: IReduxState) => state.home);
+  const { languageInformation } = useHome;
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
     setOpenDrawer(true);

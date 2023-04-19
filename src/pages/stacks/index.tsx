@@ -18,7 +18,7 @@ import { stackAssets } from '../../assets/stacks';
 
 const Stacks = () => {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application,
+    (state: IReduxState) => state.home,
   );
   const [openDrawer, setOpenDrawer] = useState(false);
   const [slideValue, setSlideValue] = useState(0);

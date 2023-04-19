@@ -11,7 +11,7 @@ export interface IHeaderProps {
 
 export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application
+    (state: IReduxState) => state.home
   );
   return (
     <Container>

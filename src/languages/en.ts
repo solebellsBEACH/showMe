@@ -50,7 +50,7 @@ export const englishJson: ILanguageJSON = {
       {
         header: 'Back-end Development',
         primaryText:
-          'As the name suggests, the back-end developer works at the “back” of the application. He is responsible, in general terms, for the implementation of the business rule. In a web application, this developer, when focused, does not touch the visual part of the application. ',
+          'As the name suggests, the back-end developer works at the “back” of the home. He is responsible, in general terms, for the implementation of the business rule. In a web home, this developer, when focused, does not touch the visual part of the home. ',
         secondaryText:
           'With back-end development I learned a lot in the first years of the profession, and because I worked in a software factory I worked on several projects, from the most common ones with simple CRUDs to projects with a complex business rule and external integrations',
         image_url: backImage,
@@ -95,7 +95,7 @@ export const englishJson: ILanguageJSON = {
     projects: [
       {
         header: 'AFPESP',
-        primaryText: 'in this project I worked on the creation of a mobile application, in which I worked on the flow of services in which I created all the crud for purchasing meals, digital menu, points of sale, in addition to having worked on creating authentication via digital and easy and on notification screen.',
+        primaryText: 'in this project I worked on the creation of a mobile home, in which I worked on the flow of services in which I created all the crud for purchasing meals, digital menu, points of sale, in addition to having worked on creating authentication via digital and easy and on notification screen.',
         secondaryText: "",
         image_url: afpesp.logo,
         hasEffect: false,
@@ -172,7 +172,7 @@ export const englishJson: ILanguageJSON = {
         image: nextjs,
         title: 'NextJS',
         description:
-          'Next.js is an open source React front-end development web framework created by Vercel that enables functionality such as server-side rendering and static website generation for React-based web applications.',
+          'Next.js is an open source React front-end development web framework created by Vercel that enables functionality such as server-side rendering and static website generation for React-based web homes.',
         myXP:
           'An excellent technology to use in projects with a large number of renders.',
       },
@@ -211,7 +211,7 @@ export const englishJson: ILanguageJSON = {
         image: nestjs,
         title: 'NestJS',
         description:
-          'NestJS is an open source Node.js framework intended for server-side application development. It was created by Kamil Mysliwiec and released in 2017. Under the hood, by default, NestJS makes use of the Express.js framework and is also compatible with Fastify.',
+          'NestJS is an open source Node.js framework intended for server-side home development. It was created by Kamil Mysliwiec and released in 2017. Under the hood, by default, NestJS makes use of the Express.js framework and is also compatible with Fastify.',
         myXP: 'Its architecture is heavily inspired by Angular.',
       },
     ],

@@ -1,7 +1,7 @@
 import { all, AllEffect } from 'redux-saga/effects';
 
-import applicationSagas from './application';
+import homeSagas from './home';
 
 export default function* rootSaga(): Generator<AllEffect<any>, any, unknown> {
-  return yield all([applicationSagas()]);
+  return yield all([homeSagas()]);
 }
