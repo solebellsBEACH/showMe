@@ -7,7 +7,7 @@ import { Information } from '../InformationBox';
 
 export function HowIHelpYou() {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application,
+    (state: IReduxState) => state.home,
   );
 
   return (

@@ -30,7 +30,7 @@ export const TextBox = ({
   const [imageHover, setImageHover] = useState(false);
   const [openImageModal, setOpenImageModal] = useState(false);
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.application,
+    (state: IReduxState) => state.home,
   );
 
   const Image = () => {

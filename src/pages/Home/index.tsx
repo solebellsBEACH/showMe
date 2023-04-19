@@ -17,7 +17,7 @@ import { useRouter } from 'next/router';
 
 const HomeComponent = () => {
   const statedfff = useSelector(
-    (state: IReduxState) => state.application,
+    (state: IReduxState) => state.home,
   );
   const { languageInformation } = statedfff
 
