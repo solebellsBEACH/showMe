@@ -19,7 +19,7 @@ export default function HobbieDuck(state = INITIAL_STATE, action: any) {
         case Types.GET_HOBBIESPAGE_DATA_SUCCESS:
             return {
                 ...state,
-                data: action.payload,
+                data: { hobbies: action.payload },
                 loading: false,
                 error: false,
             };

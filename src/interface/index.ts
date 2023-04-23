@@ -55,10 +55,11 @@ export interface Document {
   page: Page;
   header: string;
   primary_text: string;
-  secondary_text: string;
+  secondary_text?: string;
   image_url: string;
   has_effect: boolean;
   is_personal_bio: boolean;
+  subtitle?: string
 }
 
 export type HomePageData = {
