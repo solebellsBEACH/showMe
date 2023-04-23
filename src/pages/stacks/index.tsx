@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import {
   DrawerButton,
@@ -23,19 +23,28 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../pageComplements/stacks/responsive';
 import { stackAssets } from '../../assets/stacks';
+import { Creators as StackActions } from '../../store/ducks/stacks';
 
-const Stacks = () => {
-  const { languageInformation } = useSelector(
-    (state: IReduxState) => state.home,
+const Stacks = (props: any) => {
+  const selector = useSelector(
+    (state: IReduxState) => state,
   );
-  const [openDrawer, setOpenDrawer] = useState(false);
-  const [slideValue, setSlideValue] = useState(0);
+  const dispatch = useDispatch();
+  const { languageInformation } = selector.home
+  const { data } = selector.stacks
+  const [openDrawer, setOpenDrawer] = React.useState(false);
+  const [slideValue, setSlideValue] = React.useState(0);
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
   };
   const handleCloseDrawer = () => {
     setOpenDrawer(false);
   };
+
+  React.useEffect(() => {
+    dispatch(StackActions.getStackPageDataRequest())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props])
 
   return (
     <>
@@ -72,7 +81,7 @@ const Stacks = () => {
           </StacksContent>
           <h1 className="myProjects">Projetos que participei</h1>
           <BioContent>
-            {languageInformation.stacks.projects.map((e, i) => (
+            {data?.projects && data?.projects.map((e, i) => (
               <ProjectComponent
                 {...e}
                 key={`ProjectComponents->${i}`}

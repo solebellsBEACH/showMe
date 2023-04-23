@@ -8,8 +8,17 @@ export interface IHomeDuckDuckInitialState {
   language: LanguageCodeEnum;
   languageInformation: ILanguageJSON;
 }
+
+export interface IStackDuckDuckInitialState {
+  loading: boolean;
+  error: boolean;
+  data: StacksPageData | null;
+  success: boolean;
+}
+
 export interface IReduxState {
   home: IHomeDuckDuckInitialState;
+  stacks: IStackDuckDuckInitialState
 }
 
 export interface IBio {
@@ -27,7 +36,15 @@ export interface IProject {
   hasEffect?: boolean;
   tecnologies?: string[];
 }
-
+export type Project = {
+  tecnologies: string[]
+  header: string
+  primary_text: string
+  secondary_text: string
+  image_url: string
+  has_effect?: boolean
+  is_personal_bio?: boolean
+}
 export interface Document {
   page: Page;
   header: string;
@@ -44,7 +61,7 @@ export type HomePageData = {
 };
 
 export type StacksPageData = {
-  projects: IProject[];
+  projects: Project[];
   stacks: Stack[];
 };
 

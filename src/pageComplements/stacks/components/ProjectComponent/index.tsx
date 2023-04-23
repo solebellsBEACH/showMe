@@ -1,30 +1,31 @@
-import { IProject } from '../../../../interface';
+import { Project } from '../../../../interface';
 
 import { Container, Content, PerfilContainer } from './styles';
+interface ProjectProps extends Project {
+  aling?: 'left' | 'rigth'
+}
 
-export const ProjectComponent: React.FC<
-  IProject & { aling?: 'left' | 'rigth' }
-> = ({
+export const ProjectComponent: React.FC<ProjectProps> = ({
   header,
-  primaryText,
-  secondaryText,
-  aling = 'left',
   image_url,
-  hasEffect = true,
+  primary_text,
+  secondary_text,
   tecnologies,
+  aling = 'left',
+  has_effect,
 }) => {
   return (
     <Container aling={aling} key={`BioComponent->${header}`}>
       <PerfilContainer
-        style={hasEffect ? { filter: 'grayscale(100%)' } : {}}
+        style={has_effect ? { filter: 'grayscale(100%)' } : {}}
         alt="PERFILIMAGE"
         src={image_url}
       />
       <Content>
         <h1>{header}</h1>
-        <h2>{primaryText}</h2>
+        <h2>{primary_text}</h2>
         <br />
-        <h2>{secondaryText}</h2>
+        <h2>{secondary_text}</h2>
         {tecnologies && (
           <ul>
             {tecnologies.map((e, i) => (
