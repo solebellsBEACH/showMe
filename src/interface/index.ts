@@ -15,10 +15,16 @@ export interface IStackDuckDuckInitialState {
   data: StacksPageData | null;
   success: boolean;
 }
-
+export interface IHobbiesDuckDuckInitialState {
+  loading: boolean;
+  error: boolean;
+  data: HobbiesPageData | null;
+  success: boolean;
+}
 export interface IReduxState {
   home: IHomeDuckDuckInitialState;
   stacks: IStackDuckDuckInitialState;
+  hobbies: IHobbiesDuckDuckInitialState
 }
 
 export interface IBio {
@@ -65,7 +71,7 @@ export type StacksPageData = {
   stacks: Stack[];
 };
 
-export type HobbiesData = {
+export type HobbiesPageData = {
   hobbies: Document[];
 };
 
