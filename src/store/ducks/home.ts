@@ -8,10 +8,9 @@ export const Types = {
   GET_HOMEPAGE_DATA_REQUEST: 'GET_HOMEPAGE_DATA_REQUEST',
   GET_HOMEPAGE_DATA_SUCCESS: 'GET_HOMEPAGE_DATA_SUCCESS',
   GET_HOMEPAGE_DATA_FAIL: 'GET_HOMEPAGE_DATA_FAIL',
-
 };
 
-const defaultLanguage = LanguageCodeEnum.english
+const defaultLanguage = LanguageCodeEnum.english;
 
 const INITIAL_STATE: IHomeDuckDuckInitialState = {
   loading: false,
@@ -38,13 +37,13 @@ export default function HomeDuck(state = INITIAL_STATE, action: any) {
         data: action.payload,
         loading: false,
         error: false,
-      }
+      };
     case Types.GET_HOMEPAGE_DATA_FAIL:
       return {
         ...state,
         loading: false,
         error: true,
-      }
+      };
     default:
       return state;
   }
@@ -60,10 +59,9 @@ export const Creators = {
   }),
   getHomePageDataSuccess: (payload: any) => ({
     type: Types.GET_HOMEPAGE_DATA_SUCCESS,
-    payload
+    payload,
   }),
   getHomePageDataFail: () => ({
     type: Types.GET_HOMEPAGE_DATA_FAIL,
   }),
-
 };

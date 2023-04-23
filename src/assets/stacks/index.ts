@@ -27,5 +27,5 @@ export const stackAssets = {
   codeGif,
   carrerAsset,
   testIcon,
-  teamIcon
+  teamIcon,
 };

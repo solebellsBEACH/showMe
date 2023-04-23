@@ -51,7 +51,6 @@ export const ContentTop = styled.div`
   }
 `;
 
-
 export const ContentBottom = styled.div`
   margin-top: 5vh;
   display: grid;

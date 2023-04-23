@@ -31,10 +31,10 @@ export const TemplateDrawer = ({
     path: string;
     icon: ReactElement<any, any>;
   }[] = [
-      { name: 'Home', path: '/', icon: <CabinIcon /> },
-      { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
-      { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
-    ];
+    { name: 'Home', path: '/', icon: <CabinIcon /> },
+    { name: 'Hobbies', path: '/hobbies', icon: <FavoriteIcon /> },
+    { name: 'Stacks', path: '/stacks', icon: <CodeIcon /> },
+  ];
   const [loading, setLoading] = useState<string | null>(null);
   const dispatch = useDispatch();
 

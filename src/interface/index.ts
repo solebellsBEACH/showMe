@@ -1,4 +1,4 @@
-import { HowICanHelpYouIconsEnum, LanguageCodeEnum, Page } from "./enums";
+import { HowICanHelpYouIconsEnum, LanguageCodeEnum, Page } from './enums';
 
 export interface IHomeDuckDuckInitialState {
   loading: boolean;
@@ -25,33 +25,32 @@ export interface IProject {
   secondaryText: string;
   image_url: string;
   hasEffect?: boolean;
-  tecnologies?: string[]
+  tecnologies?: string[];
 }
 
 export interface Document {
-  page: Page
-  header: string
-  primary_text: string
-  secondary_text: string
-  image_url: string
-  has_effect: boolean
-  is_personal_bio: boolean
+  page: Page;
+  header: string;
+  primary_text: string;
+  secondary_text: string;
+  image_url: string;
+  has_effect: boolean;
+  is_personal_bio: boolean;
 }
-
 
 export type HomePageData = {
-  bios: Document[]
-  bio: Document
-}
+  bios: Document[];
+  bio: Document;
+};
 
 export type StacksPageData = {
   projects: IProject[];
   stacks: Stack[];
-}
+};
 
 export type HobbiesData = {
-  hobbies: Document[]
-}
+  hobbies: Document[];
+};
 
 export interface ILanguageJSON {
   homePage: {
@@ -60,7 +59,14 @@ export interface ILanguageJSON {
     header: string[];
     bios: IBio[];
     bio: IBio;
-    howIHelpYou: { label: string; context: { header: string; text: string, icon: HowICanHelpYouIconsEnum }[], };
+    howIHelpYou: {
+      label: string;
+      context: {
+        header: string;
+        text: string;
+        icon: HowICanHelpYouIconsEnum;
+      }[];
+    };
   };
   stacks: {
     bio: IBio[];
@@ -102,7 +108,7 @@ export type Stack = {
   description: string;
   myXP: string;
   image: string;
-}
+};
 
 export interface ISendMeAMessageForm {
   subject: string;
@@ -126,7 +132,6 @@ export interface ITheme {
   gray4: string;
   background: string;
 }
-
 
 export interface IProjectAssets {
   afpesp: {

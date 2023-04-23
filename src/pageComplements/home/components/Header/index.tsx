@@ -1,9 +1,9 @@
-import React from "react";
-import { BackgroundGif, Container, ContentTypewriter } from "./styles";
-import gif from "../../../../assets/homeHeaderGif.gif";
-import Typewriter from "typewriter-effect";
-import { IReduxState } from "../../../../interface";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { BackgroundGif, Container, ContentTypewriter } from './styles';
+import gif from '../../../../assets/homeHeaderGif.gif';
+import Typewriter from 'typewriter-effect';
+import { IReduxState } from '../../../../interface';
+import { useSelector } from 'react-redux';
 export interface IHeaderProps {
   showGif: boolean;
   setShowGif: React.Dispatch<React.SetStateAction<boolean>>;
@@ -11,7 +11,7 @@ export interface IHeaderProps {
 
 export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.home
+    (state: IReduxState) => state.home,
   );
   return (
     <Container>
@@ -19,7 +19,7 @@ export const Header = ({ setShowGif, showGif }: IHeaderProps) => {
       <ContentTypewriter showGif={showGif}>
         {!showGif ? (
           <Typewriter
-            onInit={(typewriter) => {
+            onInit={typewriter => {
               typewriter
                 .typeString(languageInformation.homePage.header[0])
                 .pauseFor(150)

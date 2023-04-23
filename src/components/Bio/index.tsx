@@ -3,7 +3,7 @@ import { Document } from '../../interface';
 import { Container, Content, PerfilContainer } from './styles';
 
 interface BioProps extends Document {
-  aling?: 'left' | 'rigth'
+  aling?: 'left' | 'rigth';
 }
 
 export const Bio: React.FC<BioProps> = ({

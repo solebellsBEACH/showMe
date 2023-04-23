@@ -9,9 +9,7 @@ import { Links } from '../../mocks/links';
 import { Container, ContentLeft, ContentRight } from './styles';
 
 const Footer = () => {
-  const homeData = useSelector(
-    (state: IReduxState) => state.home,
-  );
+  const homeData = useSelector((state: IReduxState) => state.home);
 
   return (
     <Container>

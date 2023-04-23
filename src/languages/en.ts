@@ -14,12 +14,12 @@ const {
   reactjs,
   reactnative,
   typescript,
-  testIcon
+  testIcon,
 } = stackAssets;
 
 const { surf, guitarra, skate } = hobbiesAssets;
 const { perfilImage, frontImage, backImage } = homeAssets;
-const { afpesp, azo, kolping, ranking, prevent } = projectAssets
+const { afpesp, azo, kolping, ranking, prevent } = projectAssets;
 
 export const englishJson: ILanguageJSON = {
   homePage: {
@@ -73,19 +73,19 @@ export const englishJson: ILanguageJSON = {
           header: 'Quality and High Performance',
           text:
             "I've always worked with current technologies, getting 100% involved with the project and the end result. ",
-          icon: HowICanHelpYouIconsEnum.highPerformace
+          icon: HowICanHelpYouIconsEnum.highPerformace,
         },
         {
           header: 'Experience and Knowledge',
           text:
             "Throughout my history, I've worked with different segments and developed the necessary know- how to work on the most diverse projects.",
-          icon: HowICanHelpYouIconsEnum.experience
+          icon: HowICanHelpYouIconsEnum.experience,
         },
         {
           header: 'Agility in Development',
           text:
             'I work with agile methodologies that rely on embedded processes and tools and the necessary skills.',
-          icon: HowICanHelpYouIconsEnum.speed
+          icon: HowICanHelpYouIconsEnum.speed,
         },
       ],
     },
@@ -95,54 +95,56 @@ export const englishJson: ILanguageJSON = {
     projects: [
       {
         header: 'AFPESP',
-        primaryText: 'in this project I worked on the creation of a mobile home, in which I worked on the flow of services in which I created all the crud for purchasing meals, digital menu, points of sale, in addition to having worked on creating authentication via digital and easy and on notification screen.',
-        secondaryText: "",
+        primaryText:
+          'in this project I worked on the creation of a mobile home, in which I worked on the flow of services in which I created all the crud for purchasing meals, digital menu, points of sale, in addition to having worked on creating authentication via digital and easy and on notification screen.',
+        secondaryText: '',
         image_url: afpesp.logo,
         hasEffect: false,
-        tecnologies: ["React Native",
-          "Styled Components",
-          "Typescript ",
-          "Expo CLI",]
+        tecnologies: [
+          'React Native',
+          'Styled Components',
+          'Typescript ',
+          'Expo CLI',
+        ],
       },
       {
         header: 'Ranking dos Políticos',
-        primaryText: 'This was a very interesting project, in which it was a ranking of politicians who were evaluated based on their votes for bills.',
-        secondaryText: "In this project I worked on the creation of the ranking itself, in addition to the blog with news about the candidates.",
+        primaryText:
+          'This was a very interesting project, in which it was a ranking of politicians who were evaluated based on their votes for bills.',
+        secondaryText:
+          'In this project I worked on the creation of the ranking itself, in addition to the blog with news about the candidates.',
         image_url: ranking.logo,
         hasEffect: false,
-        tecnologies: ["NextJs",
-          "Redux Saga",
-          "Styled Components ",]
+        tecnologies: ['NextJs', 'Redux Saga', 'Styled Components '],
       },
 
       {
         header: 'Prevent Senior',
-        primaryText: 'On this front, I worked on creating some features of the admin portal that the patient had his data and vital information, such as heartbeats, blood pressure, among others...',
-        secondaryText: "It communicated with an API that was powered by a smartwatch that stayed as a patient, and if there was something dangerous to the patient's health, it would alert those responsible.",
+        primaryText:
+          'On this front, I worked on creating some features of the admin portal that the patient had his data and vital information, such as heartbeats, blood pressure, among others...',
+        secondaryText:
+          "It communicated with an API that was powered by a smartwatch that stayed as a patient, and if there was something dangerous to the patient's health, it would alert those responsible.",
         image_url: prevent.logo,
         hasEffect: false,
       },
       {
         header: 'Kolping',
-        primaryText: 'In this project I worked on the back end of a solution that had many different payment integrations.',
-        secondaryText: "The main one was with IuguJS, in addition, I was responsible for creating the user flow and for configuring all permissions for each one, implementing a solution based on enums linked to a table of roles.",
+        primaryText:
+          'In this project I worked on the back end of a solution that had many different payment integrations.',
+        secondaryText:
+          'The main one was with IuguJS, in addition, I was responsible for creating the user flow and for configuring all permissions for each one, implementing a solution based on enums linked to a table of roles.',
         image_url: kolping.logo,
         hasEffect: false,
-        tecnologies: ["NextJs",
-          "Typescript ",
-          "SASS",
-          "Context API",]
+        tecnologies: ['NextJs', 'Typescript ', 'SASS', 'Context API'],
       },
       {
         header: 'AZO APP',
-        primaryText: 'In this project I worked on creating a page where the admin user could see a list of professionals and their information, a calendar widget where the professional could see their schedules, a graph that filtered consultations by period and type from that professional and fixed a bug in Google authentication.',
-        secondaryText: "",
+        primaryText:
+          'In this project I worked on creating a page where the admin user could see a list of professionals and their information, a calendar widget where the professional could see their schedules, a graph that filtered consultations by period and type from that professional and fixed a bug in Google authentication.',
+        secondaryText: '',
         image_url: azo.logo,
         hasEffect: false,
-        tecnologies: ["ExpressJs ",
-          "Typescript",
-          "PostgreSQL",
-          "TypeORM",]
+        tecnologies: ['ExpressJs ', 'Typescript', 'PostgreSQL', 'TypeORM'],
       },
     ],
     seeMore: 'See more',

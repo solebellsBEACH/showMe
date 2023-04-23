@@ -43,10 +43,9 @@ export const Description = styled.div<{ seeMore: boolean }>`
   color: black;
   height: ${props => (props.seeMore ? 'auto' : '7em')};
 
-  @media(max-width:320px){
+  @media (max-width: 320px) {
     max-width: 80%;
   }
-
 `;
 
 export const MyXPContent = styled.div<{ seeMore: boolean }>`

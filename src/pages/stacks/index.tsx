@@ -8,9 +8,17 @@ import {
   TemplateDrawer,
 } from '../../components';
 import { IReduxState } from '../../interface';
-import { ProjectComponent, StackTextBox } from '../../pageComplements/stacks/components';
+import {
+  ProjectComponent,
+  StackTextBox,
+} from '../../pageComplements/stacks/components';
 import { StacksContent } from '../../pageComplements/stacks/styles';
-import { Container, Content, ContentText, BioContent } from '../../pageComplements/styles';
+import {
+  Container,
+  Content,
+  ContentText,
+  BioContent,
+} from '../../pageComplements/styles';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../../pageComplements/stacks/responsive';
@@ -62,10 +70,14 @@ const Stacks = () => {
               })}
             </Carousel>
           </StacksContent>
-          <h1 className='myProjects'>Projetos que participei</h1>
+          <h1 className="myProjects">Projetos que participei</h1>
           <BioContent>
             {languageInformation.stacks.projects.map((e, i) => (
-              <ProjectComponent {...e} key={`ProjectComponents->${i}`} aling={i % 2 === 0 ? 'rigth' : 'left'} />
+              <ProjectComponent
+                {...e}
+                key={`ProjectComponents->${i}`}
+                aling={i % 2 === 0 ? 'rigth' : 'left'}
+              />
             ))}
           </BioContent>
         </Content>

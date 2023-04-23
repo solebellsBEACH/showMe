@@ -24,10 +24,10 @@ const HomeComponent = (props: any) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(HomeActions.getHomePageDataRequest())
-  }, [dispatch, props])
+    dispatch(HomeActions.getHomePageDataRequest());
+  }, [dispatch, props]);
 
-  const router = useRouter()
+  const router = useRouter();
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleOpenDrawer = () => {
@@ -51,13 +51,25 @@ const HomeComponent = (props: any) => {
           message={languageInformation.homePage.header[0]}
         />
         <HowIHelpYou />
-        {data && <>
-          <Bio {...data.bio} />
-          <div onClick={() => router.push('/stacks')} className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></div>
-          {data.bios.map((e, i) => (
-            <Bio key={`Bio_Component_index-${i}`} {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
-          ))}
-        </>}
+        {data && (
+          <>
+            <Bio {...data.bio} />
+            <div
+              onClick={() => router.push('/stacks')}
+              className="more-about-me"
+            >
+              {languageInformation.homePage.moreAboutMyCareer}{' '}
+              <ArrowOutwardIcon id="icon" />
+            </div>
+            {data.bios.map((e, i) => (
+              <Bio
+                key={`Bio_Component_index-${i}`}
+                {...e}
+                aling={i % 2 === 0 ? 'rigth' : 'left'}
+              />
+            ))}
+          </>
+        )}
 
         <Footer />
       </Container>
