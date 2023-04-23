@@ -2,7 +2,7 @@ import { Project } from '../../../../interface';
 
 import { Container, Content, PerfilContainer } from './styles';
 interface ProjectProps extends Project {
-  aling?: 'left' | 'rigth'
+  aling?: 'left' | 'rigth';
 }
 
 export const ProjectComponent: React.FC<ProjectProps> = ({

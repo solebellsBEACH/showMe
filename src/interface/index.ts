@@ -18,7 +18,7 @@ export interface IStackDuckDuckInitialState {
 
 export interface IReduxState {
   home: IHomeDuckDuckInitialState;
-  stacks: IStackDuckDuckInitialState
+  stacks: IStackDuckDuckInitialState;
 }
 
 export interface IBio {
@@ -37,14 +37,14 @@ export interface IProject {
   tecnologies?: string[];
 }
 export type Project = {
-  tecnologies: string[]
-  header: string
-  primary_text: string
-  secondary_text: string
-  image_url: string
-  has_effect?: boolean
-  is_personal_bio?: boolean
-}
+  tecnologies: string[];
+  header: string;
+  primary_text: string;
+  secondary_text: string;
+  image_url: string;
+  has_effect?: boolean;
+  is_personal_bio?: boolean;
+};
 export interface Document {
   page: Page;
   header: string;
@@ -123,8 +123,8 @@ export interface ILinks {
 export type Stack = {
   title: string;
   description: string;
-  myXP: string;
-  image: string;
+  my_xp: string;
+  image_url: string;
 };
 
 export interface ISendMeAMessageForm {

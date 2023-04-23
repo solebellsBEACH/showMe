@@ -26,12 +26,10 @@ import { stackAssets } from '../../assets/stacks';
 import { Creators as StackActions } from '../../store/ducks/stacks';
 
 const Stacks = (props: any) => {
-  const selector = useSelector(
-    (state: IReduxState) => state,
-  );
+  const selector = useSelector((state: IReduxState) => state);
   const dispatch = useDispatch();
-  const { languageInformation } = selector.home
-  const { data } = selector.stacks
+  const { languageInformation } = selector.home;
+  const { data } = selector.stacks;
   const [openDrawer, setOpenDrawer] = React.useState(false);
   const [slideValue, setSlideValue] = React.useState(0);
   const handleOpenDrawer = () => {
@@ -42,9 +40,9 @@ const Stacks = (props: any) => {
   };
 
   React.useEffect(() => {
-    dispatch(StackActions.getStackPageDataRequest())
+    dispatch(StackActions.getStackPageDataRequest());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props])
+  }, [props]);
 
   return (
     <>
@@ -69,25 +67,28 @@ const Stacks = (props: any) => {
             <div className="title">
               {languageInformation.stacks.stacksTitle}
             </div>
-            <Carousel
-              beforeChange={e => setSlideValue(e)}
-              className="carousel"
-              responsive={responsive}
-            >
-              {languageInformation.stacks.stacksDescription.map((e, i) => {
-                return <StackTextBox key={`StackTextBox${i}`} {...e} />;
-              })}
-            </Carousel>
+            {data && (
+              <Carousel
+                beforeChange={e => setSlideValue(e)}
+                className="carousel"
+                responsive={responsive}
+              >
+                {data?.stacks.map((e, i) => {
+                  return <StackTextBox key={`StackTextBox${i}`} {...e} />;
+                })}
+              </Carousel>
+            )}
           </StacksContent>
           <h1 className="myProjects">Projetos que participei</h1>
           <BioContent>
-            {data?.projects && data?.projects.map((e, i) => (
-              <ProjectComponent
-                {...e}
-                key={`ProjectComponents->${i}`}
-                aling={i % 2 === 0 ? 'rigth' : 'left'}
-              />
-            ))}
+            {data?.projects &&
+              data?.projects.map((e, i) => (
+                <ProjectComponent
+                  {...e}
+                  key={`ProjectComponents->${i}`}
+                  aling={i % 2 === 0 ? 'rigth' : 'left'}
+                />
+              ))}
           </BioContent>
         </Content>
         <Footer />
