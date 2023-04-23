@@ -16,15 +16,16 @@ export const TextBox = ({
   align = 'left',
   hobbieTemplate = false,
   header,
-  image_url, secondary_text,
+  image_url,
+  secondary_text,
   primary_text,
-  subtitle
+  subtitle,
 }: ITextBoxProps) => {
   const matches = useMediaQuery('(max-width:1250px)');
   const [imageHover, setImageHover] = useState(false);
   const [openImageModal, setOpenImageModal] = useState(false);
   const { languageInformation } = useSelector(
-    (state: IReduxState) => state.home,
+    (state: IReduxState) => state.application,
   );
 
   const Image = () => {

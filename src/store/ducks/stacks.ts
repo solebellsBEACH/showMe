@@ -1,4 +1,4 @@
-import { IStackDuckDuckInitialState } from '../../interface';
+import { IStackDuckInitialState } from '../../interface';
 
 export const Types = {
   GET_STACKSPAGE_DATA_REQUEST: 'GET_STACKSPAGE_DATA_REQUEST',
@@ -6,7 +6,7 @@ export const Types = {
   GET_STACKSPAGE_DATA_FAIL: 'GET_STACKSPAGE_DATA_FAIL',
 };
 
-const INITIAL_STATE: IStackDuckDuckInitialState = {
+const INITIAL_STATE: IStackDuckInitialState = {
   loading: false,
   error: false,
   data: null,

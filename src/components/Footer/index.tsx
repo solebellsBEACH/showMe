@@ -9,15 +9,17 @@ import { Links } from '../../mocks/links';
 import { Container, ContentLeft, ContentRight } from './styles';
 
 const Footer = () => {
-  const homeData = useSelector((state: IReduxState) => state.home);
+  const applicationData = useSelector(
+    (state: IReduxState) => state.application,
+  );
 
   return (
     <Container>
       <ContentLeft>
-        {homeData.languageInformation.homePage.footer[0]}
+        {applicationData.languageInformation.homePage.footer[0]}
       </ContentLeft>
       <ContentRight>
-        <div>{homeData.languageInformation.homePage.footer[1]}</div>
+        <div>{applicationData.languageInformation.homePage.footer[1]}</div>
         <div className="icons-content">
           <a href={Links().github}>
             <GitHubIcon className="icon" />

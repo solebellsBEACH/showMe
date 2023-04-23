@@ -7,7 +7,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Drawer, List, ListSubheader, Switch } from '@mui/material';
 
 import { IReduxState } from '../../interface';
-import { Creators as HomeActions } from '../../store/ducks/home';
+import { Creators as ApplicationActions } from '../../store/ducks/application';
 import RouterItem from './RouterItem';
 import { BrasilIcon, SwitchContainer, USAIcon } from './styles';
 import { assets } from '../../assets';
@@ -39,12 +39,14 @@ export const TemplateDrawer = ({
   const dispatch = useDispatch();
 
   const { languageInformation, language } = useSelector(
-    (state: IReduxState) => state.home,
+    (state: IReduxState) => state.application,
   );
   const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(
-      HomeActions.setLanguage({
-        language: e.target.checked ? 'en' : 'pt',
+      ApplicationActions.setLanguage({
+        language: e.target.checked
+          ? LanguageCodeEnum.english
+          : LanguageCodeEnum.portuguese,
       }),
     );
   };

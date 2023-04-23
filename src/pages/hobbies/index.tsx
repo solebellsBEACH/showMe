@@ -17,11 +17,11 @@ import {
 } from '../../pageComplements/stacks/styles';
 
 const Hobbies = (props: any) => {
-  const { hobbies, home } = useSelector((state: IReduxState) => state);
-  const { languageInformation } = home;
+  const { hobbies, application } = useSelector((state: IReduxState) => state);
+  const { languageInformation } = application;
   const { data } = hobbies;
   const [openDrawer, setOpenDrawer] = useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
   };
@@ -30,9 +30,9 @@ const Hobbies = (props: any) => {
   };
 
   React.useEffect(() => {
-    dispatch(HobbiesActions.getHobbiesPageDataRequest())
+    dispatch(HobbiesActions.getHobbiesPageDataRequest());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props])
+  }, [props]);
 
   return (
     <>
@@ -50,14 +50,15 @@ const Hobbies = (props: any) => {
         />
         <Content>
           <PageTitle>Hobbies</PageTitle>
-          {data?.hobbies && data?.hobbies.map((e, i) => (
-            <TextBox
-              key={`TextBox${i}`}
-              hobbieTemplate
-              {...e}
-              align={i % 2 === 0 ? 'left' : 'right'}
-            />
-          ))}
+          {data?.hobbies &&
+            data?.hobbies.map((e, i) => (
+              <TextBox
+                key={`TextBox${i}`}
+                hobbieTemplate
+                {...e}
+                align={i % 2 === 0 ? 'left' : 'right'}
+              />
+            ))}
         </Content>
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />

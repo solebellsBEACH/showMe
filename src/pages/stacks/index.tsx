@@ -28,7 +28,7 @@ import { Creators as StackActions } from '../../store/ducks/stacks';
 const Stacks = (props: any) => {
   const selector = useSelector((state: IReduxState) => state);
   const dispatch = useDispatch();
-  const { languageInformation } = selector.home;
+  const { languageInformation } = selector.application;
   const { data } = selector.stacks;
   const [openDrawer, setOpenDrawer] = React.useState(false);
   const [slideValue, setSlideValue] = React.useState(0);

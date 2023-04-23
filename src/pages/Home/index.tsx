@@ -17,9 +17,9 @@ import { useRouter } from 'next/router';
 import { Creators as HomeActions } from '../../store/ducks/home';
 
 const HomeComponent = (props: any) => {
-  const { data, languageInformation } = useSelector(
-    (state: IReduxState) => state.home,
-  );
+  const { home, application } = useSelector((state: IReduxState) => state);
+  const { data } = home;
+  const { languageInformation } = application;
 
   const dispatch = useDispatch();
 

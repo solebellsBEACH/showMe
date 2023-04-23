@@ -1,30 +1,33 @@
 import { HowICanHelpYouIconsEnum, LanguageCodeEnum, Page } from './enums';
 
-export interface IHomeDuckDuckInitialState {
+export interface IHomeDuckInitialState {
   loading: boolean;
   error: boolean;
   data: HomePageData | null;
   success: boolean;
+}
+
+export interface IApplicationDuckInitialState {
   language: LanguageCodeEnum;
   languageInformation: ILanguageJSON;
 }
-
-export interface IStackDuckDuckInitialState {
+export interface IStackDuckInitialState {
   loading: boolean;
   error: boolean;
   data: StacksPageData | null;
   success: boolean;
 }
-export interface IHobbiesDuckDuckInitialState {
+export interface IHobbiesDuckInitialState {
   loading: boolean;
   error: boolean;
   data: HobbiesPageData | null;
   success: boolean;
 }
 export interface IReduxState {
-  home: IHomeDuckDuckInitialState;
-  stacks: IStackDuckDuckInitialState;
-  hobbies: IHobbiesDuckDuckInitialState
+  home: IHomeDuckInitialState;
+  stacks: IStackDuckInitialState;
+  hobbies: IHobbiesDuckInitialState;
+  application: IApplicationDuckInitialState;
 }
 
 export interface IBio {
@@ -59,7 +62,7 @@ export interface Document {
   image_url: string;
   has_effect: boolean;
   is_personal_bio: boolean;
-  subtitle?: string
+  subtitle?: string;
 }
 
 export type HomePageData = {
