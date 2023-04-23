@@ -4,10 +4,18 @@ import {
   Creators as HobbiesActions,
 } from '../../ducks/hobbies';
 import { api } from '../../../services/api';
+import { LanguageCodeEnum } from '../../../interface/enums';
 
-function* getHobbiesPageData(): any {
+function* getHobbiesPageData(params: {
+  type: string;
+  payload?: { language: LanguageCodeEnum };
+}): any {
+  const language = params.payload.language || LanguageCodeEnum.english;
   try {
-    const response = yield call(api.get, `document/allHobbies`);
+    const response = yield call(
+      api.get,
+      `document/allHobbies?language=${language}`,
+    );
     if (response.status === 202) {
       yield put(HobbiesActions.getHobbiesPageDataSuccess(response.data.data));
     } else {

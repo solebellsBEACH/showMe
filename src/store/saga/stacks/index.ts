@@ -4,10 +4,18 @@ import {
   Creators as StackActions,
 } from '../../ducks/stacks';
 import { api } from '../../../services/api';
+import { LanguageCodeEnum } from '../../../interface/enums';
 
-function* getStackPageData(): any {
+function* getStackPageData(params: {
+  type: string;
+  payload?: { language: LanguageCodeEnum };
+}): any {
+  const language = params.payload.language || LanguageCodeEnum.english;
   try {
-    const response = yield call(api.get, `document/allStacks`);
+    const response = yield call(
+      api.get,
+      `document/allStacks?language=${language}`,
+    );
     if (response.status === 202) {
       yield put(StackActions.getStackPageDataSuccess(response.data.data));
     } else {

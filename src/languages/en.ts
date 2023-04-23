@@ -1,7 +1,6 @@
 import { ILanguageJSON } from '../interface';
 import { HowICanHelpYouIconsEnum } from '../interface/enums';
 
-
 export const englishJson: ILanguageJSON = {
   homePage: {
     moreAboutMyCareer: 'More about my career',
@@ -43,7 +42,7 @@ export const englishJson: ILanguageJSON = {
       "Throughout my career I've always had an open mind for new languages and experiences, I understand that closing yourself off from the market and sticking to a single front is a big mistake when it comes to technology.",
   },
   hobbies: {
-    header: "Below is everything I do when I'm not programming🏄"
+    header: "Below is everything I do when I'm not programming🏄",
   },
   textbox: ['Click to open image'],
   drawer: ['Browse pages', 'Choose language'],

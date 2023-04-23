@@ -1,4 +1,5 @@
 import { IHobbiesDuckInitialState } from '../../interface';
+import { LanguageCodeEnum } from '../../interface/enums';
 
 export const Types = {
   GET_HOBBIESPAGE_DATA_REQUEST: 'GET_HOBBIESPAGE_DATA_REQUEST',
@@ -34,8 +35,9 @@ export default function HobbieDuck(state = INITIAL_STATE, action: any) {
 }
 
 export const Creators = {
-  getHobbiesPageDataRequest: () => ({
+  getHobbiesPageDataRequest: (payload?: { language: LanguageCodeEnum }) => ({
     type: Types.GET_HOBBIESPAGE_DATA_REQUEST,
+    payload,
   }),
   getHobbiesPageDataSuccess: (payload: any) => ({
     type: Types.GET_HOBBIESPAGE_DATA_SUCCESS,

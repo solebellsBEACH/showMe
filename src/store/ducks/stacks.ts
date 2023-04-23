@@ -1,4 +1,5 @@
 import { IStackDuckInitialState } from '../../interface';
+import { LanguageCodeEnum } from '../../interface/enums';
 
 export const Types = {
   GET_STACKSPAGE_DATA_REQUEST: 'GET_STACKSPAGE_DATA_REQUEST',
@@ -34,8 +35,9 @@ export default function StackDuck(state = INITIAL_STATE, action: any) {
 }
 
 export const Creators = {
-  getStackPageDataRequest: () => ({
+  getStackPageDataRequest: (payload?: { language: LanguageCodeEnum }) => ({
     type: Types.GET_STACKSPAGE_DATA_REQUEST,
+    payload,
   }),
   getStackPageDataSuccess: (payload: any) => ({
     type: Types.GET_STACKSPAGE_DATA_SUCCESS,

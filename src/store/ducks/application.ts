@@ -29,7 +29,7 @@ export default function ApplicationDuck(state = INITIAL_STATE, action: any) {
 }
 
 export const Creators = {
-  setLanguage: (payload: { language: LanguageCodeEnum }) => ({
+  setLanguage: (payload?: { language: LanguageCodeEnum }) => ({
     type: Types.SET_LANGUAGE,
     payload,
   }),

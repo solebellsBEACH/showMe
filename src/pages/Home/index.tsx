@@ -19,13 +19,14 @@ import { Creators as HomeActions } from '../../store/ducks/home';
 const HomeComponent = (props: any) => {
   const { home, application } = useSelector((state: IReduxState) => state);
   const { data } = home;
-  const { languageInformation } = application;
+  const { languageInformation, language } = application;
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(HomeActions.getHomePageDataRequest());
-  }, [dispatch, props]);
+    dispatch(HomeActions.getHomePageDataRequest({ language }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props, language]);
 
   const router = useRouter();
   const [openDrawer, setOpenDrawer] = useState(false);

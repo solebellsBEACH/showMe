@@ -18,7 +18,7 @@ import {
 
 const Hobbies = (props: any) => {
   const { hobbies, application } = useSelector((state: IReduxState) => state);
-  const { languageInformation } = application;
+  const { languageInformation, language } = application;
   const { data } = hobbies;
   const [openDrawer, setOpenDrawer] = useState(false);
   const dispatch = useDispatch();
@@ -30,9 +30,9 @@ const Hobbies = (props: any) => {
   };
 
   React.useEffect(() => {
-    dispatch(HobbiesActions.getHobbiesPageDataRequest());
+    dispatch(HobbiesActions.getHobbiesPageDataRequest({ language }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props]);
+  }, [props, language]);
 
   return (
     <>

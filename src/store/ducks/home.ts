@@ -1,4 +1,5 @@
 import { IHomeDuckInitialState } from '../../interface';
+import { LanguageCodeEnum } from '../../interface/enums';
 
 export const Types = {
   GET_HOMEPAGE_DATA_REQUEST: 'GET_HOMEPAGE_DATA_REQUEST',
@@ -34,8 +35,9 @@ export default function HomeDuck(state = INITIAL_STATE, action: any) {
 }
 
 export const Creators = {
-  getHomePageDataRequest: () => ({
+  getHomePageDataRequest: (payload?: { language: LanguageCodeEnum }) => ({
     type: Types.GET_HOMEPAGE_DATA_REQUEST,
+    payload,
   }),
   getHomePageDataSuccess: (payload: any) => ({
     type: Types.GET_HOMEPAGE_DATA_SUCCESS,
