@@ -1,9 +1,9 @@
-import { HowICanHelpYouIconsEnum, LanguageCodeEnum } from "./enums";
+import { HowICanHelpYouIconsEnum, LanguageCodeEnum, Page } from "./enums";
 
 export interface IHomeDuckDuckInitialState {
   loading: boolean;
   error: boolean;
-  data: null;
+  data: HomePageData | null;
   success: boolean;
   language: LanguageCodeEnum;
   languageInformation: ILanguageJSON;
@@ -27,6 +27,32 @@ export interface IProject {
   hasEffect?: boolean;
   tecnologies?: string[]
 }
+
+export interface Document {
+  page: Page
+  header: string
+  primary_text: string
+  secondary_text: string
+  image_url: string
+  has_effect: boolean
+  is_personal_bio: boolean
+}
+
+
+export type HomePageData = {
+  bios: Document[]
+  bio: Document
+}
+
+export type StacksPageData = {
+  projects: IProject[];
+  stacks: Stack[];
+}
+
+export type HobbiesData = {
+  hobbies: Document[]
+}
+
 export interface ILanguageJSON {
   homePage: {
     moreAboutMyCareer: string;
@@ -44,7 +70,7 @@ export interface ILanguageJSON {
     seeLess: string;
     header: string;
     stacksTitle: string;
-    stacksDescription: IListItems[];
+    stacksDescription: Stack[];
   };
   hobbies: {
     header: string;
@@ -71,7 +97,7 @@ export interface ILinks {
   github: string;
 }
 
-export interface IListItems {
+export type Stack = {
   title: string;
   description: string;
   myXP: string;

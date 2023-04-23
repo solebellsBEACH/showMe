@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { homeAssets } from '../../assets/home';
 
 import {
@@ -14,14 +14,19 @@ import { HowIHelpYou } from '../../pageComplements/home/components';
 import { Container } from '../../pageComplements/styles';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useRouter } from 'next/router';
+import { Creators as HomeActions } from '../../store/ducks/home';
 
-const HomeComponent = () => {
-  const statedfff = useSelector(
+const HomeComponent = (props: any) => {
+  const { data, languageInformation } = useSelector(
     (state: IReduxState) => state.home,
   );
-  const { languageInformation } = statedfff
 
-  console.log(statedfff)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(HomeActions.getHomePageDataRequest())
+  }, [dispatch, props])
+
   const router = useRouter()
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -46,11 +51,14 @@ const HomeComponent = () => {
           message={languageInformation.homePage.header[0]}
         />
         <HowIHelpYou />
-        <Bio {...languageInformation.homePage.bio} />
-        <div onClick={() => router.push('/stacks')} className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></div>
-        {languageInformation.homePage.bios.map((e, i) => (
-          <Bio key={`Bio_Component_index-${i}`} {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
-        ))}
+        {data && <>
+          <Bio {...data.bio} />
+          <div onClick={() => router.push('/stacks')} className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></div>
+          {data.bios.map((e, i) => (
+            <Bio key={`Bio_Component_index-${i}`} {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
+          ))}
+        </>}
+
         <Footer />
       </Container>
       <DrawerButton onClick={handleOpenDrawer} />

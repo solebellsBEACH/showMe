@@ -1,27 +1,31 @@
 import React from 'react';
-import { IBio } from '../../interface';
+import { Document } from '../../interface';
 import { Container, Content, PerfilContainer } from './styles';
 
-export const Bio: React.FC<IBio & { aling?: 'left' | 'rigth' }> = ({
+interface BioProps extends Document {
+  aling?: 'left' | 'rigth'
+}
+
+export const Bio: React.FC<BioProps> = ({
   header,
-  primaryText,
-  secondaryText,
+  primary_text,
+  secondary_text,
   aling = 'left',
   image_url,
-  hasEffect = true,
+  has_effect = true,
 }) => {
   return (
     <Container aling={aling} key={`BioComponent->${header}`}>
       <PerfilContainer
-        style={hasEffect ? { filter: 'grayscale(100%)' } : {}}
+        style={has_effect ? { filter: 'grayscale(100%)' } : {}}
         alt="PERFILIMAGE"
         src={image_url}
       />
       <Content>
         <h1>{header}</h1>
-        <h2>{primaryText}</h2>
+        <h2>{primary_text}</h2>
         <br />
-        <h2>{secondaryText}</h2>
+        <h2>{secondary_text}</h2>
       </Content>
     </Container>
   );

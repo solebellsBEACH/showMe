@@ -4,6 +4,11 @@ import { getLanguageInformation } from '../../languages';
 
 export const Types = {
   SET_LANGUAGE: 'SET_LANGUAGE',
+
+  GET_HOMEPAGE_DATA_REQUEST: 'GET_HOMEPAGE_DATA_REQUEST',
+  GET_HOMEPAGE_DATA_SUCCESS: 'GET_HOMEPAGE_DATA_SUCCESS',
+  GET_HOMEPAGE_DATA_FAIL: 'GET_HOMEPAGE_DATA_FAIL',
+
 };
 
 const defaultLanguage = LanguageCodeEnum.english
@@ -27,6 +32,19 @@ export default function HomeDuck(state = INITIAL_STATE, action: any) {
         language: action.payload.language,
         languageInformation: getLanguageInformation(action.payload.language),
       };
+    case Types.GET_HOMEPAGE_DATA_SUCCESS:
+      return {
+        ...state,
+        data: action.payload,
+        loading: false,
+        error: false,
+      }
+    case Types.GET_HOMEPAGE_DATA_FAIL:
+      return {
+        ...state,
+        loading: false,
+        error: true,
+      }
     default:
       return state;
   }
@@ -37,4 +55,15 @@ export const Creators = {
     type: Types.SET_LANGUAGE,
     payload,
   }),
+  getHomePageDataRequest: () => ({
+    type: Types.GET_HOMEPAGE_DATA_REQUEST,
+  }),
+  getHomePageDataSuccess: (payload: any) => ({
+    type: Types.GET_HOMEPAGE_DATA_SUCCESS,
+    payload
+  }),
+  getHomePageDataFail: () => ({
+    type: Types.GET_HOMEPAGE_DATA_FAIL,
+  }),
+
 };

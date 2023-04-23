@@ -1,30 +1,28 @@
 import { all, call, fork, put, takeLatest } from 'redux-saga/effects';
 import { Types as HomeTypes, Creators as HomeActions } from '../../ducks/home'
 import { api } from '../../../services/api';
-import { Page } from '../../../interface/enums';
 
-function* getHomePageDocuments(page: Page): any {
+function* getHomePageData(): any {
   try {
-    const response = yield call(api.get, `user/cart`);
-    console.log(response)
-    if (response.status === 200) {
-      yield put(HomeActions.getHomePageDocumentsSuccess(
-        response.data
+    const response = yield call(api.get, `document/allHome`);
+    if (response.status === 202) {
+      yield put(HomeActions.getHomePageDataSuccess(
+        response.data.data
       ));
     } else {
-      yield put(HomeActions.getHomePageDocumentsFail(response));
+      yield put(HomeActions.getHomePageDataFail());
     }
   } catch (error) {
-    yield put(HomeActions.getHomePageDocumentsFail({ success: false, message: '', }));
+    yield put(HomeActions.getHomePageDataFail());
   }
 }
 
-function* getHomePageDocumentsWatcher() {
-  yield takeLatest(HomeTypes.GET_HOME_DOCUMENTS_REQUEST, getHomePageDocuments);
+function* getHomePageDataWatcher() {
+  yield takeLatest(HomeTypes.GET_HOMEPAGE_DATA_REQUEST, getHomePageData);
 }
 
 export default function* rootSagas() {
   yield all([
-    fork(getHomePageDocumentsWatcher),
+    fork(getHomePageDataWatcher),
   ]);
 }
