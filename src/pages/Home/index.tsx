@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { homeAssets } from '../../assets/home';
 
 import {
@@ -14,15 +14,21 @@ import { HowIHelpYou } from '../../pageComplements/home/components';
 import { Container } from '../../pageComplements/styles';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useRouter } from 'next/router';
+import { Creators as HomeActions } from '../../store/ducks/home';
 
-const HomeComponent = () => {
-  const statedfff = useSelector(
-    (state: IReduxState) => state.application,
-  );
-  const { languageInformation } = statedfff
+const HomeComponent = (props: any) => {
+  const { home, application } = useSelector((state: IReduxState) => state);
+  const { data } = home;
+  const { languageInformation, language } = application;
 
-  console.log(statedfff)
-  const router = useRouter()
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(HomeActions.getHomePageDataRequest({ language }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props, language]);
+
+  const router = useRouter();
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleOpenDrawer = () => {
@@ -46,11 +52,26 @@ const HomeComponent = () => {
           message={languageInformation.homePage.header[0]}
         />
         <HowIHelpYou />
-        <Bio {...languageInformation.homePage.bio} />
-        <div onClick={() => router.push('/stacks')} className='more-about-me'>{languageInformation.homePage.moreAboutMyCareer} <ArrowOutwardIcon id='icon' /></div>
-        {languageInformation.homePage.bios.map((e, i) => (
-          <Bio key={`Bio_Component_index-${i}`} {...e} aling={i % 2 === 0 ? 'rigth' : 'left'} />
-        ))}
+        {data && (
+          <>
+            <Bio {...data.bio} />
+            <div
+              onClick={() => router.push('/stacks')}
+              className="more-about-me"
+            >
+              {languageInformation.homePage.moreAboutMyCareer}{' '}
+              <ArrowOutwardIcon id="icon" />
+            </div>
+            {data.bios.map((e, i) => (
+              <Bio
+                key={`Bio_Component_index-${i}`}
+                {...e}
+                aling={i % 2 === 0 ? 'rigth' : 'left'}
+              />
+            ))}
+          </>
+        )}
+
         <Footer />
       </Container>
       <DrawerButton onClick={handleOpenDrawer} />

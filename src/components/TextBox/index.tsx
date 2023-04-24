@@ -3,28 +3,23 @@ import { useSelector } from 'react-redux';
 
 import { Divider, useMediaQuery } from '@mui/material';
 
-import { IReduxState } from '../../interface';
+import { Document, IReduxState } from '../../interface';
 import { ImageModal } from '../ImageModal';
 import { Container, ImageContainer, Content, ContentImage } from './styles';
 
-export interface ITextBoxProps {
+export interface ITextBoxProps extends Document {
   align?: 'left' | 'right';
-  title: string;
-  subject?: string;
-  description: string;
-  myXP: string;
-  image: string;
   hobbieTemplate?: boolean;
 }
 
 export const TextBox = ({
   align = 'left',
-  description,
-  title,
-  myXP,
-  image,
   hobbieTemplate = false,
-  subject,
+  header,
+  image_url,
+  secondary_text,
+  primary_text,
+  subtitle,
 }: ITextBoxProps) => {
   const matches = useMediaQuery('(max-width:1250px)');
   const [imageHover, setImageHover] = useState(false);
@@ -52,8 +47,8 @@ export const TextBox = ({
           onHover={imageHover}
           onMouseOver={onMouseOver}
           onMouseLeave={onMouseLeave}
-          alt={`imageContainer${title}`}
-          src={image}
+          alt={`imageContainer${header}`}
+          src={image_url}
         />
         {imageHover && hobbieTemplate && (
           <h1 onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
@@ -67,7 +62,7 @@ export const TextBox = ({
   return (
     <>
       <ImageModal
-        image={image}
+        image={image_url}
         open={openImageModal}
         onClose={() => {
           setOpenImageModal(false);
@@ -78,10 +73,10 @@ export const TextBox = ({
         {align === 'right' && matches && <Image />}
         {align === 'left' && <Image />}
         <Content>
-          <h1>{title}</h1>
-          {hobbieTemplate && subject && <h3>{subject}</h3>}
-          <h2>{description}</h2>
-          <h2>{myXP}</h2>
+          <h1>{header}</h1>
+          {hobbieTemplate && subtitle && <h3>{subtitle}</h3>}
+          <h2>{primary_text}</h2>
+          <h2>{secondary_text}</h2>
         </Content>
         {align === 'right' && !matches && <Image />}
       </Container>

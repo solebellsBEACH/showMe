@@ -8,16 +8,13 @@ import { HowICanHelpYouIcons } from '../../../../mocks/HowICanHelpYouIcons';
 interface IInformationProps {
   header: string;
   text: string;
-  icon: HowICanHelpYouIconsEnum
+  icon: HowICanHelpYouIconsEnum;
 }
 export const Information = ({ header, text, icon }: IInformationProps) => {
-
-  const router = useRouter()
+  const router = useRouter();
   return (
-    <Container
-      onClick={() => router.push('/stacks')}
-    >
-      <div className='icon'>{HowICanHelpYouIcons(icon)}</div>
+    <Container onClick={() => router.push('/stacks')}>
+      <div className="icon">{HowICanHelpYouIcons(icon)}</div>
       <section>
         <div>
           <h2>{header}</h2>

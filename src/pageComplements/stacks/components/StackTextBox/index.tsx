@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { IReduxState } from '../../../../interface';
+import { IReduxState, Stack } from '../../../../interface';
 import {
   Container,
   ContentImage,
@@ -10,17 +10,12 @@ import {
   ReduceContent,
 } from './styles';
 
-export interface IStackTextBox {
-  title: string;
-  image: string;
-  description: string;
-  myXP: string;
-}
+export interface IStackTextBox extends Stack {}
 
 export const StackTextBox: React.FC<IStackTextBox> = ({
-  myXP,
+  my_xp,
   description,
-  image,
+  image_url,
   title,
 }) => {
   const { seeLess, seeMore } = useSelector(
@@ -32,7 +27,7 @@ export const StackTextBox: React.FC<IStackTextBox> = ({
   const descriptionFormation = !seeMoreState
     ? description.slice(0, 100) + ' ...'
     : description;
-  const myXPFormation = !seeMoreXP ? myXP.slice(0, 50) + ' ...' : myXP;
+  const myXPFormation = !seeMoreXP ? my_xp.slice(0, 50) + ' ...' : my_xp;
   return (
     <Container>
       <ContentInfo>
@@ -47,7 +42,7 @@ export const StackTextBox: React.FC<IStackTextBox> = ({
         </ReduceContent>
       </ContentInfo>
       <ContentImage>
-        <img src={image} alt="icon" />
+        <img src={image_url} alt="icon" />
       </ContentImage>
     </Container>
   );

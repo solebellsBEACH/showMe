@@ -1,5 +1,5 @@
-import Image from "next/image";
-import styled from "styled-components";
+import Image from 'next/image';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -27,5 +27,5 @@ export const ContentTypewriter = styled.div<ContentTypewriterProps>`
   color: ${({ theme, showGif }) =>
     showGif ? theme.templateColor5 : theme.white};
   padding: 1rem 1rem 1rem 2rem;
-  background: ${({ theme, showGif }) => (showGif ? theme.white : "none")};
+  background: ${({ theme, showGif }) => (showGif ? theme.white : 'none')};
 `;

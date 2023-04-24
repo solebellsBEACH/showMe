@@ -1,66 +1,92 @@
-import { HowICanHelpYouIconsEnum, LanguageCodeEnum } from "./enums";
+import { HowICanHelpYouIconsEnum, LanguageCodeEnum, Page } from './enums';
 
-export interface IApplicationDuckDuckInitialState {
+export interface IHomeDuckInitialState {
   loading: boolean;
   error: boolean;
-  data: null;
+  data: HomePageData | null;
   success: boolean;
+}
+
+export interface IApplicationDuckInitialState {
   language: LanguageCodeEnum;
   languageInformation: ILanguageJSON;
 }
+export interface IStackDuckInitialState {
+  loading: boolean;
+  error: boolean;
+  data: StacksPageData | null;
+  success: boolean;
+}
+export interface IHobbiesDuckInitialState {
+  loading: boolean;
+  error: boolean;
+  data: HobbiesPageData | null;
+  success: boolean;
+}
 export interface IReduxState {
-  application: IApplicationDuckDuckInitialState;
+  home: IHomeDuckInitialState;
+  stacks: IStackDuckInitialState;
+  hobbies: IHobbiesDuckInitialState;
+  application: IApplicationDuckInitialState;
 }
 
-export interface IBio {
+export type Project = {
+  tecnologies: string[];
   header: string;
-  primaryText: string;
-  secondaryText: string;
+  primary_text: string;
+  secondary_text: string;
   image_url: string;
-  hasEffect?: boolean;
-}
-export interface IProject {
+  has_effect?: boolean;
+  is_personal_bio?: boolean;
+};
+export interface Document {
+  page: Page;
   header: string;
-  primaryText: string;
-  secondaryText: string;
+  primary_text: string;
+  secondary_text?: string;
   image_url: string;
-  hasEffect?: boolean;
-  tecnologies?: string[]
+  has_effect: boolean;
+  is_personal_bio: boolean;
+  subtitle?: string;
 }
+
+export type HomePageData = {
+  bios: Document[];
+  bio: Document;
+};
+
+export type StacksPageData = {
+  projects: Project[];
+  stacks: Stack[];
+};
+
+export type HobbiesPageData = {
+  hobbies: Document[];
+};
+
 export interface ILanguageJSON {
   homePage: {
     moreAboutMyCareer: string;
     footer: string[];
     header: string[];
-    bios: IBio[];
-    bio: IBio;
-    howIHelpYou: { label: string; context: { header: string; text: string, icon: HowICanHelpYouIconsEnum }[], };
+    howIHelpYou: {
+      label: string;
+      context: {
+        header: string;
+        text: string;
+        icon: HowICanHelpYouIconsEnum;
+      }[];
+    };
   };
   stacks: {
-    bio: IBio[];
-    projects: IProject[];
     stackContextText: string;
     seeMore: string;
     seeLess: string;
     header: string;
     stacksTitle: string;
-    stacksDescription: IListItems[];
   };
   hobbies: {
     header: string;
-    hobbiesDescription: {
-      title: string;
-      description: string;
-      myXP: string;
-      image: string;
-      subject: string;
-    }[];
-  };
-  sendMeAMessage: {
-    title: string;
-    subject: string;
-    description: string;
-    send: string;
   };
   textbox: string[];
   drawer: string[];
@@ -71,17 +97,12 @@ export interface ILinks {
   github: string;
 }
 
-export interface IListItems {
+export type Stack = {
   title: string;
   description: string;
-  myXP: string;
-  image: string;
-}
-
-export interface ISendMeAMessageForm {
-  subject: string;
-  description: string;
-}
+  my_xp: string;
+  image_url: string;
+};
 
 export interface ITheme {
   templateColor1: string;
@@ -99,28 +120,4 @@ export interface ITheme {
   gray3: string;
   gray4: string;
   background: string;
-}
-
-
-export interface IProjectAssets {
-  afpesp: {
-    logo: string;
-    assets: string[];
-  };
-  ranking: {
-    logo: string;
-    assets: string[];
-  };
-  azo: {
-    logo: string;
-    assets: string[];
-  };
-  prevent: {
-    logo: string;
-    assets: string[];
-  };
-  kolping: {
-    logo: string;
-    assets: string[];
-  };
 }

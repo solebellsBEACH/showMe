@@ -5,7 +5,7 @@ export const Container = styled.div`
   margin: 1rem 0;
   padding: 2rem;
   text-decoration: none;
-  color:black;    
+  color: black;
   transition: color 0.5s ease;
   transition: background-color 0.5s ease;
   h2 {
@@ -25,21 +25,21 @@ export const Container = styled.div`
     width: 80vw;
     box-shadow: 0px 0px 40px rgb(0 0 0 / 10%);
   }
-  .icon{
+  .icon {
     margin-bottom: 1rem;
-    color:${props => props.theme.gray4};
+    color: ${props => props.theme.gray4};
     transition: color 0.5s ease;
 
-    &:hover{
-      color:${props => props.theme.white};
-    }    
+    &:hover {
+      color: ${props => props.theme.white};
+    }
   }
 
-  &:hover{
-    background-color:${props => props.theme.templateColor3};
-    color:${props => props.theme.white};
-    .icon{
-      color:${props => props.theme.white};
-  }
+  &:hover {
+    background-color: ${props => props.theme.templateColor3};
+    color: ${props => props.theme.white};
+    .icon {
+      color: ${props => props.theme.white};
+    }
   }
 `;

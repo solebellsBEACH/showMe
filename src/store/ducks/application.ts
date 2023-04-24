@@ -1,4 +1,4 @@
-import { IApplicationDuckDuckInitialState } from '../../interface';
+import { IApplicationDuckInitialState } from '../../interface';
 import { LanguageCodeEnum } from '../../interface/enums';
 import { getLanguageInformation } from '../../languages';
 
@@ -6,13 +6,9 @@ export const Types = {
   SET_LANGUAGE: 'SET_LANGUAGE',
 };
 
-const defaultLanguage = LanguageCodeEnum.english
+const defaultLanguage = LanguageCodeEnum.english;
 
-const INITIAL_STATE: IApplicationDuckDuckInitialState = {
-  loading: false,
-  error: false,
-  data: null,
-  success: false,
+const INITIAL_STATE: IApplicationDuckInitialState = {
   language: defaultLanguage,
   languageInformation: getLanguageInformation(defaultLanguage),
 };
@@ -33,7 +29,7 @@ export default function ApplicationDuck(state = INITIAL_STATE, action: any) {
 }
 
 export const Creators = {
-  setLanguage: (payload: { language: 'pt' | 'en' }) => ({
+  setLanguage: (payload?: { language: LanguageCodeEnum }) => ({
     type: Types.SET_LANGUAGE,
     payload,
   }),

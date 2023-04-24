@@ -35,16 +35,16 @@ export const Content = styled.div`
     font-weight: 300;
   }
 
-  ul{
+  ul {
     margin-left: 2rem;
   }
-  li{
-  font-size: larger;
-  transition: color 0.3s;
+  li {
+    font-size: larger;
+    transition: color 0.3s;
 
-  &:hover{
-    color:#4D4DAB;
-  }
+    &:hover {
+      color: #4d4dab;
+    }
   }
 `;
 

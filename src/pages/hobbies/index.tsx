@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { hobbiesAssets } from '../../assets/hobbies';
-
+import { Creators as HobbiesActions } from '../../store/ducks/hobbies';
 import {
   DrawerButton,
   Footer,
@@ -16,16 +16,23 @@ import {
   PageTitle,
 } from '../../pageComplements/stacks/styles';
 
-const Hobbies = () => {
-  const useApplication = useSelector((state: IReduxState) => state.application);
-  const { languageInformation } = useApplication;
+const Hobbies = (props: any) => {
+  const { hobbies, application } = useSelector((state: IReduxState) => state);
+  const { languageInformation, language } = application;
+  const { data } = hobbies;
   const [openDrawer, setOpenDrawer] = useState(false);
+  const dispatch = useDispatch();
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
   };
   const handleCloseDrawer = () => {
     setOpenDrawer(false);
   };
+
+  React.useEffect(() => {
+    dispatch(HobbiesActions.getHobbiesPageDataRequest({ language }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props, language]);
 
   return (
     <>
@@ -43,14 +50,15 @@ const Hobbies = () => {
         />
         <Content>
           <PageTitle>Hobbies</PageTitle>
-          {languageInformation.hobbies.hobbiesDescription.map((e, i) => (
-            <TextBox
-              key={`TextBox${i}`}
-              hobbieTemplate
-              {...e}
-              align={i % 2 === 0 ? 'left' : 'right'}
-            />
-          ))}
+          {data?.hobbies &&
+            data?.hobbies.map((e, i) => (
+              <TextBox
+                key={`TextBox${i}`}
+                hobbieTemplate
+                {...e}
+                align={i % 2 === 0 ? 'left' : 'right'}
+              />
+            ))}
         </Content>
         <Footer />
         <DrawerButton onClick={handleOpenDrawer} />
