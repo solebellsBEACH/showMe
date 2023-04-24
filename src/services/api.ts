@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-const baseURL = 'http://127.0.0.1:3333/';
-console.log(baseURL);
+const baseURL = process.env.ENDPOINT_URL;
+
 export const api = axios.create({
   baseURL,
-  // timeout: 1000,
 });
