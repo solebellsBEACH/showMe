@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-
-import { Divider, useMediaQuery } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 
 import { IReduxState } from '../../interface';
 import { ImageModal } from '../ImageModal';
@@ -85,7 +84,6 @@ export const TextBox = ({
         </Content>
         {align === 'right' && !matches && <Image />}
       </Container>
-      <Divider />
     </>
   );
 };

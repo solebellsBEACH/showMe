@@ -1,54 +1,52 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { IReduxState } from '../../../../interface';
+import React from 'react';
+import { IListItems } from '../../../../interface';
 import {
   Container,
   ContentImage,
   ContentInfo,
   Description,
+  ExperienceBadge,
   MyXPContent,
-  ReduceContent,
+  Tags,
 } from './styles';
 
-export interface IStackTextBox {
-  title: string;
-  image: string;
-  description: string;
-  myXP: string;
-}
-
-export const StackTextBox: React.FC<IStackTextBox> = ({
+export const StackTextBox: React.FC<IListItems> = ({
   myXP,
   description,
   image,
   title,
+  tags,
+  experienceTime,
 }) => {
-  const { seeLess, seeMore } = useSelector(
-    (state: IReduxState) => state.application,
-  ).languageInformation.stacks;
+  const fallbackInitials = title
+    .split(' ')
+    .map(word => word[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
 
-  const [seeMoreState, setSeeMoreState] = useState(false);
-  const [seeMoreXP, setSeeMoreXP] = useState(false);
-  const descriptionFormation = !seeMoreState
-    ? description.slice(0, 100) + ' ...'
-    : description;
-  const myXPFormation = !seeMoreXP ? myXP.slice(0, 50) + ' ...' : myXP;
   return (
     <Container>
-      <ContentInfo>
-        <h3>{title}</h3>
-        <Description seeMore={seeMoreState}>{descriptionFormation}</Description>
-        <ReduceContent onClick={() => setSeeMoreState(!seeMoreState)}>
-          {!seeMoreState ? seeMore : seeLess}
-        </ReduceContent>
-        <MyXPContent seeMore={seeMoreXP}>{myXPFormation}</MyXPContent>
-        <ReduceContent onClick={() => setSeeMoreXP(!seeMoreXP)}>
-          {!seeMoreXP ? seeMore : seeLess}
-        </ReduceContent>
-      </ContentInfo>
       <ContentImage>
-        <img src={image} alt="icon" />
+        {image ? (
+          <img src={image} alt={title} />
+        ) : (
+          <span>{fallbackInitials}</span>
+        )}
       </ContentImage>
+      <ContentInfo>
+        {experienceTime && <ExperienceBadge>{experienceTime}</ExperienceBadge>}
+        <h3>{title}</h3>
+        <Description>{description}</Description>
+        <MyXPContent>{myXP}</MyXPContent>
+        {tags && tags.length > 0 && (
+          <Tags>
+            {tags.map(tag => (
+              <span key={`${title}-${tag}`}>{tag}</span>
+            ))}
+          </Tags>
+        )}
+      </ContentInfo>
     </Container>
   );
 };
