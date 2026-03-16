@@ -2,66 +2,51 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
-  min-height: 30rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 5vh 5vw;
+  padding: 1rem 7vw 0;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1.5rem 0;
+  }
 `;
 
 export const ContentTop = styled.div`
   display: flex;
   align-items: center;
+  gap: 1.25rem;
 
   @media (max-width: 960px) {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
   }
 
   img {
-    height: 30rem;
-
-    @media (max-width: 768px) {
-      height: 15rem;
-      margin: 0rem -2rem 0rem -3rem;
-    }
-
-    @media (max-width: 600px) {
-      height: 10rem;
-    }
-
-    @media (max-width: 500px) {
-      height: 5rem;
-      flex-direction: column;
-    }
+    height: 6rem;
+    width: 6rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background: rgba(100, 100, 222, 0.12);
   }
+
   h1 {
-    font-size: 5rem;
-    color: ${({ theme }) => theme.templateColor4};
-    @media (max-width: 768px) {
-      font-size: 3rem;
-    }
-    @media (max-width: 600px) {
-      font-size: 2rem;
-    }
-    @media (max-width: 500px) {
-      font-size: 1.5rem;
-    }
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: ${({ theme }) => theme.templateColor5};
+    letter-spacing: -0.05em;
   }
 `;
 
-
 export const ContentBottom = styled.div`
-  margin-top: 5vh;
+  margin-top: 2rem;
   display: grid;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  grid-template-columns: 30% 30% 30%;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   @media (max-width: 768px) {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 `;

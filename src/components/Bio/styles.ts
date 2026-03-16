@@ -1,54 +1,90 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ aling: 'left' | 'rigth' }>`
-  width: 100%;
+export const Container = styled.section<{ aling: 'left' | 'rigth' }>`
+  width: auto;
   min-height: 30rem;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  grid-template-areas: ${props =>
+    props.aling === 'left' ? "'image content'" : "'content image'"};
+  gap: 2rem;
   align-items: center;
-  flex-direction: ${props => (props.aling === 'left' ? 'row' : 'row-reverse')};
-  padding: 5vh 5vw;
+  padding: 2rem;
+  margin: 0 7vw 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(42, 42, 94, 0.08);
+  box-shadow: 0 28px 80px rgba(42, 42, 94, 0.08);
+  backdrop-filter: blur(12px);
 
   @media (max-width: 1200px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'image'
+      'content';
+    margin: 0 1.5rem 1.5rem;
+    padding: 1.4rem;
   }
 `;
 
 export const Content = styled.div`
+  grid-area: content;
   width: 100%;
-  min-height: 25rem;
-  margin-left: 1vw;
-  @media (max-width: 1200px) {
-    margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .eyebrow {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(77, 77, 171, 0.12);
+    color: ${({ theme }) => theme.templateColor3};
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
   h1 {
-    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    color: ${({ theme }) => theme.templateColor5};
+    letter-spacing: -0.05em;
   }
 
-  h2 {
-    margin-left: 2vw;
-    text-align: left;
-    font-size: 21px;
-    margin-bottom: 2vh;
-    margin-top: 2vh;
-    font-weight: 300;
+  p {
+    font-size: clamp(1rem, 1.8vw, 1.14rem);
+    color: ${({ theme }) => theme.gray3};
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .tags span {
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    background: ${({ theme }) => theme.gray1};
+    color: ${({ theme }) => theme.templateColor5};
+    font-size: 0.88rem;
+    font-weight: 600;
   }
 `;
 
 export const PerfilContainer = styled.img`
-  width: 100vw;
-  height: 30vw;
-  border-radius: 0.2vw;
+  grid-area: image;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.6rem;
   object-fit: cover;
-  /* filter: grayscale(100%); */
-  margin: 0 1vw;
+  background: ${({ theme }) => theme.gray1};
+  box-shadow: 0 18px 46px rgba(42, 42, 94, 0.12);
 
   @media (max-width: 1200px) {
-    margin: 0;
-    margin-bottom: 0.8vh;
-    border-radius: 1vw;
-    width: 100%;
-    height: 40vw;
+    aspect-ratio: 16 / 10;
   }
 `;

@@ -1,93 +1,125 @@
 import { hobbiesAssets } from '../assets/hobbies';
-import { stackAssets } from '../assets/stacks';
 import { homeAssets } from '../assets/home';
+import { stackAssets } from '../assets/stacks';
 import { projectAssets } from '../assets/stacks/projects';
 import { ILanguageJSON } from '../interface';
 import { HowICanHelpYouIconsEnum } from '../interface/enums';
 
-const {
-  adonisjs,
-  express,
-  nestjs,
-  nextjs,
-  nodejs,
-  reactjs,
-  reactnative,
-  typescript,
-  testIcon
-} = stackAssets;
-
-const { perfilImage, frontImage, backImage } = homeAssets;
-
 const { surf, guitarra, skate } = hobbiesAssets;
-const { afpesp, azo, kolping, ranking, prevent } = projectAssets
-
+const { perfilImage, frontImage, backImage } = homeAssets;
+const { reactjs, nextjs, nodejs, nestjs, typescript, testIcon } = stackAssets;
+const { afpesp, azo, kolping, ranking, prevent } = projectAssets;
 
 export const portugueseJson: ILanguageJSON = {
   homePage: {
-    moreAboutMyCareer: 'Mais sobre minha carreira',
+    moreAboutMyCareer: 'Ver stack e projetos',
     footer: [
-      'Obrigado por ver meu perfil.',
-      'Acompanhe meus repositórios e histórias',
+      'Vamos construir produtos confiáveis.',
+      'Acompanhe meu trabalho no GitHub, LinkedIn e Instagram.',
     ],
-    header: ['Olá Geek, seja bem vindo🚀'],
+    header: ['Lucas Xavier'],
+    hero: {
+      eyebrow: 'Senior Full Stack Engineer na Questrade Financial Group',
+      name: 'Lucas Xavier',
+      role:
+        'React.js, Web3.js, TypeScript, Node.js, Micro Frontends, acessibilidade e entrega remote-first.',
+      description:
+        'Engenheiro Full Stack com mais de 5 anos de experiência construindo aplicações web escaláveis para times de produto. Hoje trabalho remotamente de Vila Velha, ajudando a evoluir a plataforma MyQuestrade com arquitetura modular, mais confiabilidade e ganhos reais de performance.',
+      badges: [
+        'React.js',
+        'Angular 17+',
+        'TypeScript',
+        'Node.js',
+        'NestJS',
+        'Next.js',
+        'Micro Frontends',
+        'Web3.js',
+        'Accessibility / WCAG',
+        'Remote-First',
+      ],
+      spotlight: [
+        { label: 'Experiência', value: '5+ anos construindo produtos web' },
+        { label: 'Empresa atual', value: 'Questrade Financial Group' },
+        { label: 'Impacto', value: '15% a menos no carregamento crítico' },
+        { label: 'Foco', value: 'FinTech, SaaS e times remotos' },
+      ],
+      quickFacts: [
+        { label: 'Localização', value: 'Vila Velha, ES, Brasil' },
+        { label: 'Idiomas', value: 'Inglês fluente / Português nativo' },
+        { label: 'Nascimento', value: '14 de dezembro de 2002' },
+        { label: 'Valor hora', value: 'USD 23/h / BRL 100/h' },
+        { label: 'Pretensão CLT', value: 'R$ 14.000/mês' },
+        { label: 'Pretensão PJ', value: 'R$ 18.000/mês' },
+      ],
+      ctaPrimary: 'Explorar minha stack',
+      ctaSecondary: 'Ver LinkedIn',
+    },
     bio: {
-      header: 'FullStack Developer',
+      header: 'Sobre mim',
+      eyebrow: 'Engenheiro remote-first',
       primaryText:
-        'Programo desde 2019, onde iniciei minhas aulas de lógica no Ifes. Sou uma pessoa bem comunicativa e tenho facilidade para trabalhar no contato ao cliente levantando requisitos, sem dificuldades para trabalhar em time. Trabalho atualmente de desenvolvedor Full Stack, com foco em Front-End na Empresa AdGrowth. ',
+        'Sou apaixonado por clean architecture, colaboração entre times globais e construção de produtos que escalam sem perder usabilidade. Meu dia a dia fica na interseção entre arquitetura front-end, integrações back-end e experiência de desenvolvimento.',
       secondaryText:
-        'Durante esse período atuei em diversos projetos com uma atenção a mais em React Js, TypeScript e NodeJS, atualmente estou integralmente em um projeto mobile, trabalhando com React Native, oque tem sido o meu foco nos últimos meses.',
+        'Estou aberto a oportunidades remote-first em FinTech, SaaS e ambientes de produto escaláveis onde acessibilidade, performance e qualidade de engenharia sejam tratadas como base do produto.',
       image_url: perfilImage,
+      hasEffect: false,
+      tags: ['FinTech', 'SaaS', 'Clean Architecture', 'CI/CD', 'Performance'],
     },
     bios: [
       {
-        header: 'Desenvolvimento Front-end',
+        header: 'Sistemas front-end',
+        eyebrow: 'React.js, Angular 17+, Next.js e Micro Frontends',
         primaryText:
-          'O profissional desenvolvedor front-end é o responsável por colocar em prática, através de códigos, o design de um site ou interface. Enquanto o web design projeta o visual de um site, o desenvolvimento front-end implementa esse design através de códigos, como HTML, CSS e JavaScript',
+          'Projeto interfaces modulares com limites claros de componentes, decisões orientadas à acessibilidade e budgets de performance que se sustentam em produção.',
         secondaryText:
-          'Durante meu periodo como desenvolvedor front-end trabalhei com projetos de diversas naturezas, sempre com foco em ReactJs e frameworks como NextJs',
+          'Minha experiência cobre React, Angular, Redux, Sass, Next.js e arquiteturas de micro frontends para produtos que precisam de escala, experimentação e velocidade de entrega.',
         image_url: frontImage,
         hasEffect: false,
+        tags: ['React.js', 'Angular', 'Micro Frontends', 'WCAG', 'Redux'],
       },
       {
-        header: 'Desenvolvimento Back-end',
+        header: 'Back-end e integrações',
+        eyebrow: 'Node.js, NestJS, Spring Boot e camadas de dados',
         primaryText:
-          'Como o nome sugere, o desenvolvedor back-end trabalha na parte de “trás" da aplicação. Ele é o responsável, em termos gerais, pela implementação da regra de negócio. Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da aplicação. ',
+          'Construo APIs e integrações com contratos claros, código de fácil manutenção e preocupação constante com observabilidade.',
         secondaryText:
-          'Com desenvolvimento back-end aprendi muito nos primeiros anos de profissão, e por trabalhar em uma fábrica de software atuei em vários projetos, desde os mais comuns com simples CRUDs a projetos com uma complexa regra de negócio e integrações externas',
+          'Já trabalhei com Node.js, NestJS, Spring Boot, SQL, MongoDB, Docker e integrações com terceiros em projetos que vão de plataformas mais simples a fluxos complexos de negócio.',
         image_url: backImage,
         hasEffect: false,
+        tags: ['Node.js', 'NestJS', 'Spring Boot', 'Docker', 'SQL'],
       },
       {
-        header: 'Programação orientada a testes',
+        header: 'Qualidade e entrega',
+        eyebrow: 'Testes, analytics e releases confiáveis',
         primaryText:
-          'Ela consiste em um ciclo curto de repetições onde o desenvolvedor escreve casos de testes automatizados que possam tanto validar um requisito quanto implementar uma nova funcionalidade. Utilizando TDD durante o desenvolvimento de um software a rotina adotada pela maioria dos programadores muda um pouco. ',
+          'Uso CI/CD, monitoramento e testes automatizados para preservar velocidade sem abrir mão da confiança em cada entrega.',
         secondaryText:
-          'Durante minha carreira a necessidade de testes foi muito constante, por trabalhar em diversos projetos os testes automatizados e unitários ajudam a validar fluxos como um formulário com diversos campos por exemplo.',
+          'Cypress, cobertura E2E, Datadog, Amplitude e colaboração cross-functional me ajudam a transformar trabalho de engenharia em impacto mensurável de produto.',
         image_url: testIcon,
         hasEffect: false,
+        tags: ['Cypress', 'Datadog', 'Amplitude', 'CI/CD', 'E2E'],
       },
     ],
     howIHelpYou: {
-      label: 'Como posso te ajudar?',
+      label: 'Onde gero mais valor',
       context: [
         {
-          header: 'Qualidade e Alta Performance',
+          header: 'Performance e qualidade de produto',
           text:
-            'Sempre trabalhei com tecnologias atuais, se envolvendo 100% com o projeto e com o resultado final. ',
-          icon: HowICanHelpYouIconsEnum.highPerformace
+            'Trabalho com tecnologias atuais, padrões de acessibilidade e budgets de performance para manter a experiência consistente conforme o produto cresce.',
+          icon: HowICanHelpYouIconsEnum.highPerformace,
         },
         {
-          header: 'Experiência e Conhecimento',
+          header: 'Arquitetura escalável',
           text:
-            'Ao longo da minha história, trabalhei com diversos segmentos e desenvolvi o know-how necessário para atuar nos mais diversificados projetos.',
-          icon: HowICanHelpYouIconsEnum.experience
+            'Minha base em front-end e back-end me ajuda a desenhar soluções modulares, contratos claros e sistemas que evoluem bem em vez de virarem correções pontuais.',
+          icon: HowICanHelpYouIconsEnum.experience,
         },
         {
-          header: 'Agilidade no Desenvolvimento',
+          header: 'Entrega remota confiável',
           text:
-            'Trabalho com metodologias ágeis que contam com processos e ferramentas embarcadas e as skills necessárias.',
-          icon: HowICanHelpYouIconsEnum.speed
+            'Estou acostumado com times distribuídos, rituais ágeis e colaboração assíncrona que mantém a entrega fluindo sem sacrificar qualidade de código.',
+          icon: HowICanHelpYouIconsEnum.speed,
         },
       ],
     },
@@ -96,172 +128,324 @@ export const portugueseJson: ILanguageJSON = {
     bio: [],
     projects: [
       {
+        header: 'Questrade Financial Group',
+        role: 'Senior Full Stack Engineer',
+        period: 'Atual',
+        primaryText:
+          'Atuando na evolução do MyQuestrade em um contexto FinTech de grande escala, com foco em arquitetura front-end modular, confiabilidade da plataforma e entrega contínua.',
+        secondaryText:
+          'Trabalhei em performance, acessibilidade e fluxos de integração, ajudando a reduzir em 15% o tempo de carregamento de jornadas críticas em um modelo remoto entre Brasil e Canadá.',
+        result: '15% mais velocidade em jornadas críticas',
+        image_url: perfilImage,
+        hasEffect: false,
+        tecnologies: [
+          'React.js',
+          'Angular 17+',
+          'TypeScript',
+          'Node.js',
+          'Micro Frontends',
+          'Datadog',
+          'Amplitude',
+          'CI/CD',
+          'Accessibility',
+        ],
+      },
+      {
         header: 'AFPESP',
-        primaryText: 'nesse projeto atuei na criação de uma aplicação mobile, nela atuei no fluxo de serviços na qual criei todo crud de compra de refeições, cardápio digital, pontos de venda, além de ter atuado na criação da autenticação via digital e fáceis e na tela de notificações.',
-        secondaryText: "",
+        role: 'Full Stack / Mobile Engineer',
+        period: 'Plataforma mobile de serviços',
+        primaryText:
+          'Construí fluxos de serviço de uma aplicação mobile, incluindo CRUD de compra de refeições, cardápio digital e jornadas de ponto de venda.',
+        secondaryText:
+          'Também implementei autenticação por digital, notificações e features conectadas à operação do dia a dia do produto.',
+        result: 'Fluxo mobile do pedido à autenticação',
         image_url: afpesp.logo,
         hasEffect: false,
-        tecnologies: ["React Native",
-          "Styled Components",
-          "Typescript ",
-          "Expo CLI",]
+        tecnologies: [
+          'React Native',
+          'Styled Components',
+          'TypeScript',
+          'Expo CLI',
+        ],
       },
       {
-        header: 'Ranking dos políticos',
-        primaryText: 'Esse foi um projeto muito interessante, na qual se tratava de um ranking de políticos que eram avaliados baseado em seus votos de projetos de lei.',
-        secondaryText: "Nesse projeto atuei na criação do próprio ranking, além do blog de notícias sobre os candidatos.",
+        header: 'Ranking dos Políticos',
+        role: 'Front-end Engineer',
+        period: 'Produto cívico',
+        primaryText:
+          'Atuei na experiência do ranking dos políticos e na camada de conteúdo que publicava notícias e atualizações sobre candidatos.',
+        secondaryText:
+          'O projeto exigia uma experiência clara para a lógica do ranking, o conteúdo editorial e a navegação pública.',
+        result: 'Experiência de ranking e conteúdo editorial',
         image_url: ranking.logo,
         hasEffect: false,
-        tecnologies: ["NextJs",
-          "Redux Saga",
-          "Styled Components ",]
+        tecnologies: ['Next.js', 'Redux Saga', 'Styled Components'],
       },
-
       {
-        header: 'Prevent Sênior',
-        primaryText: 'Nessa frente, atuei na criação de algumas features do portal admin que o paciente tinha seus dados e informações vitais, como batimentos, pressão arterial, entre outros..',
-        secondaryText: "Ele comunicava com uma API que era alimentada por um smartwatch que ficava como paciente, e caso tivesse algo de perigoso a saúde do mesmo, alertava seus responsáveis.",
+        header: 'Prevent Senior',
+        role: 'Front-end Engineer',
+        period: 'Portal de monitoramento em saúde',
+        primaryText:
+          'Entreguei funcionalidades do portal admin onde pacientes e times acessavam dados vitais como batimentos e pressão arterial.',
+        secondaryText:
+          'O portal consumia APIs alimentadas por smartwatch e sinalizava riscos de saúde para acelerar a ação dos responsáveis.',
+        result: 'Features para monitoramento de pacientes',
         image_url: prevent.logo,
         hasEffect: false,
-        tecnologies: ["NextJs",
-          "Typescript ",
-          "SASS",
-          "Context API",]
+        tecnologies: ['Next.js', 'TypeScript', 'Sass', 'Context API'],
       },
       {
         header: 'Kolping',
-        primaryText: 'Nesse projeto atuei no back end de uma solução que contava com muitas integrações de pagamento diferentes.',
-        secondaryText: "A principal delas era com o IuguJS, além disso, fui o responsável por criar o fluxo de usuários e por configurar todas permissões de cada um, implementando uma solução baseada em enums atrelados a uma tabela de roles.",
+        role: 'Back-end Engineer',
+        period: 'Pagamentos e permissões',
+        primaryText:
+          'Atuei no back-end de uma solução com múltiplas integrações de pagamento, incluindo IuguJS.',
+        secondaryText:
+          'Também implementei fluxos de usuários e um modelo de permissões baseado em enums ligados a uma tabela de roles.',
+        result: 'Camada multi-pagamento com controle de acesso',
         image_url: kolping.logo,
         hasEffect: false,
-        tecnologies: ["ExpressJs ",
-          "Typescript",
-          "PostgreSQL",
-          "TypeORM",]
+        tecnologies: ['ExpressJS', 'TypeScript', 'PostgreSQL', 'TypeORM'],
       },
       {
         header: 'AZO APP',
-        primaryText: 'Nesse projeto atuei na criação de uma página na qual o usuário admin podia ver uma lista de profissionais e suas informações, um widget de calendário em que o profissional poderia ver seus horários, um gráfico que filtrava por período e por tipo as consultas daquele profissional e corrigi um bug na autenticação pelo Google.',
-        secondaryText: "",
+        role: 'Front-end Engineer',
+        period: 'Operação em saúde',
+        primaryText:
+          'Criei features administrativas como lista de profissionais, widget de calendário e visualizações filtradas por período e tipo de consulta.',
+        secondaryText:
+          'Também corrigi um problema na autenticação com Google e melhorei o fluxo para profissionais e administradores.',
+        result: 'Experiência de dashboard operacional',
         image_url: azo.logo,
         hasEffect: false,
-        tecnologies: ["React Js",
-          "Bootstrap ",
-          "Styled Components",
-          "Axios ",
-          "Redux toolkit",]
+        tecnologies: [
+          'React.js',
+          'Bootstrap',
+          'Styled Components',
+          'Axios',
+          'Redux Toolkit',
+        ],
+      },
+    ],
+    stackContextText:
+      'Minha stack atual combina arquitetura front-end, serviços back-end, acessibilidade, observabilidade e tooling de entrega. Prefiro construir produtos olhando o sistema inteiro: experiência do usuário, contratos de API, métricas e evolução segura em produção.',
+    overviewCards: [
+      { label: 'Cargo', value: 'Senior Full Stack Engineer' },
+      { label: 'Modelo', value: 'Remote-first' },
+      { label: 'Especialidades', value: 'Micro Frontends / Acessibilidade' },
+      { label: 'Tooling', value: 'Datadog, Amplitude e CI/CD' },
+    ],
+    experienceTitle: 'Experiência prática ao longo da stack',
+    projectsTitle: 'Projetos e produtos em que atuei',
+    stackExperience: [
+      {
+        title: 'React',
+        time: '5a 9m',
+        context:
+          'Interfaces componentizadas, tuning de performance e fluxos de produto escaláveis.',
+      },
+      {
+        title: 'Angular',
+        time: '5a 9m',
+        context:
+          'Interfaces enterprise com arquitetura modular e componentes compartilhados.',
+      },
+      {
+        title: 'Node.js',
+        time: '5a 9m',
+        context: 'APIs, integrações e desenho de serviços back-end.',
+      },
+      {
+        title: 'TypeScript',
+        time: '5a 9m',
+        context: 'Codebases front-end e back-end com contratos mais seguros.',
+      },
+      {
+        title: 'Spring Boot',
+        time: '5a 9m',
+        context:
+          'Suporte a back-end e integrações quando o ecossistema Java era necessário.',
+      },
+      {
+        title: 'Docker',
+        time: '5a 9m',
+        context: 'Ambientes estáveis e releases mais previsíveis entre times.',
+      },
+      {
+        title: 'MongoDB',
+        time: '5a 9m',
+        context: 'Persistência não relacional e modelagem pragmática de dados.',
+      },
+      {
+        title: 'SQL',
+        time: '5a 9m',
+        context: 'Modelagem relacional, queries e suporte a APIs.',
+      },
+      {
+        title: 'Redux',
+        time: '5a 9m',
+        context:
+          'Estado global, side effects e fluxos previsíveis no front-end.',
+      },
+      {
+        title: 'Sass',
+        time: '5a 9m',
+        context: 'Base de estilos escalável em codebases front-end.',
+      },
+      {
+        title: 'NestJS',
+        time: 'Produção',
+        context:
+          'Serviços Node estruturados com padrões modulares sustentáveis.',
+      },
+      {
+        title: 'Micro Frontends',
+        time: 'Produção',
+        context:
+          'Entrega modular de front-end para times maiores e plataformas em evolução.',
       },
     ],
     seeMore: 'Ver mais',
     seeLess: 'Ver menos',
-    stackContextText:
-      'Ao longo de minha carreira sempre tive uma mente aberta para novas linguagens e experiencias, entendo que se fechar para o mercado e se manter em uma frente de atuação somente é um grande erro quando se trata de tecnologia.',
-    header: 'Essas são algumas das tecnologias que tive contato👨🏽‍💻',
-    stacksTitle: 'Tecnologias que usei em minha carreira',
-
+    header: 'Stack, arquitetura e entrega para produtos escaláveis',
+    stacksTitle: 'Tecnologias em destaque',
     stacksDescription: [
       {
         image: reactjs,
-        title: 'React Js',
+        title: 'React.js',
+        experienceTime: '5a 9m',
         description:
-          'O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.',
+          'Desenvolvimento de interfaces em produção para produtos escaláveis.',
         myXP:
-          'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
+          'Uso React ao longo da minha carreira para arquitetura front-end, design systems reutilizáveis e tuning de performance em aplicações reais.',
+        tags: ['Component systems', 'Performance', 'SPA architecture'],
       },
       {
-        image: reactnative,
-        title: 'React Native',
+        title: 'Angular 17+',
+        experienceTime: '5a 9m',
         description:
-          'React Native é uma biblioteca Javascript criada pelo Facebook. É usada para desenvolver aplicativos para os sistemas Android e iOS de forma nativa.',
+          'Interfaces enterprise com boa estrutura e manutenção sustentável.',
         myXP:
-          'Trabalhei com esta biblioteca ao longo de toda minha carreira de desenvolvedor,trabalhando em vários projetos de escopos diferentes.',
-      },
-      {
-        image: nextjs,
-        title: 'NextJS',
-        description:
-          'Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.',
-        myXP:
-          'Uma excelente tecnologia para usar em projetos com grande número de renderizações.',
+          'Tenho conforto em codebases Angular com componentes compartilhados, modularização e entregas paralelas entre times.',
+        tags: ['Enterprise UI', 'Modular architecture', 'Type safety'],
       },
       {
         image: typescript,
         title: 'TypeScript',
+        experienceTime: '5a 9m',
         description:
-          'TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.',
+          'A linguagem que mantém codebases front-end e back-end mais confiáveis.',
         myXP:
-          'Tecnologia super importante quando utilizada para implementar os princípios de orientação a objetos em seu código Javascript.',
-      },
-      {
-        image: adonisjs,
-        title: 'Adonis JS',
-        description:
-          'O AdonisJS é um framerwork Node. js que surgiu para trazer facilidades ao desenvolvedor incluindo padrões de estruturação do projeto.',
-        myXP:
-          'Por causa disso, o Adonis é conhecido por ser um framework opinado, isto é, ele segue um padrão de desenvolvimento e "força" o desenvolvedor a segui-lo.',
-      },
-      {
-        image: express,
-        title: 'ExpressJS',
-        description:
-          'Express.js é um framework para Node.js que fornece recursos mínimos para construção de servidores web. Foi lançado como software livre e de código aberto sob a Licença MIT. ',
-        myXP: 'É um dos mais populares frameworks para servidores em Node.js',
+          'TypeScript é central na forma como desenho contratos, reduzo regressões e mantenho projetos grandes de JavaScript mais fáceis de evoluir.',
+        tags: ['Type safety', 'DX', 'Refactors'],
       },
       {
         image: nestjs,
-        title: 'NestJS',
+        title: 'Node.js & NestJS',
+        experienceTime: '5a 9m',
         description:
-          'NestJS é um framework Node.js de código aberto destinado ao desenvolvimento de aplicativos do lado do servidor. Foi criado por Kamil Mysliwiec e lançado em 2017. Sob o capô, por padrão, o NestJS faz uso do framework Express.js, sendo também compatível com o Fastify.',
-        myXP: 'Sua arquitetura é fortemente inspirada no Angular.',
+          'Serviços back-end, regras de negócio e integrações externas.',
+        myXP:
+          'Usei essa base para construir APIs REST, orquestrar integrações e estruturar serviços com manutenção clara via NestJS e padrões próximos de Express.',
+        tags: ['APIs', 'Integrations', 'Service design'],
+      },
+      {
+        image: nextjs,
+        title: 'Next.js & Micro Frontends',
+        experienceTime: 'Produção',
+        description:
+          'Escolhas de arquitetura para superfícies rápidas e modulares.',
+        myXP:
+          'Usei Next.js e padrões de micro frontends para apoiar SEO, ciclos mais rápidos de entrega e módulos front-end que evoluem com independência.',
+        tags: ['SSR', 'Scalable teams', 'Modular UI'],
+      },
+      {
+        title: 'Dados e Persistência',
+        experienceTime: '5a 9m',
+        description:
+          'Trabalho com dados relacionais e não relacionais conforme a necessidade do produto.',
+        myXP:
+          'Tenho experiência modelando dados e sustentando APIs com SQL, MongoDB e PostgreSQL em ambientes operacionais.',
+        tags: ['SQL', 'MongoDB', 'PostgreSQL'],
       },
       {
         image: nodejs,
-        title: 'NodeJS',
+        title: 'Docker & CI/CD',
+        experienceTime: '5a 9m',
         description:
-          'Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript.',
+          'Suporte de infraestrutura para ambientes estáveis e releases previsíveis.',
         myXP:
-          'Uma das principais tecnologias usadas para criação de APIs Rest, na qual trabalhei principalmente com o auxílio do ExpressJS',
+          'Docker e pipelines de CI/CD me ajudam a padronizar ambientes, reduzir atrito entre times e entregar com mais confiança.',
+        tags: ['Delivery', 'Pipelines', 'Consistency'],
+      },
+      {
+        title: 'Accessibility / WCAG',
+        experienceTime: 'Produção',
+        description:
+          'Acessibilidade faz parte da qualidade do produto, não é checklist tardio.',
+        myXP:
+          'Levo preocupações de acessibilidade para o desenho de componentes, semântica, navegação por teclado e experiência geral.',
+        tags: ['Inclusive UI', 'Semantics', 'Usability'],
+      },
+      {
+        image: testIcon,
+        title: 'Observabilidade e Testes',
+        experienceTime: 'Toolkit atual',
+        description:
+          'Dados e monitoramento para conectar código com resultado real de produto.',
+        myXP:
+          'Uso testes automatizados, observabilidade e analytics para validar releases e entender impacto além da entrega do código.',
+        tags: ['Cypress', 'Datadog', 'Amplitude'],
+      },
+      {
+        title: 'Web3.js',
+        experienceTime: 'Hands-on',
+        description:
+          'Exploração de interfaces e integrações orientadas a blockchain.',
+        myXP:
+          'Web3.js faz parte do meu toolkit para explorar produtos em que fluxos descentralizados ou experiências conectadas a carteira entram no roadmap.',
+        tags: ['Wallets', 'Integrations', 'Experiments'],
       },
     ],
   },
   hobbies: {
-    header: 'Abaixo está tudo que faço quando não estou programando🏄',
+    header: 'Abaixo está um pouco do que faço quando não estou programando',
     hobbiesDescription: [
       {
         image: surf,
         subject: 'Isso não é um esporte, é um estilo de vida.',
         title: 'Surf',
         description:
-          'O surf começou na minha vida quando saí do interior e vim para o litoral por influência do meu pai, que surfava desde 1989. Comecei a 2 anos para curtir um dia de praia e acabei me viciando. ',
+          'O surf entrou na minha vida quando saí do interior e vim para o litoral por influência do meu pai, que surfa desde 1989. Comecei para curtir um dia de praia e acabei ficando viciado.',
         myXP:
-          'A origem do surfe é disputada entre os povos peruanos e polinésios. A prática de deslizar sobre as ondas há muito tempo já era conhecida pelos povos polinésios, que povoaram grande parte das ilhas do Oceano Pacífico, além do litoral pacífico das Américas. Os primeiros relatos do surfe dizem que este foi introduzido no Havaí pelo rei polinésio Tahíto. Outros relatos dão conta de que, muito antes dos havaianos, antigos povos peruanos já utilizavam uma espécie de canoa confeccionada de junco para deslizar sobre as ondas. O primeiro relato escrito da observação de pessoas a fazerem surfe, foi feito pelo navegador inglês James Cook que gostou do esporte por se tratar de uma forma de relaxamento.',
+          'A origem do surfe é disputada entre os povos peruanos e polinésios. A prática de deslizar sobre as ondas já era conhecida pelos povos polinésios, que povoaram grande parte das ilhas do Oceano Pacífico e do litoral pacífico das Américas.',
       },
       {
         image: skate,
         subject: 'O melhor meio de transporte já inventado.',
         title: 'Skate',
         description:
-          'Comecei andar de skate aos 12 anos, influenciado por amigos e pela banda Charlie Brown Jr, o skate veio pra mim por conta de ser muito ruim no futebol.',
+          'Comecei a andar de skate aos 12 anos, influenciado por amigos e pela banda Charlie Brown Jr. O skate apareceu porque eu realmente era muito ruim no futebol.',
         myXP:
-          'Não se sabe ao certo do quê surgiu o skate, mas muitos falam que vieram do surf; outros de patins quebrados, que com suas partes se montavam um skate em um pedaço de madeira. No início da década de 1960, os surfistas da Califórnia mais ou menos na cidade de Los Angeles queriam fazer das pranchas um divertimento também nas ruas, em uma época de marés baixas e secas na região. Inicialmente, a nova "maneira de surfar" foi chamada de sidewalk surfing. Em 1965, surgiram os primeiros campeonatos, mas o skate só ficou mais reconhecido uma década depois.',
+          'Não se sabe ao certo de onde surgiu o skate, mas muita gente relaciona sua origem ao surf. No início da década de 1960, surfistas da Califórnia queriam levar para a rua a sensação das manobras feitas na água.',
       },
       {
         image: guitarra,
-        subject: 'Ouvir é bom, tocar é bem melhor.',
+        subject: 'Ouvir é bom, tocar é melhor ainda.',
         title: 'Guitarra',
         description:
-          'Quando tinha 12 anos ganhei um simples violão de nylon, no qual não me interessei muito. Até o dia que conheci o Rolling Stones, depois disso ao conhecer Guns n Roses, comecei estudar horas e horas diariamente e também ao conhecer  Yngwie Malmsteen, que os estudos duravam o dia todo. ',
+          'Quando tinha 12 anos ganhei um violão simples de nylon e no começo nem me interessei tanto. Isso mudou depois que conheci Rolling Stones e Guns N Roses. A partir daí comecei a estudar horas por dia.',
         myXP:
-          "Saul Hudson, conhecido pelo seu nome artístico Slash, é um guitarrista anglo-americano mundialmente famoso como integrante da formação clássica da banda Guns N' Roses, com quem alcançou sucesso mundial no final da década de 1980 e início dos anos 90. Em sua carreira posterior, Slash integrou algumas outras bandas de diversos estilos, bem sucedidas em sua maioria, e em 2011 iniciou uma carreira solo, em que até agora lançou cinco discos. Yngwie Malmsteen, nome artístico de Lars Johan Yngve Lannerbäck é um virtuoso guitarrista sueco, considerado um dos melhores de seu estilo. Influenciado pela música barroca de Bach e Vivaldi, Malmsteen é conhecido por ser um dos precursores do chamado metal neoclássico, que envolve heavy metal com elementos de música clássica.",
+          'Slash ficou mundialmente conhecido como integrante da formação clássica do Guns N Roses. Yngwie Malmsteen, por sua vez, é um guitarrista virtuoso sueco conhecido pela forte influência de música clássica e pelo metal neoclássico.',
       },
     ],
   },
   sendMeAMessage: {
-    title: 'Me envie uma Mensagem',
+    title: 'Me envie uma mensagem',
     subject: 'Assunto',
     description: 'Descrição',
     send: 'Enviar',
   },
-  textbox: ['Clique para abrir imagem'],
+  textbox: ['Clique para abrir a imagem'],
   drawer: ['Navegue pelas páginas', 'Escolha o idioma'],
 };

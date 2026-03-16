@@ -21,13 +21,13 @@ const Footer = () => {
       <ContentRight>
         <div>{applicationData.languageInformation.homePage.footer[1]}</div>
         <div className="icons-content">
-          <a href={Links().github}>
+          <a href={Links().github} target="_blank" rel="noreferrer">
             <GitHubIcon className="icon" />
           </a>
-          <a href={Links().instagram}>
+          <a href={Links().instagram} target="_blank" rel="noreferrer">
             <InstagramIcon className="icon" />
           </a>
-          <a href={Links().linkedin}>
+          <a href={Links().linkedin} target="_blank" rel="noreferrer">
             <LinkedInIcon className="icon" />
           </a>
         </div>

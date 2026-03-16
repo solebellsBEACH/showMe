@@ -1,4 +1,4 @@
-import { HowICanHelpYouIconsEnum, LanguageCodeEnum } from "./enums";
+import { HowICanHelpYouIconsEnum, LanguageCodeEnum } from './enums';
 
 export interface IApplicationDuckDuckInitialState {
   loading: boolean;
@@ -18,6 +18,8 @@ export interface IBio {
   secondaryText: string;
   image_url: string;
   hasEffect?: boolean;
+  eyebrow?: string;
+  tags?: string[];
 }
 export interface IProject {
   header: string;
@@ -25,21 +27,59 @@ export interface IProject {
   secondaryText: string;
   image_url: string;
   hasEffect?: boolean;
-  tecnologies?: string[]
+  tecnologies?: string[];
+  role?: string;
+  period?: string;
+  result?: string;
+}
+
+export interface IMetric {
+  label: string;
+  value: string;
+}
+
+export interface IStackExperience {
+  title: string;
+  time: string;
+  context: string;
+}
+
+export interface IHeroContent {
+  eyebrow: string;
+  name: string;
+  role: string;
+  description: string;
+  badges: string[];
+  spotlight: IMetric[];
+  quickFacts: IMetric[];
+  ctaPrimary: string;
+  ctaSecondary: string;
 }
 export interface ILanguageJSON {
   homePage: {
     moreAboutMyCareer: string;
     footer: string[];
     header: string[];
+    hero: IHeroContent;
     bios: IBio[];
     bio: IBio;
-    howIHelpYou: { label: string; context: { header: string; text: string, icon: HowICanHelpYouIconsEnum }[], };
+    howIHelpYou: {
+      label: string;
+      context: {
+        header: string;
+        text: string;
+        icon: HowICanHelpYouIconsEnum;
+      }[];
+    };
   };
   stacks: {
     bio: IBio[];
     projects: IProject[];
     stackContextText: string;
+    overviewCards: IMetric[];
+    experienceTitle: string;
+    projectsTitle: string;
+    stackExperience: IStackExperience[];
     seeMore: string;
     seeLess: string;
     header: string;
@@ -75,7 +115,9 @@ export interface IListItems {
   title: string;
   description: string;
   myXP: string;
-  image: string;
+  image?: string;
+  tags?: string[];
+  experienceTime?: string;
 }
 
 export interface ISendMeAMessageForm {
@@ -100,7 +142,6 @@ export interface ITheme {
   gray4: string;
   background: string;
 }
-
 
 export interface IProjectAssets {
   afpesp: {
