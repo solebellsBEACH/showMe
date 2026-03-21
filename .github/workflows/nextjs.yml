@@ -51,7 +51,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Enable Corepack
         run: corepack enable
       - name: Setup Pages
